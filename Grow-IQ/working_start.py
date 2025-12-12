@@ -3,6 +3,7 @@
 Working Startup Script - Fixed version
 """
 
+import os
 import uvicorn
 import time
 from app import app
@@ -12,9 +13,15 @@ def main():
     print("🚀 Starting CareerConnect FastAPI application...")
     print(f"🌍 Environment: {settings.ENVIRONMENT}")
     print(f"🔧 Debug Mode: {settings.DEBUG}")
-    print(f"📱 Dashboard will be available at: http://{settings.HOST}:{settings.PORT}")
-    print(f"📚 API documentation at: http://{settings.HOST}:{settings.PORT}/docs")
-    print(f"🏥 Health check at: http://{settings.HOST}:{settings.PORT}/health")
+    
+    # Get port from environment (Render sets $PORT automatically)
+    # Fallback to settings.PORT for local development
+    port = int(os.getenv("PORT", settings.PORT))
+    host = os.getenv("HOST", settings.HOST)
+    
+    print(f"📱 Dashboard will be available at: http://{host}:{port}")
+    print(f"📚 API documentation at: http://{host}:{port}/docs")
+    print(f"🏥 Health check at: http://{host}:{port}/health")
     print("🔧 Press Ctrl+C to stop the server")
     print("-" * 50)
     
@@ -26,11 +33,12 @@ def main():
         print("🚀 Starting Uvicorn server...")
         
         # Use simpler uvicorn configuration
+        # Note: Don't use reload in production (Render sets DEBUG=false)
         uvicorn.run(
             app,  # Pass the app directly instead of string
-            host=settings.HOST,
-            port=settings.PORT,
-            reload=settings.DEBUG,
+            host=host,
+            port=port,
+            reload=settings.DEBUG,  # Only reload in development
             log_level=settings.LOG_LEVEL.lower()
         )
         

@@ -1,0 +1,46 @@
+# Render Blueprint Configuration
+# This file allows you to deploy multiple services at once
+# Usage: In Render Dashboard, click "New" → "Blueprint" → Upload this file
+
+services:
+  # Backend Web Service
+  - type: web
+    name: grow-iq-backend
+    env: python
+    region: oregon  # Change to your preferred region
+    plan: starter  # Change to 'free' for free tier
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: false
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: $PORT
+      - key: WORKERS
+        value: 2
+      - key: LOG_LEVEL
+        value: INFO
+      # IMPORTANT: Set these in Render Dashboard after creation
+      # SECRET_KEY - Generate a strong secret key
+      # DATABASE_URL - Will be auto-populated if you link the database below
+      # CORS_ORIGINS - Add your frontend URL
+      # GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REDIRECT_URI (if using OAuth)
+      # GEMINI_API_KEY (if using Gemini AI)
+
+  # PostgreSQL Database
+  - type: pspg
+    name: grow-iq-db
+    region: oregon  # Should match web service region
+    plan: starter  # Change to 'free' for 90-day trial
+    databaseName: growiq
+    databaseUser: growiq_user
+
+# Note: After creating services, link the database to web service:
+# 1. Go to web service settings
+# 2. Add DATABASE_URL environment variable
+# 3. Use the Internal Database URL from the database service
+

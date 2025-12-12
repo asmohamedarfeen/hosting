@@ -1,0 +1,73 @@
+# Files and directories to ignore during Render deployment
+# Similar to .gitignore but specific to Render builds
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Database files (use PostgreSQL on Render)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Environment files (use Render env vars instead)
+.env
+.env.local
+.env.*.local
+
+# Test files
+test_*.py
+*_test.py
+tests/
+
+# Documentation
+*.md
+!README.md
+
+# Frontend build artifacts (if deploying separately)
+fronted/node_modules/
+fronted/dist/
+fronted/.vite/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Attachments and uploads (consider using external storage)
+attached_assets/
+static/uploads/*
+
+# Docker (not needed for Render)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
