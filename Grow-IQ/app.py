@@ -101,11 +101,22 @@ app = FastAPI(
 app.add_middleware(SecurityMiddleware)
 
 # Add trusted host middleware for production
-if settings.ENVIRONMENT == "production":
-    app.add_middleware(
-        TrustedHostMiddleware,
-        allowed_hosts=settings.ALLOWED_HOSTS
-    )
+# Note: Disabled for Render deployment - Render uses dynamic hostnames
+# If you need this, add your Render domain to ALLOWED_HOSTS environment variable
+# Example: ALLOWED_HOSTS=hosting-ujm7.onrender.com,your-domain.com
+if settings.ENVIRONMENT == "production" and settings.ALLOWED_HOSTS:
+    # Only enable if ALLOWED_HOSTS is explicitly set and not just defaults
+    allowed_hosts = [h.strip() for h in settings.ALLOWED_HOSTS if h.strip() and h.strip() not in ["localhost", "127.0.0.1", "0.0.0.0"]]
+    if allowed_hosts:
+        app.add_middleware(
+            TrustedHostMiddleware,
+            allowed_hosts=allowed_hosts
+        )
+        logger.info(f"TrustedHostMiddleware enabled with hosts: {allowed_hosts}")
+    else:
+        logger.info("TrustedHostMiddleware disabled - no production hosts configured")
+else:
+    logger.info("TrustedHostMiddleware disabled - not in production or ALLOWED_HOSTS not set")
 
 # Add CORS middleware
 app.add_middleware(
@@ -431,10 +442,21 @@ async def root():
         index_path = os.path.join(FRONTEND_DIST_DIR, "index.html")
         if os.path.exists(index_path):
             return FileResponse(index_path, media_type="text/html")
-    except Exception:
-        pass
-    # Final fallback to dev server
-    return RedirectResponse(url="http://localhost:5000/", status_code=307)
+    except Exception as e:
+        logger.warning(f"Could not serve landing page: {e}")
+    
+    # Fallback: Return a simple JSON response instead of redirecting to localhost
+    return JSONResponse(
+        content={
+            "message": "Grow-IQ API is running!",
+            "status": "healthy",
+            "version": settings.APP_VERSION,
+            "environment": settings.ENVIRONMENT,
+            "docs": "/docs",
+            "health": "/health"
+        },
+        status_code=200
+    )
 
 # Resume analyzer endpoint (optional authentication)
 @app.post("/upload-resume")
