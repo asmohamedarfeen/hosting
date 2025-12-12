@@ -1,0 +1,3 @@
+ALLOW_ALL_USERS_TO_POST_JOBS=True
+DEV_MODE=True
+# This file enables development mode where all users can post jobs

@@ -1,0 +1,110 @@
+# Azure App Service Requirements for Glow-IQ
+# ===========================================
+# Optimized for Azure deployment
+
+# Core FastAPI and ASGI server
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+gunicorn>=21.2.0
+
+# Database and ORM
+sqlalchemy>=2.0.42
+alembic>=1.13.0
+psycopg2-binary>=2.9.0  # PostgreSQL driver for Azure Database
+sqlalchemy-utils>=0.41.0
+sqlalchemy-json>=0.1.0
+
+# Authentication and security
+python-multipart>=0.0.6
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+cryptography>=41.0.0
+argon2-cffi>=21.3.0
+itsdangerous>=2.1.0
+
+# Template engine
+jinja2>=3.1.2
+
+# File handling
+aiofiles>=23.2.1
+pillow>=10.0.0
+python-magic>=0.4.24
+
+# Data validation
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+pydantic[email]>=2.0.0
+email-validator>=2.2.0
+
+# HTTP client
+requests>=2.31.0
+httpx>=0.25.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+
+# Monitoring and logging (Azure compatible)
+structlog>=23.1.0
+prometheus-client>=0.17.0
+sentry-sdk[fastapi]>=1.32.0
+
+# Cache (Azure Redis compatible)
+redis>=5.0.0
+
+# Background tasks
+celery>=5.3.0
+
+# Machine Learning (if needed)
+scikit-learn>=1.3.0
+numpy>=1.24.0
+
+# Speech Recognition (if needed)
+speechrecognition>=3.10.0
+pyaudio>=0.2.11
+pydub>=0.25.1
+
+# AI/ML for Resume Testing
+google-generativeai>=0.3.0
+
+# Production optimizations
+uvloop>=0.19.0  # Fast event loop for Linux
+httptools>=0.6.0  # Fast HTTP parser
+
+# Performance monitoring
+psutil>=5.9.0
+
+# Azure specific dependencies
+azure-identity>=1.15.0
+azure-keyvault-secrets>=4.7.0
+azure-storage-blob>=12.19.0
+azure-mgmt-web>=7.0.0
+azure-mgmt-resource>=23.0.0
+
+# Health checks
+fastapi-health>=0.1.0
+
+# CORS
+fastapi-cors>=0.0.6
+
+# Rate limiting
+slowapi>=0.1.9
+
+# Security headers
+secure>=0.3.0
+
+# Additional utilities
+click>=8.1.0
+python-slugify>=8.0.0
+rich>=13.6.0
+typer>=0.9.0
+
+# Date handling
+python-dateutil>=2.8.2
+
+# URL validation
+validators>=0.22.0
+
+# Additional FastAPI features
+fastapi-limiter>=0.1.0
+fastapi-users>=12.0.0
+fastapi-versioning>=0.10.0

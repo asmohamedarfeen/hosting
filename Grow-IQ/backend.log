@@ -1,0 +1,17 @@
+INFO:database_enhanced:SQLite engine initialized (development mode)
+2025-09-29 20:45:56,630 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+2025-09-29 20:45:56,630 INFO sqlalchemy.engine.Engine SELECT 1
+INFO:sqlalchemy.engine.Engine:SELECT 1
+2025-09-29 20:45:56,630 INFO sqlalchemy.engine.Engine [generated in 0.00013s] ()
+INFO:sqlalchemy.engine.Engine:[generated in 0.00013s] ()
+INFO:database_enhanced:Database connection test successful
+2025-09-29 20:45:56,630 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+2025-09-29 20:45:56 - qrowiq - INFO - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/fronted/dist/public/assets at /assets
+2025-09-29 20:45:56 - qrowiq - WARNING - Mock interview static directory not found: /Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/mockinterviwe/static
+2025-09-29 20:45:56 - qrowiq - INFO - Message UI static directory mounted at /message/static
+2025-09-29 20:45:56 - passlib.utils.compat - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2025-09-29 20:45:56 - passlib.utils.compat - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2025-09-29 20:45:56 - passlib.utils.compat - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2025-09-29 20:45:56 - passlib.registry - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>

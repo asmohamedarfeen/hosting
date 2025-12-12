@@ -1,0 +1,3389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced All-in-One Dashboard</title>
+    <!-- Font Awesome for post icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #52328B; /* Updated Primary Color */
+            --primary-light: #6a4fa8;
+            --primary-dark: #4A2D74;
+            --secondary-color: #9c27b0;
+            --accent-color: #e91e63;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --error-color: #f44336;
+            --info-color: #2196f3;
+            
+            --bg-primary: #f4f5f7;
+            --bg-secondary: #e8eaf6;
+            --bg-card: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --border-color: #e0e0e0;
+            --shadow-light: 0 4px 20px rgba(0,0,0,0.06);
+            --shadow-medium: 0 8px 32px rgba(0,0,0,0.08);
+            --shadow-heavy: 0 12px 40px rgba(0,0,0,0.12);
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #52328B;
+            --primary-light: #6a4fa8;
+            --bg-primary: #121212;
+            --bg-secondary: #1e1e1e;
+            --bg-card: #2d2d2d;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-light: #999999;
+            --border-color: #404040;
+            --shadow-light: 0 4px 20px rgba(0,0,0,0.3);
+            --shadow-medium: 0 8px 32px rgba(0,0,0,0.4);
+            --shadow-heavy: 0 12px 40px rgba(0,0,0,0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* --- Updated Sidebar --- */
+        .sidebar {
+            width: 80px;
+            background: var(--primary-color); /* Solid background */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 25px;
+            flex-shrink: 0;
+            height: 100vh;
+            position: fixed;
+            box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sidebar.expanded {
+            width: 260px; /* Adjusted expanded width */
+            align-items: flex-start;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: white; /* Simplified logo */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .sidebar.expanded .logo {
+            text-align: left;
+            padding-left: 25px;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .sidebar-toggle {
+            position: absolute;
+            top: 25px;
+            right: -15px; /* Keeps it outside for easy clicking */
+            width: 30px;
+            height: 30px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--primary-color);
+            font-size: 14px;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .sidebar-toggle:hover {
+            transform: scale(1.1) rotate(180deg);
+            box-shadow: 0 4px 15px rgba(97, 62, 155, 0.3);
+        }
+
+        .sidebar nav {
+            width: 100%;
+        }
+
+        .sidebar nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar nav ul li a {
+            color: #d1c4e9;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 10px;
+            margin: 0 10px;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .sidebar:not(.expanded) nav ul li a {
+            justify-content: center;
+        }
+
+        .sidebar nav ul li a .icon {
+            font-size: 20px;
+            transition: all 0.3s ease;
+            width: 24px;
+            text-align: center;
+        }
+
+        .sidebar.expanded nav ul li a .icon {
+            margin-right: 20px;
+        }
+        
+        .sidebar:not(.expanded) nav ul li a .text,
+        .sidebar:not(.expanded) nav ul li a .notification-badge {
+             display: none;
+        }
+        
+        .sidebar nav ul li a .text {
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
+        
+        .sidebar.expanded nav ul li a .text {
+            opacity: 1;
+        }
+
+        .sidebar nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .sidebar nav ul li a.active {
+            background: var(--primary-light);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .notification-badge {
+            background: var(--error-color);
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-left: auto;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Enhanced Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1001;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(180deg);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        /* Enhanced Search Bar */
+        .search-container {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar {
+            width: 400px;
+            height: 50px;
+            border: 2px solid transparent;
+            border-radius: 25px;
+            padding: 0 50px 0 20px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 16px;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(97, 62, 155, 0.1), var(--shadow-heavy);
+            width: 450px;
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Main Content Area */
+        .main-content-wrapper {
+            flex-grow: 1;
+            padding: 100px 40px 30px 40px;
+            margin-left: 80px; /* Adjusted margin */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .sidebar.expanded ~ .main-content-wrapper {
+            margin-left: 260px; /* Adjusted margin */
+        }
+        
+        .page {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+            animation: slideInDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .page-header h1 {
+            font-size: 36px;
+            margin: 0;
+            background: linear-gradient(45deg, var(--primary-light), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header h2 {
+             font-size: 24px;
+             margin: 0;
+             color: var(--text-primary);
+        }
+
+        .page-header p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        /* Enhanced Dashboard Widgets */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .widget {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .widget::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-light), var(--secondary-color), var(--accent-color));
+        }
+
+        .widget:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .widget-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .widget-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .widget-icon {
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(97, 62, 155, 0.1), rgba(156, 39, 176, 0.1));
+        }
+
+        .widget-value {
+            font-size: 42px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--primary-light), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .widget-change {
+            font-size: 14px;
+            color: var(--success-color);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .widget-change.negative {
+            color: var(--error-color);
+        }
+
+        /* Enhanced Progress Bar */
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-light), var(--secondary-color));
+            border-radius: 5px;
+            transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            100% {
+                left: 100%;
+            }
+        }
+
+        /* Enhanced Chart Widget */
+        .chart-widget {
+            grid-column: span 2;
+            min-height: 400px;
+        }
+        
+        [data-theme="dark"] .chart-widget {
+             background: #242424;
+        }
+
+        .chart-container {
+            height: 300px;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .chart-bar {
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(to top, var(--primary-light), var(--secondary-color));
+            border-radius: 4px 4px 0 0;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .chart-bar:hover {
+            opacity: 0.8;
+            transform: scaleY(1.05);
+        }
+
+        .chart-label {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .chart-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--text-primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .chart-bar:hover .chart-value {
+            opacity: 1;
+        }
+
+        /* Two-column layout */
+        .split-view {
+            display: flex;
+            gap: 30px;
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .split-view.page-content {
+             flex-grow: 1;
+        }
+
+        .left-pane {
+            flex: 1;
+            max-width: 450px;
+        }
+
+        .right-pane {
+            flex: 2;
+            background: var(--bg-card);
+            border-radius: 20px;
+            box-shadow: var(--shadow-medium);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Enhanced Card Styles */
+        .card {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
+            margin-bottom: 20px;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(97, 62, 155, 0.05), transparent);
+            transition: left 0.5s;
+        }
+
+        .card:hover, .card.active-card {
+            border-color: var(--primary-light);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .card-header {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f0e6ff, #e1bee7);
+            color: var(--primary-color);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(97, 62, 155, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .card-title h4 {
+            margin: 0;
+            font-size: 18px;
+            color: var(--text-primary);
+        }
+
+        .card-title p {
+            margin: 5px 0 0 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Enhanced Details */
+        .details-header h2 {
+            margin: 0;
+            font-size: 28px;
+            color: var(--text-primary);
+        }
+
+        .details-header p {
+            color: var(--text-secondary);
+            margin: 8px 0 30px 0;
+            font-size: 16px;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .details-grid div {
+            padding: 20px;
+            background: var(--bg-primary);
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-light);
+            transition: all 0.3s ease;
+        }
+
+        .details-grid div:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-light);
+        }
+
+        .details-grid div h5 {
+            margin: 0 0 10px 0;
+            color: var(--text-light);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .details-grid div p {
+            margin: 0;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--text-primary);
+        }
+
+        .details-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .details-section ul {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .details-section li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        /* Enhanced Button */
+        .btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(97, 62, 155, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .btn .loading {
+             margin: 0 auto;
+        }
+
+        /* Enhanced Tabs */
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 25px;
+            background: var(--bg-card);
+            border-radius: 15px 15px 0 0;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .tab-link {
+            padding: 15px 25px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 16px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--text-secondary);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .tab-link.active {
+            border-bottom-color: var(--primary-light);
+            font-weight: bold;
+            color: var(--primary-light);
+        }
+
+        .tab-link:hover {
+            color: var(--primary-light);
+            background: rgba(97, 62, 155, 0.05);
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+
+        /* --- Professional Chat UI --- */
+        .chat-container {
+            display: flex;
+            flex-grow: 1;
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--border-color);
+            height: calc(100vh - 200px); /* Full height chat */
+            min-height: 600px;
+        }
+
+        .contact-list {
+            width: 340px;
+            border-right: 1px solid var(--border-color);
+            background: var(--bg-primary);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-list-search {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .contact-list-search input {
+            width: 100%;
+            padding: 12px 15px 12px 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+        
+        .contact-list-search-container {
+            position: relative;
+        }
+        .contact-list-search-container i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+
+        .contact-list-body {
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+        
+        .contact-list-header {
+            padding: 15px 20px 5px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item {
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+        }
+
+        .contact-item:hover {
+            background: var(--bg-secondary);
+        }
+
+        .contact-item.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .contact-item.active .contact-info small,
+        .contact-item.active .contact-meta .time {
+             color: #d1c4e9;
+        }
+        .contact-item.active .contact-meta .unread {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+
+        .contact-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+        
+        .contact-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-info {
+            flex-grow: 1;
+            overflow: hidden;
+        }
+        .contact-info strong {
+            display: block;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+        .contact-info small {
+            display: block;
+            font-size: 13px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .contact-meta {
+            text-align: right;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
+        }
+        .contact-meta .time {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+        .contact-meta .unread {
+            font-size: 11px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .chat-window {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            padding: 15px 25px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+        .chat-header-user {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .chat-header-user strong {
+            font-size: 18px;
+        }
+        #typing-indicator {
+            font-style: italic;
+            font-size: 13px;
+            color: var(--text-secondary);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        #typing-indicator.visible {
+            opacity: 1;
+        }
+        .chat-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-secondary);
+        }
+        .chat-header-actions i {
+            cursor: pointer;
+            font-size: 20px;
+            transition: color 0.2s ease;
+        }
+        .chat-header-actions i:hover {
+            color: var(--primary-color);
+        }
+
+
+        .message-area {
+            flex-grow: 1;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            background: var(--bg-card);
+        }
+
+        .message {
+            display: flex;
+            margin-bottom: 20px;
+            animation: messageSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .message.sent {
+            justify-content: flex-end;
+        }
+        
+        .message.sent .message-content {
+            align-items: flex-end;
+        }
+
+        .message.received {
+            justify-content: flex-start;
+        }
+        
+         .message.received .message-content {
+            align-items: flex-start;
+        }
+
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 15px;
+            flex-shrink: 0;
+        }
+        
+        .message-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .message-content {
+             display: flex;
+             flex-direction: column;
+             max-width: 75%;
+        }
+
+        .message p {
+            display: inline-block;
+            padding: 15px 20px;
+            border-radius: 20px;
+            margin: 0;
+            box-shadow: var(--shadow-light);
+            position: relative;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .message.sent p {
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .message.received p {
+            background: var(--bg-primary);
+            border-bottom-left-radius: 5px;
+            color: var(--text-primary);
+        }
+        
+        .message-time {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+
+        .message-input {
+            border-top: 1px solid var(--border-color);
+            padding: 20px 25px;
+            background: var(--bg-primary);
+            flex-shrink: 0;
+        }
+
+        .message-input-container {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            background: var(--bg-card);
+            border-radius: 25px;
+            padding: 5px 5px 5px 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+        .message-input-container:focus-within {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(97, 62, 155, 0.1);
+        }
+        
+
+        .message-input-container input {
+            flex-grow: 1;
+            border: none;
+            padding: 10px 0;
+            font-size: 15px;
+            background: transparent;
+            color: var(--text-primary);
+        }
+        
+        .message-input-container input:focus {
+            outline: none;
+        }
+        
+        .message-input-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-right: 5px;
+        }
+        .message-input-actions i {
+            font-size: 18px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 5px;
+            transition: color 0.2s;
+        }
+        .message-input-actions i:hover {
+            color: var(--primary-color);
+        }
+
+        .send-btn {
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .send-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(97, 62, 155, 0.4);
+        }
+        
+        /* --- End Professional Chat UI --- */
+
+
+        /* --- New LinkedIn Home Page Grid Layout --- */
+        .linkedin-grid-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr 320px;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .linkedin-left-column,
+        .linkedin-main-column,
+        .linkedin-right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* --- Specific component styles for LinkedIn page --- */
+        .linkedin-left-column .card,
+        .linkedin-main-column .card,
+        .linkedin-right-column .card {
+            margin-bottom: 0;
+            border-radius: 12px;
+            overflow: visible;
+            border: 1px solid var(--border-color);
+            padding: 1.25rem;
+        }
+
+        .linkedin-left-column .card:hover,
+        .linkedin-main-column .card:hover,
+        .linkedin-right-column .card:hover {
+            transform: none;
+            box-shadow: var(--shadow-light);
+        }
+        
+        .linkedin-main-column .card {
+            cursor: default;
+        }
+
+        /* Left Column */
+        .profile-card-header {
+            height: 60px;
+            background: url('https://i.imgur.com/4lPZ2yT.jpeg') center center/cover;
+            margin: -1.25rem -1.25rem 0 -1.25rem;
+            border-radius: 12px 12px 0 0;
+        }
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid var(--bg-card);
+            margin: -40px auto 0 auto;
+            background-color: var(--bg-secondary);
+            cursor: pointer;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+        .profile-card h4 {
+            margin: 10px 0 5px 0;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .profile-card h4:hover {
+            text-decoration: underline;
+        }
+        .profile-card .text-secondary {
+            font-size: 14px;
+        }
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+            padding: 10px;
+            margin: 0 -10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+        }
+        .profile-section:hover {
+            background-color: var(--bg-primary);
+        }
+        .profile-section span:first-child {
+            font-weight: 500;
+        }
+        
+        .premium-card {
+            border-left: 2px solid var(--warning-color);
+            padding: 1rem;
+            margin-top: 1rem;
+            background: var(--bg-primary);
+            border-radius: 8px;
+        }
+        .premium-card p {
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0;
+        }
+        .premium-card a {
+             text-decoration: none;
+        }
+
+        .left-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .left-nav-list-header {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+            padding: 0 8px;
+        }
+        .left-nav-list li {
+            color: var(--text-primary);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        .left-nav-list li i {
+            color: var(--text-secondary);
+        }
+        .left-nav-list li:hover {
+            background-color: var(--bg-primary);
+            text-decoration: underline;
+        }
+
+        /* Main Column */
+        .card.writePost {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .writePost .row1 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .writePost .row1 > img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .writePost .row1 > .start-a-post {
+            flex: 1;
+            padding: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid var(--text-secondary);
+            border-radius: 2rem;
+            transition: background-color 0.2s;
+        }
+
+        .writePost .row1 > .start-a-post:hover {
+            background-color: var(--bg-primary);
+        }
+
+        .writePost .row2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 0.5rem;
+        }
+
+        .writePost .row2 > div > label {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            gap: 0.5rem;
+            cursor: pointer;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .writePost .row2 > div > label i {
+            font-size: 1.2rem;
+        }
+        .writePost .row2 > div > label:hover {
+            background-color: var(--bg-primary);
+        }
+
+        .post-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 0;
+            cursor: default;
+        }
+        
+        .post-card:hover {
+             transform: none;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .post-header-info h4 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .post-header-info h4:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .post-header-info p {
+            margin: 0.25rem 0 0;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .post-body p {
+            line-height: 1.6;
+            margin-bottom: 0;
+            color: var(--text-primary);
+            white-space: pre-wrap; /* To respect newlines in content */
+        }
+
+        .post-body img {
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 1rem;
+            max-height: 500px;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 1rem;
+        }
+
+        .post-action {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-weight: 600;
+            padding: 0.75rem;
+            border-radius: 0.3rem;
+            flex: 1;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+        .post-action i {
+            font-size: 1.2rem;
+        }
+        .post-action:hover {
+            background-color: var(--bg-primary);
+        }
+
+        .loader {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            display: none;
+            font-size: 1.2rem;
+        }
+        .loader i {
+            margin-right: 0.5rem;
+        }
+
+        /* Right Column */
+        .right-column-card {
+            padding: 1rem;
+        }
+        .news-list {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 1rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .news-list li {
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--text-primary);
+        }
+        .news-list li:hover {
+            color: var(--primary-color);
+        }
+        .news-list li small {
+            display: block;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 4px;
+        }
+        .show-more-link {
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-decoration: none;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .show-more-link:hover {
+            background-color: var(--bg-primary);
+        }
+        .linkedin-footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 1rem 0;
+        }
+        .linkedin-footer a {
+            color: var(--text-secondary);
+            font-size: 12px;
+            text-decoration: none;
+        }
+        .linkedin-footer a:hover {
+            text-decoration: underline;
+            color: var(--primary-color);
+        }
+        .ad-card {
+            background-color: var(--bg-primary);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .ad-card small {
+            font-size: 11px;
+            color: var(--text-secondary);
+            display: block;
+            text-align: right;
+        }
+        .ad-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0.5rem auto;
+        }
+        .ad-card p {
+            margin: 0.5rem 0;
+            font-weight: 500;
+        }
+        .ad-card .btn {
+            width: auto;
+            padding: 8px 16px;
+            font-size: 14px;
+            margin-top: 0.5rem;
+            border-radius: 20px;
+            background: var(--info-color);
+        }
+
+        /* Animations */
+        @keyframes slideInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes messageSlideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+
+        /* Loading Animation */
+        .loading-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 10000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .loading-overlay.visible { opacity: 1; pointer-events: all; }
+        .loading-spinner { display: inline-block; width: 50px; height: 50px; border: 4px solid var(--border-color); border-top: 4px solid var(--primary-light); border-radius: 50%; animation: spin 1s linear infinite; }
+        .loading { width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.5); border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Status indicators */
+        .status-online { width: 12px; height: 12px; background: var(--success-color); border-radius: 50%; border: 2px solid var(--bg-card); position: absolute; bottom: 2px; right: 2px; animation: pulse 2s infinite; }
+        
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .linkedin-grid-layout { grid-template-columns: 250px 1fr; }
+            .linkedin-right-column { display: none; }
+        }
+        @media (max-width: 992px) {
+            .search-container { display: none; }
+            .linkedin-grid-layout { grid-template-columns: 1fr; }
+            .linkedin-left-column { display: none; }
+            .chat-container { flex-direction: column; }
+            .contact-list {
+                width: 100%;
+                max-height: 250px;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+        }
+        @media (max-width: 768px) {
+            .sidebar { width: 70px; }
+            .sidebar.expanded { width: 250px; }
+            .main-content-wrapper { margin-left: 70px; padding: 100px 20px 20px 20px; }
+            .sidebar.expanded ~ .main-content-wrapper { margin-left: 250px; }
+            .split-view { flex-direction: column; }
+            .left-pane { max-width: none; }
+            .dashboard-grid { grid-template-columns: 1fr; }
+            .chat-container { height: calc(100vh - 120px); }
+            .chart-widget { grid-column: span 1; }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+        /* Enhanced Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1001;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(180deg);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        /* Enhanced Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 10000;
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-heavy);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to { 
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            color: var(--text-primary);
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(97, 62, 155, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        .image-preview {
+            margin-top: 10px;
+            border-radius: 12px;
+            overflow: hidden;
+            max-width: 100%;
+            display: none;
+        }
+
+        .image-preview img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .btn-secondary {
+            padding: 12px 24px;
+            border: 2px solid var(--border-color);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-secondary);
+            border-color: var(--text-secondary);
+        }
+
+        .btn-primary {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(97, 62, 155, 0.3);
+        }
+
+        /* Enhanced Post Cards */
+        .post-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .post-header img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 12px;
+            border: 2px solid var(--border-color);
+        }
+
+        .post-header-info h4 {
+            margin: 0 0 4px 0;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .post-header-info p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .delete-post-btn {
+            margin-left: auto;
+            background: none;
+            border: none;
+            color: var(--error-color);
+            font-size: 18px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            opacity: 0.7;
+        }
+
+        .delete-post-btn:hover {
+            opacity: 1;
+            background: rgba(244, 67, 54, 0.1);
+            transform: scale(1.1);
+        }
+
+        .post-body {
+            margin-bottom: 15px;
+        }
+
+        .post-body p {
+            margin: 0 0 15px 0;
+            line-height: 1.6;
+            color: var(--text-primary);
+            white-space: pre-wrap;
+        }
+
+        .post-body img {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .post-actions {
+            display: flex;
+            gap: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .post-action {
+            display: flex;
+            align-items: center;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+
+        .post-action:hover {
+            background: var(--bg-primary);
+            color: var(--primary-color);
+        }
+
+        .post-action i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search jobs, workshops, contacts..." id="globalSearch">
+            <button class="search-btn" id="searchBtn"><i class="fa-solid fa-search"></i></button>
+        </div>
+        
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-toggle" id="sidebarToggle">→</div>
+            <div class="logo" id="logo">Qrow IQ</div>
+            <nav>
+                <ul>
+                    <li><a href="#" data-page="home" class="active">
+                        <span class="icon"><i class="fa-solid fa-house-chimney"></i></span>
+                        <span class="text">Home</span>
+                    </a></li>
+                    <li><a href="#" data-page="dashboard">
+                        <span class="icon"><i class="fa-solid fa-chart-pie"></i></span>
+                        <span class="text">Dashboard</span>
+                    </a></li>
+                    <li><a href="#" data-page="jobs">
+                        <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
+                        <span class="text">Jobs</span>
+                    </a></li>
+                    <li><a href="#" data-page="my-jobs">
+                        <span class="icon"><i class="fa-solid fa-list-check"></i></span>
+                        <span class="text">My Jobs</span>
+                    </a></li>
+                    <li><a href="#" data-page="workshops">
+                        <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <span class="text">Workshops</span>
+                    </a></li>
+                    <li><a href="#" data-page="resume">
+                        <span class="icon"><i class="fa-solid fa-file-lines"></i></span>
+                        <span class="text">Resume</span>
+                    </a></li>
+                    <li><a href="#" data-page="interview">
+                        <span class="icon"><i class="fa-solid fa-microphone"></i></span>
+                        <span class="text">Interview</span>
+                    </a></li>
+                    <li><a href="#" data-page="chat">
+                        <span class="icon"><i class="fa-solid fa-comments"></i></span>
+                        <span class="text">Chat</span>
+                        <span class="notification-badge">3</span>
+                    </a></li>
+                    <li><a href="#" data-page="events">
+                        <span class="icon"><i class="fa-solid fa-calendar-days"></i></span>
+                        <span class="text">Events</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <div class="main-content-wrapper">
+            
+            <!-- NEW LinkedIn Style Home Page -->
+            <div id="home" class="page active">
+                 <div class="linkedin-grid-layout">
+                    <!-- Left Column -->
+                    <div class="linkedin-left-column">
+                        <div class="card profile-card" style="text-align: center; overflow: hidden; padding: 0;">
+                             <div class="profile-card-header"></div>
+                             <div style="padding: 0 1.25rem 1.25rem 1.25rem;">
+                                 <img src="https://i.pravatar.cc/150?u=prawin" alt="User Avatar" class="profile-avatar">
+                                 <h4>Prawin Kumar</h4>
+                                 <p class="text-secondary" style="padding: 0 10px;">B.Tech AI & Data Science Student at Nandha Engineering College | Aspiring Full Stack Developer</p>
+                                 <hr style="border-color: var(--border-color); margin: 1rem 0;">
+                                 <div class="profile-section">
+                                    <span>Connections</span>
+                                    <span style="color: var(--info-color); font-weight: bold;">6</span>
+                                </div>
+                                <p style="margin: 0; font-weight: bold; color: var(--text-primary); text-align: left; padding: 0 10px;">Connect with alumni</p>
+                                <hr style="border-color: var(--border-color); margin: 1rem 0;">
+                                <div class="premium-card">
+                                    <p class="text-secondary" style="text-align: left;">Achieve your goals with Premium</p>
+                                    <a href="#"><p style="text-align: left; font-weight:bold; color: var(--primary-color);">Try Premium for ₹0</p></a>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="card">
+                             <ul class="left-nav-list">
+                                <li class="left-nav-list-header">Recent</li>
+                                <li><i class="fa-solid fa-users"></i> AI & Machine Learning</li>
+                                <li><i class="fa-solid fa-hashtag"></i> futureofwork</li>
+                                <li><i class="fa-solid fa-hashtag"></i> datascience</li>
+                                <li class="left-nav-list-header" style="margin-top:10px;">My Items</li>
+                                <li><i class="fa-solid fa-bookmark"></i> Saved items</li>
+                                <li><i class="fa-solid fa-user-group"></i> Groups</li>
+                                <li><i class="fa-solid fa-calendar-days"></i> Events</li>
+                             </ul>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Column -->
+                    <div class="linkedin-main-column">
+                        <div class="card writePost">
+                             <div class="row1">
+                                <img src="https://i.pravatar.cc/150?u=prawin" alt="User Avatar">
+                                <div class="start-a-post" id="openPostModal">Start a post</div>
+                            </div>
+                            <div class="row2">
+                                <div><label><i class="fa-solid fa-image" style="color: #70b5f9;"></i>&nbsp;<span>Media</span></label></div>
+                                <div><label><i class="fa-solid fa-calendar-days" style="color: #e7a33e;"></i>&nbsp;<span>Event</span></label></div>
+                                <div><label><i class="fa-solid fa-file-pen" style="color: #f5987e;"></i>&nbsp;<span>Write article</span></label></div>
+                            </div>
+                        </div>
+
+                        <!-- Post Creation Modal -->
+                        <div id="postModal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3>Create a Post</h3>
+                                    <button id="closePostModal" class="modal-close">&times;</button>
+                                </div>
+                                <form id="postForm">
+                                    <div class="form-group">
+                                        <label class="form-label">Your Name:</label>
+                                        <input type="text" id="authorName" required class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Your Title/Position:</label>
+                                        <input type="text" id="authorTitle" required class="form-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Post Content:</label>
+                                        <textarea id="postContent" required rows="6" class="form-input form-textarea" placeholder="What's on your mind?"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Image URL (optional):</label>
+                                        <input type="url" id="imageUrl" class="form-input" placeholder="https://example.com/image.jpg">
+                                        <div id="imagePreview" class="image-preview">
+                                            <img id="previewImg" src="" alt="Image preview">
+                                        </div>
+                                    </div>
+                                    <div class="modal-actions">
+                                        <button type="button" id="cancelPost" class="btn-secondary">Cancel</button>
+                                        <button type="submit" class="btn-primary">Create Post</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="post-feed-content" style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- Posts will be loaded here by JavaScript -->
+                        </div>
+
+                        <div class="loader" id="feed-loader">
+                            <i class="fa-solid fa-spinner fa-spin"></i> Loading more posts...
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="linkedin-right-column">
+                        <div class="card right-column-card">
+                            <div class="widget-header" style="margin-bottom: 0;">
+                                <span class="widget-title">LinkedIn News</span>
+                                <i class="fa-solid fa-info-circle"></i>
+                            </div>
+                            <ul class="news-list">
+                                <li>
+                                    RBI keeps repo rate unchanged
+                                    <small>30m ago</small>
+                                </li>
+                                <li>
+                                    We've entered the 'hard tech' era
+                                    <small>17h ago • 30,479 readers</small>
+                                </li>
+                                 <li>
+                                    IndusInd Bank appoints new CEO
+                                    <small>5h ago • 22,603 readers</small>
+                                </li>
+                                 <li>
+                                    GCCs to step up hiring
+                                    <small>5h ago • 6,663 readers</small>
+                                </li>
+                            </ul>
+                             <a href="#" class="show-more-link">Show more <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                        </div>
+                        <div class="ad-card">
+                            <small>Ad</small>
+                            <img src="https://i.imgur.com/v2Ds2k6.png" alt="Ad Image">
+                            <p>Master AI in 2024. Upskill with Google's top-rated courses.</p>
+                            <a href="#" class="btn">Learn More</a>
+                        </div>
+                        <footer class="linkedin-footer">
+                             <a href="#">About</a>
+                             <a href="#">Accessibility</a>
+                             <a href="#">Help Center</a>
+                             <a href="#">Privacy & Terms</a>
+                             <a href="#">Ad Choices</a>
+                             <a href="#">Business Services</a>
+                             <a href="#">Get the app</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Dashboard Page -->
+            <div id="dashboard" class="page">
+                <div class="page-header">
+                    <h1>Welcome Back, Alex! 👋</h1>
+                    <p>Here's your career progress overview and recent activities.</p>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="widget floating">
+                        <div class="widget-header">
+                            <span class="widget-title">Job Applications</span>
+                            <span class="widget-icon"><i class="fa-solid fa-paper-plane" style="color: var(--info-color)"></i></span>
+                        </div>
+                        <div class="widget-value">24</div>
+                        <div class="widget-change">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            +12% from last month
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget floating">
+                        <div class="widget-header">
+                            <span class="widget-title">Interview Invites</span>
+                            <span class="widget-icon"><i class="fa-solid fa-calendar-check" style="color: var(--success-color)"></i></span>
+                        </div>
+                        <div class="widget-value">8</div>
+                        <div class="widget-change">
+                            <span>⚡</span>
+                            +3 this week
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget floating">
+                        <div class="widget-header">
+                            <span class="widget-title">Workshops Completed</span>
+                            <span class="widget-icon"><i class="fa-solid fa-trophy" style="color: var(--warning-color)"></i></span>
+                        </div>
+                        <div class="widget-value">12</div>
+                        <div class="widget-change">
+                            <span>📚</span>
+                            +2 this month
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget floating">
+                        <div class="widget-header">
+                            <span class="widget-title">Profile Views</span>
+                            <span class="widget-icon"><i class="fa-solid fa-eye" style="color: var(--accent-color)"></i></span>
+                        </div>
+                        <div class="widget-value">156</div>
+                        <div class="widget-change">
+                            <span>🔥</span>
+                            +23% this week
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget chart-widget">
+                        <div class="widget-header">
+                            <span class="widget-title">Weekly Activity</span>
+                            <span class="widget-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        </div>
+                        <div class="chart-container" id="weeklyChart">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="split-view page-content">
+                    <div class="left-pane">
+                        <div class="widget" style="cursor:default;">
+                            <div class="widget-header">
+                                <span class="widget-title">Recent Activities</span>
+                                <span class="widget-icon">⚡</span>
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <div style="padding: 15px 0; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px;">
+                                    <div style="width: 8px; height: 8px; background: var(--success-color); border-radius: 50%;"></div>
+                                    <div>
+                                        <strong>Applied to Sales Associate at Want Boutique</strong><br>
+                                        <small style="color: var(--text-secondary);">2 hours ago</small>
+                                    </div>
+                                </div>
+                                <div style="padding: 15px 0; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px;">
+                                    <div style="width: 8px; height: 8px; background: var(--info-color); border-radius: 50%;"></div>
+                                    <div>
+                                        <strong>Completed Baking Fundamentals Workshop</strong><br>
+                                        <small style="color: var(--text-secondary);">1 day ago</small>
+                                    </div>
+                                </div>
+                                <div style="padding: 15px 0; display: flex; align-items: center; gap: 15px;">
+                                    <div style="width: 8px; height: 8px; background: var(--warning-color); border-radius: 50%;"></div>
+                                    <div>
+                                        <strong>Updated Resume with AI suggestions</strong><br>
+                                        <small style="color: var(--text-secondary);">3 days ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="right-pane" style="cursor:default;">
+                        <h3>Quick Actions</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                            <button class="btn" style="margin-top: 0;">🔍 Find New Jobs</button>
+                            <button class="btn" style="margin-top: 0; background: linear-gradient(135deg, var(--success-color), #66bb6a);">👤 Update Profile</button>
+                            <button class="btn" style="margin-top: 0; background: linear-gradient(135deg, var(--warning-color), #ffb74d);">📅 Book Interview</button>
+                            <button class="btn" style="margin-top: 0; background: linear-gradient(135deg, var(--info-color), #64b5f6);">🎓 Join Workshop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Jobs Page -->
+            <div id="jobs" class="page">
+                <div class="page-header">
+                    <h1>Available Jobs 💼</h1>
+                    <p>Discover your next career opportunity</p>
+                </div>
+                <div class="split-view page-content">
+                    <div class="left-pane list-pane">
+                        <div class="card" 
+                             data-title="Associate Director, Higher Business Solutions" 
+                             data-company="Funniche - Corporate"
+                             data-rate="$35/hr"
+                             data-date="August 1, 2025"
+                             data-responsibilities="Lead a team of 10+ professionals|Develop new business strategies and partnerships|Manage client relationships and ensure satisfaction|Drive revenue growth and market expansion"
+                             data-requirements="5+ years experience in business development|MBA preferred from accredited institution|Strong leadership and communication skills|Experience with CRM systems">
+                            <div class="card-header">
+                                <div class="card-icon">AD</div>
+                                <div class="card-title">
+                                    <h4>Associate Director, Higher Business Solutions</h4>
+                                    <p>Funniche • Full-time • Remote</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card"
+                             data-title="Sales Associate"
+                             data-company="Want Boutique - Retail"
+                             data-rate="$16/hr"
+                             data-date="July 5, 2025"
+                             data-responsibilities="Greet customers as they enter the store|Answer customer questions and provide assistance|Apply sales techniques to sell products to customers|Maintain store cleanliness and organization|Process transactions and handle returns"
+                             data-requirements="Experience: 1 year in retail|Languages: English fluency required|Customer service skills|Flexible schedule availability">
+                             <div class="card-header">
+                                <div class="card-icon">SA</div>
+                                <div class="card-title">
+                                    <h4>Sales Associate</h4>
+                                    <p>Want Boutique • Part-time • On-site</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card"
+                             data-title="Marketing Coordinator"
+                             data-company="TechStart Inc - Technology"
+                             data-rate="$28/hr"
+                             data-date="August 15, 2025"
+                             data-responsibilities="Create and manage social media campaigns|Coordinate marketing events and promotions|Analyze marketing metrics and prepare reports|Collaborate with design team on marketing materials"
+                             data-requirements="Bachelor's degree in Marketing or related field|2+ years experience in digital marketing|Proficiency in social media platforms|Strong analytical skills">
+                             <div class="card-header">
+                                <div class="card-icon">MC</div>
+                                <div class="card-title">
+                                    <h4>Marketing Coordinator</h4>
+                                    <p>TechStart Inc • Full-time • Hybrid</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-pane detail-pane">
+                        <div class="details-header">
+                            <h2 id="detail-title">Select a job to view details</h2>
+                            <p id="detail-company">Choose from the available positions on the left</p>
+                        </div>
+                        <div class="details-grid">
+                            <div>
+                                <h5><i class="fa-solid fa-dollar-sign"></i> HOURLY RATE</h5>
+                                <p id="detail-rate">-</p>
+                            </div>
+                            <div>
+                                <h5><i class="fa-solid fa-calendar-day"></i> START DATE</h5>
+                                <p id="detail-date">-</p>
+                            </div>
+                        </div>
+                        <div class="details-section">
+                            <h3><i class="fa-solid fa-list-ul"></i> Key Responsibilities</h3>
+                            <ul id="detail-responsibilities">
+                                <li>Select a job to see responsibilities</li>
+                            </ul>
+                        </div>
+                        <div class="details-section">
+                            <h3><i class="fa-solid fa-bullseye"></i> Requirements</h3>
+                             <ul id="detail-requirements">
+                                <li>Select a job to see requirements</li>
+                            </ul>
+                        </div>
+                        <button class="btn" id="applyBtn" disabled>🚀 Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced My Jobs Page -->
+            <div id="my-jobs" class="page">
+                <div class="page-header">
+                    <h1>My Job Applications 📋</h1>
+                    <p>Track your application progress and manage connections</p>
+                </div>
+                <div class="tabs">
+                    <button class="tab-link active" data-tab="#applications">📄 Applications (5)</button>
+                    <button class="tab-link" data-tab="#connections">🤝 Connections (12)</button>
+                    <button class="tab-link" data-tab="#interviews">🎤 Interviews (3)</button>
+                </div>
+                <div id="applications" class="tab-content active">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">S</div>
+                            <div class="card-title">
+                                <h4>Server</h4>
+                                <p>The Restaurant • Applied 2 days ago</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; padding: 12px; background: linear-gradient(135deg, #e8f5e8, #c8e6c9); border-radius: 10px; color: #2e7d32;">
+                            <strong>✅ Status:</strong> Under Review
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">BC</div>
+                            <div class="card-title">
+                                <h4>Bakery Clerk</h4>
+                                <p>Baskin Robbins • Applied 5 days ago</p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px; padding: 12px; background: linear-gradient(135deg, #fff3e0, #ffe0b2); border-radius: 10px; color: #f57c00;">
+                            <strong>📅 Status:</strong> Interview Scheduled
+                        </div>
+                    </div>
+                </div>
+                <div id="connections" class="tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">JD</div>
+                            <div class="card-title">
+                                <h4>John Doe</h4>
+                                <p>HR Manager at TechCorp • Connected 1 week ago</p>
+                            </div>
+                            <button class="btn" style="margin: 0 0 0 auto; width:auto; padding: 10px 20px;">Message</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">SM</div>
+                            <div class="card-title">
+                                <h4>Sarah Miller</h4>
+                                <p>Recruiter at StartupXYZ • Connected 2 weeks ago</p>
+                            </div>
+                            <button class="btn" style="margin: 0 0 0 auto; width:auto; padding: 10px 20px;">Message</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="interviews" class="tab-content">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">📅</div>
+                            <div class="card-title">
+                                <h4>Marketing Assistant Interview</h4>
+                                <p>Tomorrow at 2:00 PM • Video Call</p>
+                            </div>
+                        </div>
+                        <div style="display:flex; gap: 15px; margin-top: 15px;">
+                            <button class="btn" style="margin-top:0;">🎥 Join Interview</button>
+                            <a href="#" class="btn" style="margin-top:0; background: var(--info-color);">📝 Prepare</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Workshops Page -->
+            <div id="workshops" class="page">
+                <div class="page-header">
+                    <h1>Professional Workshops 🎓</h1>
+                    <p>Enhance your skills with expert-led training sessions</p>
+                </div>
+                <div class="split-view page-content">
+                    <div class="left-pane list-pane">
+                        <div class="card"
+                             data-title="Advanced Serving Techniques"
+                             data-company="The Restaurant - Food & Beverage"
+                             data-rate="Free"
+                             data-date="Sep 10, 2025"
+                             data-responsibilities="Learn advanced plating techniques|Master upselling strategies|Handle customer conflict resolution|Food safety and hygiene protocols"
+                             data-requirements="Basic serving experience preferred|Food handler's permit|Professional attitude">
+                            <div class="card-header">
+                                <div class="card-icon">🍽</div>
+                                <div class="card-title">
+                                    <h4>Advanced Serving Techniques</h4>
+                                    <p>The Restaurant • 4 hours • Beginner</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card"
+                              data-title="Baking Fundamentals"
+                              data-company="Baskin Robbins - Bakery"
+                              data-rate="$25"
+                              data-date="Sep 15, 2025"
+                              data-responsibilities="Mastering dough preparation and handling|Cake decorating basics and techniques|Pastry essentials and flavor combinations|Kitchen equipment and safety"
+                              data-requirements="Beginner friendly - no experience needed|Apron and closed-toe shoes required|Interest in culinary arts">
+                            <div class="card-header">
+                                <div class="card-icon">🧁</div>
+                                <div class="card-title">
+                                    <h4>Baking Fundamentals</h4>
+                                    <p>Baskin Robbins • 6 hours • Beginner</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card"
+                              data-title="Digital Marketing Essentials"
+                              data-company="Marketing Pro Academy"
+                              data-rate="$75"
+                              data-date="Sep 20, 2025"
+                              data-responsibilities="Social media strategy development|Google Analytics and SEO basics|Content creation and copywriting|Email marketing campaigns"
+                              data-requirements="Basic computer skills|Understanding of social media platforms|Marketing interest or experience">
+                            <div class="card-header">
+                                <div class="card-icon">📱</div>
+                                <div class="card-title">
+                                    <h4>Digital Marketing Essentials</h4>
+                                    <p>Marketing Pro Academy • 8 hours • Intermediate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-pane detail-pane">
+                         <div class="details-header">
+                            <h2 id="detail-title">Workshop Details</h2>
+                            <p id="detail-company">Select a workshop to see the details.</p>
+                        </div>
+                         <div class="details-grid">
+                            <div>
+                                <h5><i class="fa-solid fa-tags"></i> PRICE</h5>
+                                <p id="detail-rate">-</p>
+                            </div>
+                            <div>
+                                <h5><i class="fa-solid fa-calendar-day"></i> DATE</h5>
+                                <p id="detail-date">-</p>
+                            </div>
+                        </div>
+                        <div class="details-section">
+                            <h3><i class="fa-solid fa-book-open"></i> What You'll Learn</h3>
+                            <ul id="detail-responsibilities">
+                                <li>Select a workshop to see curriculum</li>
+                            </ul>
+                        </div>
+                         <div class="details-section">
+                            <h3><i class="fa-solid fa-check-double"></i> Prerequisites</h3>
+                            <ul id="detail-requirements">
+                                <li>Select a workshop to see requirements</li>
+                            </ul>
+                        </div>
+                        <button class="btn" id="registerBtn" disabled>📚 Register Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Resume Page -->
+            <div id="resume" class="page">
+                <div class="page-header">
+                    <p>Resume Building Tools</p>
+                    <h1 style="font-size: 48px;">Build a Job-Winning Resume ✨</h1>
+                </div>
+                <div class="dashboard-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="widget">
+                        <div class="widget-header">
+                            <span class="widget-title">AI Resume Scan</span>
+                            <span class="widget-icon"><i class="fa-solid fa-robot" style="color:var(--primary-color)"></i></span>
+                        </div>
+                        <p>Get instant feedback on your resume against a target job description. Improve your chances of getting noticed.</p>
+                        <button class="btn" style="margin-top: 15px; background: var(--info-color)">📤 Upload & Scan</button>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-header">
+                            <span class="widget-title">Resume Score</span>
+                            <span class="widget-icon"><i class="fa-solid fa-gauge-high" style="color:var(--success-color)"></i></span>
+                        </div>
+                        <div class="widget-value">85%</div>
+                        <div class="widget-change">
+                            <span>⚡</span>
+                            +15% improvement needed
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="details-section">
+                    <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Resume Templates</h3>
+                </div>
+                <div class="dashboard-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="card" style="text-align:center;">
+                        <img src="https://i.imgur.com/gZolY3B.png" alt="Modern Resume Template" style="width:100%; border-radius:10px; border: 1px solid var(--border-color);">
+                        <h4 style="margin-top:15px;">Modern</h4>
+                        <button class="btn" style="margin-top:5px; padding: 10px 15px; font-size: 14px;">Use Template</button>
+                    </div>
+                    <div class="card" style="text-align:center;">
+                        <img src="https://i.imgur.com/N1fOWwQ.png" alt="Creative Resume Template" style="width:100%; border-radius:10px; border: 1px solid var(--border-color);">
+                        <h4 style="margin-top:15px;">Creative</h4>
+                        <button class="btn" style="margin-top:5px; padding: 10px 15px; font-size: 14px;">Use Template</button>
+                    </div>
+                    <div class="card" style="text-align:center;">
+                        <img src="https://i.imgur.com/k9oWc4s.png" alt="Professional Resume Template" style="width:100%; border-radius:10px; border: 1px solid var(--border-color);">
+                        <h4 style="margin-top:15px;">Professional</h4>
+                        <button class="btn" style="margin-top:5px; padding: 10px 15px; font-size: 14px;">Use Template</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Interview Page -->
+            <div id="interview" class="page">
+                <div class="page-header">
+                    <h1>Mock Interview Program 🎤</h1>
+                    <p>Practice makes perfect - boost your interview confidence</p>
+                </div>
+                <div class="details-section">
+                    <h3><i class="fa-solid fa-star"></i> Choose Your Practice Arena</h3>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="widget">
+                         <div class="widget-header">
+                            <span class="widget-title">AI Mock Interview</span>
+                             <span class="widget-icon"><i class="fa-solid fa-robot" style="color:var(--primary-color)"></i></span>
+                        </div>
+                        <p>Practice anytime with an AI interviewer. Get instant feedback on your answers, body language, and speech patterns.</p>
+                        <button class="btn" style="margin-top: 15px;">🚀 Start Now</button>
+                    </div>
+                    <div class="widget">
+                         <div class="widget-header">
+                            <span class="widget-title">Peer-to-Peer</span>
+                             <span class="widget-icon"><i class="fa-solid fa-users" style="color:var(--info-color)"></i></span>
+                        </div>
+                        <p>Connect with other job seekers to practice interviewing each other. Give and receive valuable feedback from your peers.</p>
+                         <button class="btn" style="margin-top: 15px;">🤝 Find a Partner</button>
+                    </div>
+                    <div class="widget">
+                         <div class="widget-header">
+                            <span class="widget-title">Expert Session</span>
+                             <span class="widget-icon"><i class="fa-solid fa-user-tie" style="color:var(--success-color)"></i></span>
+                        </div>
+                        <p>Book a one-on-one session with an industry expert or hiring manager for personalized coaching and in-depth feedback.</p>
+                         <button class="btn" style="margin-top: 15px;">📅 Book an Expert</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Chat Page -->
+            <div id="chat" class="page">
+                <div class="page-header">
+                    <h1>Messages 💬</h1>
+                    <p>Connect with recruiters and industry professionals</p>
+                </div>
+                <div class="chat-container">
+                    <aside class="contact-list">
+                        <div class="contact-list-search">
+                            <div class="contact-list-search-container">
+                                <i class="fa-solid fa-search"></i>
+                                <input type="text" placeholder="Search">
+                            </div>
+                        </div>
+                        <div class="contact-list-body">
+                            <div class="contact-list-header">
+                                <i class="fa-solid fa-star"></i> Favourites
+                            </div>
+                            <div class="contact-item active">
+                                <div class="contact-avatar">
+                                    <img src="https://i.pravatar.cc/150?u=JulieBowman" alt="Julie Bowman">
+                                    <div class="status-online"></div>
+                                </div>
+                                <div class="contact-info">
+                                    <strong>Julie Bowman</strong>
+                                    <small>I'll send you the meeting link. 📅</small>
+                                </div>
+                                <div class="contact-meta">
+                                    <span class="time">10:42</span>
+                                    <span class="unread">1</span>
+                                </div>
+                            </div>
+                             <div class="contact-item">
+                                <div class="contact-avatar">
+                                     <img src="https://i.pravatar.cc/150?u=AnnaSmith" alt="Anna Smith">
+                                    <div class="status-online"></div>
+                                </div>
+                                <div class="contact-info">
+                                    <strong>Anna Smith</strong>
+                                    <small>Sounds good, let's connect then.</small>
+                                </div>
+                                <div class="contact-meta">
+                                    <span class="time">Yesterday</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-list-header">
+                                <i class="fa-solid fa-comment"></i> Chat
+                            </div>
+                             <div class="contact-item">
+                                <div class="contact-avatar">
+                                    <img src="https://i.pravatar.cc/150?u=MikeJohnson" alt="Mike Johnson">
+                                </div>
+                                <div class="contact-info">
+                                    <strong>Mike Johnson</strong>
+                                    <small>Okay, thanks for the update!</small>
+                                </div>
+                                <div class="contact-meta">
+                                    <span class="time">1d ago</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-avatar">
+                                    <img src="https://i.pravatar.cc/150?u=KenjiAso" alt="Kenji Asou">
+                                </div>
+                                <div class="contact-info">
+                                    <strong>Kenji Asou</strong>
+                                    <small>You: Can we reschedule?</small>
+                                </div>
+                                <div class="contact-meta">
+                                    <span class="time">3d ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <main class="chat-window">
+                        <header class="chat-header">
+                            <div class="chat-header-user">
+                                <div class="contact-avatar">
+                                    <img src="https://i.pravatar.cc/150?u=JulieBowman" alt="Julie Bowman">
+                                    <div class="status-online"></div>
+                                </div>
+                                <div>
+                                    <strong>Julie Bowman</strong><br>
+                                    <small id="typing-indicator">typing...</small>
+                                </div>
+                            </div>
+                             <div class="chat-header-actions">
+                                <i class="fa-solid fa-phone"></i>
+                                <i class="fa-solid fa-video"></i>
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                        </header>
+                        <div class="message-area" id="messageArea">
+                            <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="https://i.pravatar.cc/150?u=JulieBowman" alt="Julie Bowman">
+                                </div>
+                                <div class="message-content">
+                                    <p>Hi! I reviewed your application for the Marketing Coordinator position. Very impressive background! 🌟</p>
+                                    <span class="message-time">10:38</span>
+                                </div>
+                            </div>
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>Thank you so much! I'm really excited about this opportunity. 😊</p>
+                                    <span class="message-time">10:40</span>
+                                </div>
+                            </div>
+                             <div class="message received">
+                                <div class="message-avatar">
+                                    <img src="https://i.pravatar.cc/150?u=JulieBowman" alt="Julie Bowman">
+                                </div>
+                                <div class="message-content">
+                                    <p>Would you be available for a quick call tomorrow to discuss the role in more detail?</p>
+                                    <span class="message-time">10:41</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-input">
+                            <div class="message-input-container">
+                                <input type="text" placeholder="Type your message..." id="messageInput">
+                                <div class="message-input-actions">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <i class="fa-solid fa-image"></i>
+                                </div>
+                                <button class="send-btn" id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+
+            <!-- Enhanced Events Page -->
+            <div id="events" class="page">
+                <div class="page-header">
+                    <h1>Upcoming Events 🎉</h1>
+                    <p>Join networking events and company culture activities</p>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="right-pane">
+                        <div class="details-header">
+                            <h2>🎮 Funniche Week - Smash Karts Showdown</h2>
+                            <p>Hosted by Funniche</p>
+                        </div>
+                        <div class="details-grid">
+                            <div>
+                                <h5>DATE & TIME</h5>
+                                <p>September 20, 2025<br>6:00 PM - 9:00 PM</p>
+                            </div>
+                            <div>
+                                <h5>PRICE</h5>
+                                <p>Free<br>Snacks included!</p>
+                            </div>
+                        </div>
+                        <div class="details-section">
+                            <h3>About Funniche Week</h3>
+                            <p>Join us for an exciting week of games and activities! Connect with colleagues, compete in tournaments, and enjoy great food. This is a perfect opportunity to network and have fun!</p>
+                        </div>
+                        <button class="btn">🎮 RSVP Now</button>
+                    </div>
+                    <div class="right-pane">
+                        <div class="details-header">
+                            <h2>💼 Career Fair 2025</h2>
+                            <p>Multiple Companies</p>
+                        </div>
+                        <div class="details-grid">
+                            <div>
+                                <h5>DATE & TIME</h5>
+                                <p>October 5, 2025<br>10:00 AM - 4:00 PM</p>
+                            </div>
+                            <div>
+                                <h5>LOCATION</h5>
+                                <p>Convention Center<br>Downtown</p>
+                            </div>
+                        </div>
+                        <div class="details-section">
+                            <h3>What to Expect</h3>
+                            <ul>
+                                <li>50+ companies recruiting</li>
+                                <li>On-the-spot interviews</li>
+                                <li>Resume review sessions</li>
+                            </ul>
+                        </div>
+                        <button class="btn">🎟️ Get Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const themeToggle = document.getElementById('themeToggle');
+        const navLinks = document.querySelectorAll('.sidebar nav a');
+        const pages = document.querySelectorAll('.main-content-wrapper .page');
+        const weeklyChartContainer = document.getElementById('weeklyChart');
+
+        // --- Loading Overlay ---
+        const showLoading = () => loadingOverlay.classList.add('visible');
+        const hideLoading = () => loadingOverlay.classList.remove('visible');
+
+        showLoading();
+        window.onload = () => setTimeout(hideLoading, 500);
+        
+        // --- Sidebar Toggle ---
+        const toggleSidebar = () => {
+            sidebar.classList.toggle('expanded');
+            sidebarToggle.innerHTML = sidebar.classList.contains('expanded') ? '←' : '→';
+        };
+        sidebarToggle.addEventListener('click', toggleSidebar);
+        document.getElementById('logo').addEventListener('click', toggleSidebar);
+
+        // --- Theme Toggle (Enhanced) ---
+        const setInitialTheme = () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        };
+        setInitialTheme();
+
+        // --- Page Navigation ---
+        const switchPage = (pageId) => {
+            if (!pageId) return;
+            showLoading();
+            setTimeout(() => {
+                navLinks.forEach(navLink => navLink.classList.toggle('active', navLink.getAttribute('data-page') === pageId));
+                pages.forEach(page => page.classList.toggle('active', page.id === pageId));
+                
+                if(pageId === 'dashboard' && weeklyChartContainer.childElementCount === 0) renderWeeklyChart();
+                if(pageId === 'home' && postCounter === 0) loadMorePosts();
+
+                const activePage = document.getElementById(pageId);
+                const listPane = activePage.querySelector('.list-pane');
+                if (listPane) {
+                    const firstCard = listPane.querySelector('.card');
+                    if (firstCard) firstCard.click();
+                }
+                
+                hideLoading();
+            }, 300);
+        };
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchPage(link.getAttribute('data-page'));
+            });
+        });
+
+        // --- Dynamic Content Pane for Jobs and Workshops ---
+        document.querySelectorAll('.list-pane').forEach(listPane => {
+            const cards = listPane.querySelectorAll('.card');
+            const detailPane = listPane.closest('.split-view').querySelector('.detail-pane');
+            const actionButton = detailPane?.querySelector('.btn');
+
+            if (cards.length > 0 && detailPane && actionButton) {
+                 cards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        cards.forEach(c => c.classList.remove('active-card'));
+                        card.classList.add('active-card');
+
+                        const data = card.dataset;
+                        
+                        detailPane.style.opacity = '0.7';
+                        setTimeout(() => {
+                            detailPane.querySelector('#detail-title').textContent = data.title;
+                            detailPane.querySelector('#detail-company').textContent = data.company;
+                            detailPane.querySelector('#detail-rate').textContent = data.rate;
+                            detailPane.querySelector('#detail-date').textContent = data.date;
+                            
+                            const respList = detailPane.querySelector('#detail-responsibilities');
+                            if (respList) respList.innerHTML = data.responsibilities.split('|').map(item => `<li>${item}</li>`).join('');
+                            
+                            const reqList = detailPane.querySelector('#detail-requirements');
+                            if (reqList) reqList.innerHTML = data.requirements.split('|').map(item => `<li>${item}</li>`).join('');
+                            
+                            actionButton.disabled = false;
+                            detailPane.style.opacity = '1';
+                        }, 150);
+                    });
+                });
+            }
+        });
+
+        // --- Tab Functionality ---
+        document.querySelectorAll('.tabs').forEach(tabsContainer => {
+            tabsContainer.addEventListener('click', (e) => {
+                if (!e.target.matches('.tab-link')) return;
+
+                const tab = e.target;
+                const targetSelector = tab.dataset.tab;
+                const target = tabsContainer.parentElement.querySelector(targetSelector);
+
+                tabsContainer.querySelectorAll('.tab-link').forEach(link => link.classList.remove('active'));
+                tab.classList.add('active');
+                
+                tabsContainer.parentElement.querySelectorAll('.tab-content').forEach(content => {
+                     content.classList.remove('active');
+                });
+                if (target) target.classList.add('active');
+            });
+        });
+
+        // --- Chat Functionality ---
+        const sendMessage = () => {
+            const input = document.getElementById('messageInput');
+            const messageArea = document.getElementById('messageArea');
+            const typingIndicator = document.getElementById('typing-indicator');
+            if (!input || !input.value.trim()) return;
+            
+            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message sent';
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    <p>${input.value.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+                    <span class="message-time">${time}</span>
+                </div>
+            `;
+            messageArea.appendChild(messageDiv);
+            input.value = '';
+            messageArea.scrollTop = messageArea.scrollHeight;
+            
+            // Simulate response
+            setTimeout(() => {
+                if(typingIndicator) typingIndicator.classList.add('visible');
+            }, 800);
+            
+            setTimeout(() => {
+                const responseTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                const responseDiv = document.createElement('div');
+                responseDiv.className = 'message received';
+                responseDiv.innerHTML = `
+                     <div class="message-avatar">
+                        <img src="https://i.pravatar.cc/150?u=JulieBowman" alt="Julie Bowman">
+                    </div>
+                    <div class="message-content">
+                        <p>Thanks for your message! How about 2:00 PM? I'll send you the meeting link. 📅</p>
+                        <span class="message-time">${responseTime}</span>
+                    </div>
+                `;
+                if(typingIndicator) typingIndicator.classList.remove('visible');
+                messageArea.appendChild(responseDiv);
+                messageArea.scrollTop = messageArea.scrollHeight;
+            }, 2500);
+        };
+        document.getElementById('sendBtn')?.addEventListener('click', sendMessage);
+        document.getElementById('messageInput')?.addEventListener('keypress', e => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // --- Dashboard Chart ---
+        const renderWeeklyChart = () => {
+            if (!weeklyChartContainer) return;
+            weeklyChartContainer.innerHTML = ''; // Clear previous chart
+            const data = [ { day: 'Mon', value: 22 }, { day: 'Tue', value: 45 }, { day: 'Wed', value: 30 }, { day: 'Thu', value: 60 }, { day: 'Fri', value: 85 }, { day: 'Sat', value: 50 }, { day: 'Sun', value: 15 } ];
+            const maxVal = Math.max(...data.map(d => d.value));
+
+            data.forEach((d, i) => {
+                const bar = document.createElement('div');
+                bar.className = 'chart-bar';
+                bar.style.cssText = `width: 10%; left: ${i * 14 + 2}%; height: 0%;`;
+                bar.innerHTML = `<div class="chart-value">${d.value}</div><div class="chart-label">${d.day}</div>`;
+                weeklyChartContainer.appendChild(bar);
+                setTimeout(() => bar.style.height = `${(d.value / maxVal) * 100}%`, 100 * i);
+            });
+        };
+        
+        // --- Post Feed Infinite Scroll Logic ---
+        const postFeedContent = document.getElementById('post-feed-content');
+        const loader = document.getElementById('feed-loader');
+        let isLoading = false;
+        let postCounter = 0;
+
+        const loadMorePosts = async () => {
+            if (isLoading) return;
+            isLoading = true;
+            if(loader) loader.style.display = 'block';
+
+            try {
+                const posts = await api.getPosts(postCounter, 5);
+                if (posts.length === 0) {
+                    if(loader) loader.style.display = 'none';
+                    isLoading = false;
+                    return;
+                }
+
+                posts.forEach(post => {
+                    const postElement = createPostElement(post);
+                    postFeedContent.appendChild(postElement);
+                    postCounter++;
+                });
+
+                // Add event listeners for post actions
+                addPostActionListeners();
+                
+            } catch (error) {
+                console.error('Error loading posts:', error);
+            } finally {
+                if(loader) loader.style.display = 'none';
+                isLoading = false;
+            }
+        };
+
+        if (document.getElementById('home')?.classList.contains('active')) loadMorePosts();
+
+        window.addEventListener('scroll', () => {
+            if (document.getElementById('home')?.classList.contains('active') && postFeedContent) {
+                const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+                if (clientHeight + scrollTop >= scrollHeight - 100) loadMorePosts();
+            }
+        });
+
+        // --- Loading States for Buttons ---
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const originalHTML = this.innerHTML;
+                this.innerHTML = '<span class="loading loading-spinner"></span>';
+                this.disabled = true;
+                setTimeout(() => {
+                    this.innerHTML = originalHTML;
+                    // Re-enable button only if it doesn't control page navigation
+                    const parentPane = this.closest('.detail-pane');
+                    if (!parentPane) {
+                         this.disabled = false;
+                    }
+                }, 2000);
+            });
+        });
+        
+        // --- API Configuration ---
+        const API_BASE_URL = 'http://localhost:8002';
+        
+        // API Functions
+        const api = {
+            async createPost(postData) {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/posts/`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(postData)
+                    });
+                    if (!response.ok) throw new Error('Failed to create post');
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error creating post:', error);
+                    throw error;
+                }
+            },
+
+            async getPosts(skip = 0, limit = 10) {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/posts/?skip=${skip}&limit=${limit}`);
+                    if (!response.ok) throw new Error('Failed to fetch posts');
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error fetching posts:', error);
+                    throw error;
+                }
+            },
+
+            async likePost(postId) {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/posts/${postId}/like`, {
+                        method: 'PUT'
+                    });
+                    if (!response.ok) throw new Error('Failed to like post');
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error liking post:', error);
+                    throw error;
+                }
+            },
+
+            async commentPost(postId) {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/posts/${postId}/comment`, {
+                        method: 'PUT'
+                    });
+                    if (!response.ok) throw new Error('Failed to comment on post');
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error commenting on post:', error);
+                    throw error;
+                }
+            },
+
+            async repostPost(postId) {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/posts/${postId}/repost`, {
+                        method: 'PUT'
+                    });
+                    if (!response.ok) throw new Error('Failed to repost');
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error reposting:', error);
+                    throw error;
+                }
+            },
+
+            async deletePost(postId) {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/posts/${postId}`, {
+                        method: 'DELETE'
+                    });
+                    if (!response.ok) throw new Error('Failed to delete post');
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error deleting post:', error);
+                    throw error;
+                }
+            }
+        };
+
+        // Helper function to format time
+        const formatTime = (dateString) => {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffInHours = (now - date) / (1000 * 60 * 60);
+            
+            if (diffInHours < 1) return 'Just now';
+            if (diffInHours < 24) return `${Math.floor(diffInHours)}h ago`;
+            if (diffInHours < 168) return `${Math.floor(diffInHours / 24)}d ago`;
+            return `${Math.floor(diffInHours / 168)}w ago`;
+        };
+
+        // Create post element
+        const createPostElement = (post) => {
+            const postElement = document.createElement('div');
+            postElement.className = 'post-card';
+            postElement.dataset.postId = post.id;
+            
+            const postImageHTML = post.image_url ? `<img src="${post.image_url}" alt="Post image" onerror="this.style.display='none'">` : '';
+            
+            postElement.innerHTML = `
+                <div class="post-header">
+                    <img src="https://i.pravatar.cc/150?u=${post.author_name.replace(/\s/g,'')}" alt="User Avatar">
+                    <div class="post-header-info">
+                        <h4>${post.author_name}</h4>
+                        <p>${post.author_title} • ${formatTime(post.created_at)}</p>
+                    </div>
+                    <button class="delete-post-btn" title="Delete Post" style="margin-left:auto; background:none; border:none; color:#f44336; font-size:18px; cursor:pointer;" data-post-id="${post.id}"><i class="fa fa-trash"></i></button>
+                </div>
+                <div class="post-body">
+                    <p>${post.content.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+                    ${postImageHTML}
+                </div>
+                <div class="post-actions">
+                    <div class="post-action like-btn" data-post-id="${post.id}">
+                        <i class="fa-regular fa-thumbs-up"></i>&nbsp;<span>Like</span>
+                        <span class="like-count" style="margin-left: 5px; color: var(--text-secondary);">${post.likes}</span>
+                    </div>
+                    <div class="post-action comment-btn" data-post-id="${post.id}">
+                        <i class="fa-regular fa-comment-dots"></i>&nbsp;<span>Comment</span>
+                        <span class="comment-count" style="margin-left: 5px; color: var(--text-secondary);">${post.comments}</span>
+                    </div>
+                    <div class="post-action repost-btn" data-post-id="${post.id}">
+                        <i class="fa-solid fa-retweet"></i>&nbsp;<span>Repost</span>
+                        <span class="repost-count" style="margin-left: 5px; color: var(--text-secondary);">${post.reposts}</span>
+                    </div>
+                    <div class="post-action">
+                        <i class="fa-solid fa-paper-plane"></i>&nbsp;<span>Send</span>
+                    </div>
+                </div>
+            `;
+            
+            return postElement;
+        };
+
+        // Add event listeners for post actions
+        const addPostActionListeners = () => {
+            // Like functionality
+            document.querySelectorAll('.like-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    const postId = btn.dataset.postId;
+                    const likeCount = btn.querySelector('.like-count');
+                    
+                    try {
+                        const result = await api.likePost(postId);
+                        likeCount.textContent = result.likes;
+                        btn.style.color = 'var(--primary-color)';
+                    } catch (error) {
+                        console.error('Error liking post:', error);
+                    }
+                });
+            });
+
+            // Comment functionality
+            document.querySelectorAll('.comment-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    const postId = btn.dataset.postId;
+                    const commentCount = btn.querySelector('.comment-count');
+                    
+                    try {
+                        const result = await api.commentPost(postId);
+                        commentCount.textContent = result.comments;
+                    } catch (error) {
+                        console.error('Error commenting on post:', error);
+                    }
+                });
+            });
+
+            // Repost functionality
+            document.querySelectorAll('.repost-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    const postId = btn.dataset.postId;
+                    const repostCount = btn.querySelector('.repost-count');
+                    
+                    try {
+                        const result = await api.repostPost(postId);
+                        repostCount.textContent = result.reposts;
+                    } catch (error) {
+                        console.error('Error reposting:', error);
+                    }
+                });
+            });
+
+            // Delete functionality
+            document.querySelectorAll('.delete-post-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    const postId = btn.dataset.postId;
+                    if (!confirm('Are you sure you want to delete this post?')) return;
+                    try {
+                        await api.deletePost(postId);
+                        // Remove post from UI
+                        const postCard = btn.closest('.post-card');
+                        if (postCard) postCard.remove();
+                    } catch (error) {
+                        alert('Failed to delete post.');
+                        console.error('Error deleting post:', error);
+                    }
+                });
+            });
+        };
+
+        // --- Enhanced Theme Toggle ---
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        
+        // Set initial theme
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        
+        themeToggle?.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            
+            // Add animation
+            themeToggle.style.transform = 'scale(1.2) rotate(180deg)';
+            setTimeout(() => {
+                themeToggle.style.transform = 'scale(1) rotate(0deg)';
+            }, 300);
+        });
+
+        // --- Enhanced Post Modal Functionality ---
+        const postModal = document.getElementById('postModal');
+        const openPostModal = document.getElementById('openPostModal');
+        const closePostModal = document.getElementById('closePostModal');
+        const cancelPost = document.getElementById('cancelPost');
+        const postForm = document.getElementById('postForm');
+        const imageUrlInput = document.getElementById('imageUrl');
+        const imagePreview = document.getElementById('imagePreview');
+        const previewImg = document.getElementById('previewImg');
+
+        const showPostModal = () => {
+            postModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            // Focus on first input
+            setTimeout(() => {
+                document.getElementById('authorName').focus();
+            }, 100);
+        };
+
+        const hidePostModal = () => {
+            postModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            postForm.reset();
+            imagePreview.style.display = 'none';
+        };
+
+        // Image preview functionality
+        imageUrlInput?.addEventListener('input', (e) => {
+            const url = e.target.value.trim();
+            if (url && isValidImageUrl(url)) {
+                previewImg.src = url;
+                imagePreview.style.display = 'block';
+            } else {
+                imagePreview.style.display = 'none';
+            }
+        });
+
+        function isValidImageUrl(url) {
+            return /\.(jpg|jpeg|png|gif|webp)$/i.test(url) || url.startsWith('data:image/');
+        }
+
+        // Event listeners for modal
+        openPostModal?.addEventListener('click', showPostModal);
+        closePostModal?.addEventListener('click', hidePostModal);
+        cancelPost?.addEventListener('click', hidePostModal);
+
+        // Close modal when clicking outside
+        postModal?.addEventListener('click', (e) => {
+            if (e.target === postModal) {
+                hidePostModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && postModal.style.display === 'block') {
+                hidePostModal();
+            }
+        });
+
+        // Handle form submission with enhanced UX
+        postForm?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = postForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Creating...';
+            submitBtn.disabled = true;
+            
+            const formData = {
+                author_name: document.getElementById('authorName').value,
+                author_title: document.getElementById('authorTitle').value,
+                content: document.getElementById('postContent').value,
+                image_url: document.getElementById('imageUrl').value || null
+            };
+
+            try {
+                const newPost = await api.createPost(formData);
+                
+                // Add the new post to the top of the feed with animation
+                const postElement = createPostElement(newPost);
+                postElement.style.opacity = '0';
+                postElement.style.transform = 'translateY(-20px)';
+                postFeedContent.insertBefore(postElement, postFeedContent.firstChild);
+                
+                // Animate the new post
+                setTimeout(() => {
+                    postElement.style.transition = 'all 0.3s ease';
+                    postElement.style.opacity = '1';
+                    postElement.style.transform = 'translateY(0)';
+                }, 100);
+                
+                // Add event listeners for the new post
+                addPostActionListeners();
+                
+                // Show success message
+                showNotification('Post created successfully!', 'success');
+                hidePostModal();
+                
+            } catch (error) {
+                console.error('Error creating post:', error);
+                showNotification('Failed to create post. Please try again.', 'error');
+            } finally {
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 8px;
+                color: white;
+                font-weight: 500;
+                z-index: 10000;
+                transform: translateX(100%);
+                transition: all 0.3s ease;
+                max-width: 300px;
+            `;
+            
+            const colors = {
+                success: '#4caf50',
+                error: '#f44336',
+                info: '#2196f3'
+            };
+            
+            notification.style.background = colors[type] || colors.info;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // --- Initial setup ---
+        const firstPage = document.querySelector('.page.active');
+        if (firstPage) {
+            const listPane = firstPage.querySelector('.list-pane');
+            if (listPane?.querySelector('.card')) {
+                setTimeout(() => listPane.querySelector('.card').click(), 500);
+            }
+        }
+    });
+    </script>
+</body>
+</html>

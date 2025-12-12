@@ -1,0 +1,14 @@
+{
+  "name": "grow-iq",
+  "version": "1.0.0",
+  "description": "GRow-IQ Application",
+  "private": true,
+  "scripts": {
+    "build": "npm run build --prefix fronted",
+    "dev": "npm run dev --prefix fronted",
+    "start": "npm run start --prefix fronted",
+    "check": "npm run check --prefix fronted",
+    "db:push": "npm run db:push --prefix fronted"
+  }
+}
+

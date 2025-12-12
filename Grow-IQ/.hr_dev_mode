@@ -1,0 +1,11 @@
+# Development Mode - HR Access Override
+# This file enables development mode where HR access is relaxed for testing
+
+DEV_MODE=True
+ALLOW_HR_ACCESS_OVERRIDE=True
+RELAX_HR_EMAIL_REQUIREMENTS=True
+
+# In development mode:
+# - Users with any email can access HR features
+# - User type restrictions are relaxed
+# - Verification requirements are bypassed

@@ -1,0 +1,121 @@
+# Glow-IQ Production Requirements
+# ================================
+
+# Core FastAPI and ASGI server
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+gunicorn>=21.2.0
+
+# Database and ORM
+sqlalchemy>=2.0.42
+alembic>=1.13.0
+psycopg2-binary>=2.9.0  # PostgreSQL driver
+asyncpg>=0.29.0  # Async PostgreSQL driver
+sqlalchemy-utils>=0.41.0
+sqlalchemy-json>=0.1.0
+
+# Authentication and security
+python-multipart>=0.0.6
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+werkzeug>=3.0.0
+cryptography>=41.0.0
+bcrypt>=4.0.0
+argon2-cffi>=21.3.0
+itsdangerous>=2.1.0
+secure>=0.3.0
+
+# Template engine
+jinja2>=3.1.2
+
+# File handling and uploads
+aiofiles>=23.2.1
+pillow>=10.0.0
+python-magic>=0.4.24
+python-magic-bin>=0.4.14; sys_platform == "win32"
+
+# Data validation and serialization
+email-validator>=2.2.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+pydantic[email]>=2.0.0
+orjson>=3.9.0
+validators>=0.22.0
+
+# HTTP client and requests
+requests>=2.31.0
+httpx>=0.25.0
+
+# Utilities
+python-dateutil>=2.8.2
+pytz>=2023.3
+python-dotenv>=1.0.0
+python-slugify>=8.0.0
+click>=8.1.0
+rich>=13.6.0
+typer>=0.9.0
+
+# Logging and Monitoring
+structlog>=23.1.0
+prometheus-client>=0.17.0
+prometheus-fastapi-instrumentator>=6.0.0
+sentry-sdk[fastapi]>=1.32.0
+opentelemetry-api>=1.20.0
+opentelemetry-sdk>=1.20.0
+opentelemetry-instrumentation-fastapi>=0.41b0
+python-json-logger>=2.0.0
+
+# Caching and Workers
+redis>=5.0.0
+aioredis>=2.0.0
+diskcache>=5.6.0
+celery>=5.3.0
+apscheduler>=3.10.0
+
+# AI/ML and Speech Processing
+scikit-learn>=1.3.0
+numpy>=1.24.0
+scipy>=1.10.0
+speechrecognition>=3.10.0
+pyaudio>=0.2.11
+pydub>=0.25.1
+google-generativeai>=0.3.0
+pyttsx3>=2.90
+keyboard>=0.13.5
+
+# Image and Document Processing
+opencv-python>=4.8.0
+PyPDF2>=3.0.0
+python-docx>=0.8.11
+openpyxl>=3.1.0
+
+# Performance
+uvloop>=0.19.0; sys_platform != "win32"
+httptools>=0.6.0
+psutil>=5.9.0
+py-spy>=0.3.14
+memory-profiler>=0.61.0
+
+# FastAPI Extensions
+fastapi-cors>=0.0.6
+fastapi-request-id>=0.1.0
+slowapi>=0.1.9
+fastapi-health>=0.1.0
+fastapi-mail>=1.4.0
+fastapi-limiter>=0.1.0
+fastapi-users>=12.0.0
+fastapi-versioning>=0.10.0
+fastapi-swagger-ui>=0.1.0
+
+# WebSocket
+websockets>=11.0.0
+
+# Azure Deployment (Optional but recommended for Azure)
+azure-identity>=1.15.0
+azure-keyvault-secrets>=4.7.0
+azure-storage-blob>=12.19.0
+
+# Development/Testing (Keep in production for now if needed, or move to dev requirements)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0

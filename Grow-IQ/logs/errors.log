@@ -1,0 +1,836 @@
+2025-09-10 15:50:37 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 18:34:29 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 18:34:29 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 18:45:06 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 18:55:42 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 18:58:32 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:00:05 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:14:42 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:16:12 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:20:41 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:28:23 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:32:06 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:32:06 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-10 19:41:14 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:41:14 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-10 19:46:20 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:52:58 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-10 19:52:58 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 18:47:30 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 18:47:30 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 18:50:23 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 18:50:23 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 18:51:18 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 18:51:18 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 18:53:32 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 18:53:32 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 18:53:59 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 18:53:59 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 18:57:31 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 18:57:31 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 18:58:54 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 18:58:54 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:01:08 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:01:08 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:06:09 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:06:09 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:09:36 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:09:37 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:10:06 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:10:06 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:11:05 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:11:05 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:11:08 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:11:08 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:12:29 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:12:29 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:14:50 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:14:50 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:15:01 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:15:01 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:15:35 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:15:35 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:16:19 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:16:19 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:16:52 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:16:52 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:17:06 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:17:06 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:19:37 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:19:37 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:19:59 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:19:59 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:20:03 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:20:03 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:21:11 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:21:11 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:23:01 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:23:01 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:23:10 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:23:10 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:24:32 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:24:32 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:24:56 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:24:56 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:25:38 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:25:38 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:26:55 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:26:55 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:27:03 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:27:03 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:29:38 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:29:38 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:31:21 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:31:21 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:31:36 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:31:36 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:32:37 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:32:37 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:35:22 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:35:22 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:36:22 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:36:22 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:38:55 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:38:55 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:40:36 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:40:36 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:43:53 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:43:53 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:44:28 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:44:28 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:47:03 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:47:03 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:48:32 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:48:32 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:49:10 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:49:10 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:51:32 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:51:32 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:52:09 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:52:09 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 19:57:25 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 19:57:25 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 20:02:19 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 20:06:36 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 20:10:52 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:12:39 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:12:39 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:14:56 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:14:56 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:15:51 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:15:51 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:17:27 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:17:27 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:17:38 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:17:38 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:18:56 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:18:56 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:29:44 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:29:44 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:29:48 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:29:48 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:30:44 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:30:44 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:31:20 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:31:20 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:32:25 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:32:25 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:32:31 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:32:31 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:33:02 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:33:02 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:34:15 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:34:15 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:34:50 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:34:50 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:35:15 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:35:15 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:35:23 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:35:23 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 21:36:14 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:38:10 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 21:38:10 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:32:43 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:32:43 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:35:35 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:35:35 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:38:15 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:38:15 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:38:30 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:38:30 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:40:43 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:40:43 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:41:29 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:41:29 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:46:28 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:46:28 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:47:53 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:47:53 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:47:59 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:47:59 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:48:57 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:48:57 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:49:20 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:49:20 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:52:10 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:52:10 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:54:13 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:54:13 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:54:14 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:54:14 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:54:15 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:54:15 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:54:15 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:54:15 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:54:16 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:54:16 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:54:20 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:54:20 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:54:58 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:54:58 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:58:37 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:58:37 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 22:59:04 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 22:59:04 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-11 23:01:28 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-11 23:01:28 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:22:16 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:22:16 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:24:20 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:24:20 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:24:59 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:24:59 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:25:25 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:25:25 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:29:51 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:29:51 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:31:04 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:31:04 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:31:53 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:31:53 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:32:45 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:32:45 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:34:19 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:34:19 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:35:32 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:35:32 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 11:38:53 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 11:38:53 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 14:02:30 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 14:02:30 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 14:02:47 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 14:02:47 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 14:06:03 - home_routes - ERROR - home_page:284 - Error fetching user applications: name 'JobApplication' is not defined
+2025-09-12 14:06:03 - home_routes - ERROR - get_analytics_data:106 - Error getting analytics data: 'Post' object has no attribute 'user'
+2025-09-12 14:06:08 - hr_routes - ERROR - hr_dashboard:228 - Error loading HR dashboard: 'base.html' not found in search path: '/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/templates'
+2025-09-12 14:06:08 - hr_routes - ERROR - hr_dashboard:229 - Error details: 'base.html' not found in search path: '/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/templates'
+2025-09-12 14:06:08 - hr_routes - ERROR - hr_dashboard:231 - Traceback: Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/hr_routes.py", line 225, in hr_dashboard
+    return templates.TemplateResponse("hr_dashboard.html", context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/starlette/templating.py", line 210, in TemplateResponse
+    return _TemplateResponse(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/starlette/templating.py", line 41, in __init__
+    content = template.render(context)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/templates/hr_dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/jinja2/loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+jinja2.exceptions.TemplateNotFound: 'base.html' not found in search path: '/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/templates'
+
+2025-09-12 19:55:22 - job_routes - ERROR - jobs_listing_page:200 - Jobs listing error: 'jobs.html' not found in search path: '/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/templates'
+2025-09-12 20:17:58 - job_routes - ERROR - jobs_listing_page:200 - Jobs listing error: 'jobs.html' not found in search path: '/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/templates'
+2025-09-12 20:25:37 - job_routes - ERROR - jobs_listing_page:200 - Jobs listing error: 'jobs.html' not found in search path: '/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/templates'
+2025-09-12 20:54:48 - job_routes - ERROR - jobs_listing_page:200 - Jobs listing error: name 'get_user_from_session' is not defined
+2025-09-12 20:54:52 - job_routes - ERROR - jobs_listing_page:200 - Jobs listing error: name 'get_user_from_session' is not defined
+2025-09-12 21:44:04 - qrowiq - ERROR - upload_resume_public:350 - Error analyzing resume: 'str' object does not support item assignment
+2025-09-12 21:44:42 - qrowiq - ERROR - upload_resume_public:355 - Error analyzing resume: 500: Error analyzing resume: 400 API Key not found. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API Key not found. Please pass a valid API key."
+]
+2025-09-12 21:46:25 - resume_tester_routes - ERROR - analyze_resume_public:680 - Error scoring resume: 'str' object does not support item assignment
+2025-09-12 21:47:22 - resume_tester_routes - ERROR - analyze_resume_public:680 - Error scoring resume: 'str' object does not support item assignment
+2025-09-12 22:11:01 - qrowiq - ERROR - upload_resume:420 - Error saving resume results to database: 'dict' object has no attribute 'id'
+2025-09-12 22:13:48 - qrowiq - ERROR - get_resume_scores:499 - Error fetching resume scores: 'dict' object has no attribute 'id'
+2025-09-12 22:23:36 - job_routes - ERROR - apply_for_job:335 - Error submitting job application: name 'get_user_from_session' is not defined
+2025-09-12 22:25:41 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('interview_scheduled', '2025-09-12 22:25:41.137263', '2025-09-12 22:25:41.137606', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:25:43 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:25:43.249028', '2025-09-12 22:25:43.249338', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:25:52 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('under_review', '2025-09-12 22:25:52.121801', '2025-09-12 22:25:52.122188', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:25:58 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('under_review', '2025-09-12 22:25:58.466207', '2025-09-12 22:25:58.466599', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:26:01 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:26:01.711566', '2025-09-12 22:26:01.711775', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:26:01 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:26:01.966127', '2025-09-12 22:26:01.966682', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:26:02 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:26:02.147994', '2025-09-12 22:26:02.148374', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:26:02 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:26:02.337659', '2025-09-12 22:26:02.337966', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:26:02 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:26:02.503357', '2025-09-12 22:26:02.503722', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:26:02 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:26:02.675751', '2025-09-12 22:26:02.676024', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:26:02 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:26:02.837634', '2025-09-12 22:26:02.837919', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:26:22 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:26:22.516840', '2025-09-12 22:26:22.517308', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:27:37 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('under_review', '2025-09-12 22:27:37.437952', '2025-09-12 22:27:37.438207', 34)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:27:43 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('interview_scheduled', '2025-09-12 22:27:43.368686', '2025-09-12 22:27:43.369014', 34)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:27:47 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:27:47.291709', '2025-09-12 22:27:47.292077', 34)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:27:53 - job_routes - ERROR - update_application_status:773 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:27:53.700460', '2025-09-12 22:27:53.700664', 34)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 22:43:57 - job_routes - ERROR - update_application_status:774 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('accepted', '2025-09-12 22:43:57.040861', '2025-09-12 22:43:57.041855', 33)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-13 10:12:24 - auth_routes - ERROR - login:133 - Login error: Invalid hash method ''.
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/auth_routes.py", line 82, in login
+    if not check_password_hash(user.password_hash, password):
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/security.py", line 131, in check_password_hash
+    return hmac.compare_digest(_hash_internal(method, salt, password)[0], hashval)
+                               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/werkzeug/security.py", line 70, in _hash_internal
+    raise ValueError(f"Invalid hash method '{method}'.")
+ValueError: Invalid hash method ''.
+2025-09-13 12:30:29 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:30:29 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:30:30 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:30:30 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:30:31 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:30:31 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:30:31 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:30:31 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:05 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:05 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:15 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:15 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:15 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:15 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:16 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:16 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:16 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:16 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:16 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:16 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:17 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:17 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:17 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:17 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:18 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:18 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:18 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:34:18 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:34:44 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:34:44 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:35:26 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:35:26 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:35:29 - root - ERROR - send_connection_request:469 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:35:29 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:37:11 - root - ERROR - send_connection_request:482 - Error sending connection request: 401: Authentication required
+2025-09-13 12:37:11 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:38:52 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 12:38:52 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 12:39:33 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 12:39:35 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 12:39:35 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 12:45:53 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:45:53 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:45:54 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:45:54 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:45:54 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:45:54 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:45:59 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:45:59 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:46:01 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:46:01 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:46:01 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:46:01 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:46:01 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:46:01 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:48:33 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 12:48:35 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 12:50:19 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Connection request already sent
+2025-09-13 12:50:19 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:50:30 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:50:30 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:52:36 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:52:36 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:56:10 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:56:10 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:56:28 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:56:28 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:56:29 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:56:29 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:56:29 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:56:29 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:56:30 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:56:30 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:56:31 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:56:31 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:56:31 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:56:31 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:56:31 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:56:31 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 12:56:33 - root - ERROR - send_connection_request:499 - Error sending connection request: 400: Already connected with this user
+2025-09-13 12:56:33 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 13:01:16 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:01:16 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:01:17 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:01:17 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:01:20 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:01:20 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:01:20 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:01:20 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:01:27 - root - ERROR - send_connection_request:499 - Error sending connection request: 401: Invalid session token
+2025-09-13 13:01:27 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 13:02:18 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:02:18 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:16:41 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:16:41 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:17:59 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:17:59 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:31:51 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 13:36:55 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:36:55 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Invalid session token
+2025-09-13 13:49:48 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 13:50:13 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 13:50:13 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 13:50:13 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 13:52:58 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:21:37 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:21:42 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:21:43 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:22:20 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:23:37 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:23:40 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:24:00 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:24:04 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:25:25 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:25:30 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:29:54 - database - ERROR - get_db:46 - Unexpected error in database session: 401: Authentication required
+2025-09-13 15:30:01 - root - ERROR - get_connections:111 - Error getting connections: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:30:01 - root - ERROR - get_pending_requests:132 - Error getting pending requests: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:30:01 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting connections
+2025-09-13 15:30:01 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting pending requests
+2025-09-13 15:30:06 - database - ERROR - get_db:42 - Database session error: (sqlite3.OperationalError) no such column: messages.updated_at
+[SQL: SELECT messages.id AS messages_id, messages.sender_id AS messages_sender_id, messages.receiver_id AS messages_receiver_id, messages.content AS messages_content, messages.is_read AS messages_is_read, messages.created_at AS messages_created_at, messages.updated_at AS messages_updated_at 
+FROM messages 
+WHERE messages.sender_id = ? OR messages.receiver_id = ? ORDER BY messages.created_at DESC]
+[parameters: (1, 1)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-13 15:30:10 - root - ERROR - get_connections:111 - Error getting connections: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:30:10 - root - ERROR - get_pending_requests:132 - Error getting pending requests: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:30:10 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting connections
+2025-09-13 15:30:10 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting pending requests
+2025-09-13 15:30:22 - database - ERROR - get_db:46 - Unexpected error in database session: '>' not supported between instances of 'NoneType' and 'NoneType'
+2025-09-13 15:30:31 - database - ERROR - get_db:46 - Unexpected error in database session: 'NoneType' object has no attribute 'isoformat'
+2025-09-13 15:30:42 - database - ERROR - get_db:46 - Unexpected error in database session: '<' not supported between instances of 'NoneType' and 'NoneType'
+2025-09-13 15:30:53 - database - ERROR - get_db:46 - Unexpected error in database session: 403: You can only message your connections
+2025-09-13 15:31:29 - root - ERROR - get_connections:111 - Error getting connections: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:31:29 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting connections
+2025-09-13 15:31:29 - root - ERROR - get_pending_requests:132 - Error getting pending requests: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:31:29 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting pending requests
+2025-09-13 15:31:31 - root - ERROR - get_connections:111 - Error getting connections: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:31:31 - root - ERROR - get_pending_requests:132 - Error getting pending requests: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:31:31 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting connections
+2025-09-13 15:31:31 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting pending requests
+2025-09-13 15:31:53 - root - ERROR - get_connections:111 - Error getting connections: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:31:53 - root - ERROR - get_pending_requests:132 - Error getting pending requests: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:31:53 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting connections
+2025-09-13 15:31:53 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting pending requests
+2025-09-13 15:32:15 - root - ERROR - send_connection_request:499 - Error sending connection request: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:32:15 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error sending connection request
+2025-09-13 15:33:08 - root - ERROR - get_connections:111 - Error getting connections: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 15:33:08 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Error getting connections
+2025-09-13 15:52:43 - auth_routes - ERROR - get_profile:370 - Profile retrieval error: (sqlite3.InterfaceError) bad parameter or other API misuse
+[SQL: SELECT sessions.id AS sessions_id, sessions.token AS sessions_token, sessions.user_id AS sessions_user_id, sessions.created_at AS sessions_created_at, sessions.expires_at AS sessions_expires_at, sessions.is_active AS sessions_is_active 
+FROM sessions 
+WHERE sessions.token = ? AND sessions.is_active = 1 AND sessions.expires_at > ?
+ LIMIT ? OFFSET ?]
+[parameters: ('RM4Nl8d7JkOT3WtEDm9Y44d4-UwzDgOClru1GwLK0qw', '2025-09-13 15:52:43.064756', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2025-09-13 15:57:02 - qrowiq - ERROR - upload_profile_picture:802 - Error uploading profile picture: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 19:52:54 - auth_routes - ERROR - login:133 - Login error: Invalid hash method ''.
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/auth_routes.py", line 82, in login
+    if not check_password_hash(user.password_hash, password):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/werkzeug/security.py", line 131, in check_password_hash
+    return hmac.compare_digest(_hash_internal(method, salt, password)[0], hashval)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/werkzeug/security.py", line 70, in _hash_internal
+    raise ValueError(f"Invalid hash method '{method}'.")
+ValueError: Invalid hash method ''.
+2025-09-13 19:53:52 - database - ERROR - get_db:46 - Unexpected error in database session: 404: Session not found. Start a new interview.
+2025-09-13 20:00:53 - job_routes - ERROR - update_application_status:774 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('under_review', '2025-09-13 20:00:53.719383', '2025-09-13 20:00:53.721309', 81)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-13 20:03:53 - database - ERROR - get_db:46 - Unexpected error in database session: 404: Session not found. Start a new interview.
+2025-09-13 20:35:37 - admin_routes - ERROR - get_all_jobs_admin:303 - Error fetching jobs for admin: type object 'Job' has no attribute 'created_at'
+2025-09-13 20:35:37 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Failed to fetch jobs
+2025-09-13 20:36:03 - auth_routes - ERROR - login:133 - Login error: Error creating backref 'posted_jobs' on relationship 'Job.poster': property of that name exists on mapper 'Mapper[User(users)]'
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/auth_routes.py", line 67, in login
+    user = db.query(User).filter(
+           ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2955, in query
+    return self._query_cls(entities, self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 276, in __init__
+    self._set_entities(entities)
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 288, in _set_entities
+    self._raw_columns = [
+                        ^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 289, in <listcomp>
+    coercions.expect(
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/sql/coercions.py", line 388, in expect
+    insp._post_inspect
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 1338, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+                                           ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 2724, in _post_inspect
+    self._check_configure()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 2401, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 4218, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 4259, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 2418, in _post_configure_properties
+    prop.init()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/interfaces.py", line 595, in init
+    self.do_init()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/relationships.py", line 1660, in do_init
+    self._generate_backref()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/relationships.py", line 2086, in _generate_backref
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Error creating backref 'posted_jobs' on relationship 'Job.poster': property of that name exists on mapper 'Mapper[User(users)]'
+2025-09-13 20:38:53 - auth_routes - ERROR - login:133 - Login error: Error creating backref 'posted_jobs' on relationship 'Job.poster': property of that name exists on mapper 'Mapper[User(users)]'
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/auth_routes.py", line 67, in login
+    user = db.query(User).filter(
+           ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2955, in query
+    return self._query_cls(entities, self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 276, in __init__
+    self._set_entities(entities)
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 288, in _set_entities
+    self._raw_columns = [
+                        ^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 289, in <listcomp>
+    coercions.expect(
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/sql/coercions.py", line 388, in expect
+    insp._post_inspect
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 1338, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+                                           ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 2724, in _post_inspect
+    self._check_configure()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 2401, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 4218, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 4259, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 2418, in _post_configure_properties
+    prop.init()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/interfaces.py", line 595, in init
+    self.do_init()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/relationships.py", line 1660, in do_init
+    self._generate_backref()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/relationships.py", line 2086, in _generate_backref
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Error creating backref 'posted_jobs' on relationship 'Job.poster': property of that name exists on mapper 'Mapper[User(users)]'
+2025-09-13 20:39:04 - auth_routes - ERROR - login:133 - Login error: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Job(jobs)]'. Original exception was: Error creating backref 'posted_jobs' on relationship 'Job.poster': property of that name exists on mapper 'Mapper[User(users)]'
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/auth_routes.py", line 67, in login
+    user = db.query(User).filter(
+           ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2955, in query
+    return self._query_cls(entities, self, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 276, in __init__
+    self._set_entities(entities)
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 288, in _set_entities
+    self._raw_columns = [
+                        ^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 289, in <listcomp>
+    coercions.expect(
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/sql/coercions.py", line 388, in expect
+    insp._post_inspect
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 1338, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+                                           ^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 2724, in _post_inspect
+    self._check_configure()
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 2401, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 4218, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/opt/anaconda3/envs/intre/lib/python3.11/site-packages/sqlalchemy/orm/mapper.py", line 4255, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Job(jobs)]'. Original exception was: Error creating backref 'posted_jobs' on relationship 'Job.poster': property of that name exists on mapper 'Mapper[User(users)]'
+2025-09-13 20:39:27 - admin_routes - ERROR - get_all_jobs_admin:303 - Error fetching jobs for admin: type object 'Job' has no attribute 'created_at'
+2025-09-13 20:39:27 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Failed to fetch jobs
+2025-09-13 20:39:31 - admin_routes - ERROR - get_all_jobs_admin:303 - Error fetching jobs for admin: type object 'Job' has no attribute 'created_at'
+2025-09-13 20:39:31 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Failed to fetch jobs
+2025-09-13 20:39:41 - admin_routes - ERROR - get_all_jobs_admin:303 - Error fetching jobs for admin: type object 'Job' has no attribute 'created_at'
+2025-09-13 20:39:41 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Failed to fetch jobs
+2025-09-13 20:40:00 - admin_routes - ERROR - get_all_jobs_admin:303 - Error fetching jobs for admin: type object 'Job' has no attribute 'created_at'
+2025-09-13 20:40:00 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Failed to fetch jobs
+2025-09-13 20:40:13 - admin_routes - ERROR - get_all_jobs_admin:303 - Error fetching jobs for admin: type object 'Job' has no attribute 'created_at'
+2025-09-13 20:40:13 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Failed to fetch jobs
+2025-09-13 20:40:25 - admin_routes - ERROR - get_all_jobs_admin:303 - Error fetching jobs for admin: type object 'Job' has no attribute 'created_at'
+2025-09-13 20:40:25 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Failed to fetch jobs
+2025-09-13 21:00:23 - job_routes - ERROR - jobs_listing_page:200 - Jobs listing error: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-13 21:06:56 - database - ERROR - get_db:46 - Unexpected error in database session: 400: End date must be after start date
+2025-09-13 21:22:50 - database - ERROR - get_db:46 - Unexpected error in database session: 400: End date must be after start date
+2025-09-13 21:22:58 - database - ERROR - get_db:46 - Unexpected error in database session: 400: End date must be after start date
+2025-09-13 21:23:15 - database - ERROR - get_db:46 - Unexpected error in database session: 400: End date must be after start date
+2025-09-16 20:14:31 - database - ERROR - get_db:46 - Unexpected error in database session: 400: End date must be after start date
+2025-09-16 20:14:35 - database - ERROR - get_db:46 - Unexpected error in database session: 400: End date must be after start date
+2025-09-16 20:24:04 - database - ERROR - get_db:46 - Unexpected error in database session: 400: Already registered for this workshop
+2025-09-17 21:26:42 - job_routes - ERROR - jobs_listing_page:200 - Jobs listing error: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-17 21:35:07 - job_routes - ERROR - jobs_listing_page:213 - Jobs listing error: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-20 22:19:55 - mockinterview_routes - ERROR - send_message:662 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-20 22:19:55 - qrowiq - ERROR - process_auto_speech:1467 - Failed to submit to interview: 500: Failed to process message
+2025-09-22 20:15:05 - job_routes - ERROR - jobs_listing_page:214 - Jobs listing error: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-22 20:15:20 - job_routes - ERROR - jobs_listing_page:214 - Jobs listing error: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-22 20:19:46 - job_routes - ERROR - jobs_listing_page:227 - Jobs listing error: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-23 11:00:55 - mockinterview_routes - ERROR - send_message:662 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-23 11:00:55 - qrowiq - ERROR - process_auto_speech:1467 - Failed to submit to interview: 500: Failed to process message
+2025-09-23 19:55:43 - job_routes - ERROR - update_application_status:941 - Error updating application status: (sqlite3.IntegrityError) CHECK constraint failed: valid_application_status
+[SQL: UPDATE job_applications SET status=?, reviewed_at=?, updated_at=? WHERE job_applications.id = ?]
+[parameters: ('under_review', '2025-09-23 19:55:43.278463', '2025-09-23 19:55:43.279318', 81)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-29 19:05:06 - qrowiq - ERROR - get_mock_scores:708 - Error fetching mock interview scores: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-29 19:05:45 - mockinterview_routes - ERROR - send_message:662 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-29 19:05:45 - qrowiq - ERROR - process_auto_speech:1560 - Failed to submit to interview: 500: Failed to process message
+2025-09-29 19:06:01 - qrowiq - ERROR - get_mock_scores:708 - Error fetching mock interview scores: get_user_from_session() missing 1 required positional argument: 'db'
+2025-09-29 19:18:59 - mockinterview_routes - ERROR - send_message:701 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-29 19:18:59 - qrowiq - ERROR - process_auto_speech:1560 - Failed to submit to interview: 500: Failed to process message
+2025-09-29 19:22:02 - mockinterview_routes - ERROR - send_message:701 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-29 19:22:02 - qrowiq - ERROR - process_auto_speech:1560 - Failed to submit to interview: 500: Failed to process message
+2025-09-29 19:22:32 - mockinterview_routes - ERROR - send_message:701 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-29 19:22:32 - qrowiq - ERROR - process_auto_speech:1560 - Failed to submit to interview: 500: Failed to process message
+2025-09-29 19:23:06 - mockinterview_routes - ERROR - send_message:701 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-29 19:23:06 - qrowiq - ERROR - process_auto_speech:1560 - Failed to submit to interview: 500: Failed to process message
+2025-09-29 19:24:16 - mockinterview_routes - ERROR - send_message:701 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-29 19:24:16 - qrowiq - ERROR - process_auto_speech:1560 - Failed to submit to interview: 500: Failed to process message
+2025-09-29 19:24:38 - mockinterview_routes - ERROR - send_message:701 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-29 19:24:38 - qrowiq - ERROR - process_auto_speech:1560 - Failed to submit to interview: 500: Failed to process message
+2025-09-29 19:25:26 - mockinterview_routes - ERROR - send_message:701 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-29 19:25:26 - qrowiq - ERROR - process_auto_speech:1560 - Failed to submit to interview: 500: Failed to process message
+2025-09-29 19:26:38 - mockinterview_routes - ERROR - send_message:701 - Error processing message: 'dict' object has no attribute 'session_id'
+2025-09-29 19:26:38 - qrowiq - ERROR - process_auto_speech:1560 - Failed to submit to interview: 500: Failed to process message
+2025-10-04 23:44:22 - job_routes - ERROR - jobs_listing_page:227 - Jobs listing error: get_user_from_session() missing 1 required positional argument: 'db'
+2025-10-04 23:44:41 - job_routes - ERROR - jobs_listing_page:227 - Jobs listing error: 'jobs.html' not found in search path: '/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/Grow-IQ-2025-/templates'
+2025-10-05 00:23:00 - database - ERROR - get_db:46 - Unexpected error in database session: 403: Forbidden
+2025-10-05 00:23:08 - database - ERROR - get_db:46 - Unexpected error in database session: 403: Forbidden
+2025-10-05 00:23:18 - database - ERROR - get_db:46 - Unexpected error in database session: 403: Forbidden
+2025-10-05 00:44:07 - mockinterview_routes - ERROR - end_interview_manually:562 - Error ending interview: 'transcript'
+2025-10-05 00:44:07 - database - ERROR - get_db:46 - Unexpected error in database session: 500: Failed to end interview
+2025-10-29 09:58:57 - qrowiq - ERROR - upload_profile_picture:1002 - Error uploading profile picture: get_user_from_session() missing 1 required positional argument: 'db'
+2025-10-29 10:46:31 - job_routes - ERROR - apply_for_job:502 - Error submitting job application: 400: Missing boundary in multipart.
+2025-11-01 20:04:11 - qrowiq - ERROR - upload_profile_picture:1002 - Error uploading profile picture: get_user_from_session() missing 1 required positional argument: 'db'
+2025-11-01 20:04:16 - qrowiq - ERROR - upload_profile_picture:1002 - Error uploading profile picture: get_user_from_session() missing 1 required positional argument: 'db'
+2025-11-01 20:08:26 - qrowiq - ERROR - upload_profile_picture:1027 - Error uploading profile picture: get_user_from_session() missing 1 required positional argument: 'db'
+2025-11-01 20:14:32 - database - ERROR - get_db:46 - Unexpected error in database session: 
+2025-11-19 14:36:18 - auth_routes - ERROR - login:199 - Login error: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Job(jobs)]'. Original exception was: Error creating backref 'job' on relationship 'Job.applications': property of that name exists on mapper 'Mapper[JobApplication(job_applications)]'
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/Grow-IQ-2025-/auth_routes.py", line 79, in login
+    user = db.query(User).filter(
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/session.py", line 2941, in query
+    return self._query_cls(entities, self, **kwargs)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/query.py", line 276, in __init__
+    self._set_entities(entities)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/query.py", line 288, in _set_entities
+    self._raw_columns = [
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/query.py", line 289, in <listcomp>
+    coercions.expect(
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/sql/coercions.py", line 388, in expect
+    insp._post_inspect
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/util/langhelpers.py", line 1338, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 2724, in _post_inspect
+    self._check_configure()
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 2401, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 4218, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 4255, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Job(jobs)]'. Original exception was: Error creating backref 'job' on relationship 'Job.applications': property of that name exists on mapper 'Mapper[JobApplication(job_applications)]'
+2025-11-19 14:36:26 - auth_routes - ERROR - login:199 - Login error: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Job(jobs)]'. Original exception was: Error creating backref 'job' on relationship 'Job.applications': property of that name exists on mapper 'Mapper[JobApplication(job_applications)]'
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/Grow-IQ-2025-/auth_routes.py", line 79, in login
+    user = db.query(User).filter(
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/session.py", line 2941, in query
+    return self._query_cls(entities, self, **kwargs)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/query.py", line 276, in __init__
+    self._set_entities(entities)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/query.py", line 288, in _set_entities
+    self._raw_columns = [
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/query.py", line 289, in <listcomp>
+    coercions.expect(
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/sql/coercions.py", line 388, in expect
+    insp._post_inspect
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/util/langhelpers.py", line 1338, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 2724, in _post_inspect
+    self._check_configure()
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 2401, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 4218, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 4255, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Job(jobs)]'. Original exception was: Error creating backref 'job' on relationship 'Job.applications': property of that name exists on mapper 'Mapper[JobApplication(job_applications)]'
+2025-11-19 14:38:15 - auth_routes - ERROR - login:199 - Login error: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Job(jobs)]'. Original exception was: Error creating backref 'job' on relationship 'Job.applications': property of that name exists on mapper 'Mapper[JobApplication(job_applications)]'
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/Grow-IQ-2025-/auth_routes.py", line 79, in login
+    user = db.query(User).filter(
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/session.py", line 2941, in query
+    return self._query_cls(entities, self, **kwargs)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/query.py", line 276, in __init__
+    self._set_entities(entities)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/query.py", line 288, in _set_entities
+    self._raw_columns = [
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/query.py", line 289, in <listcomp>
+    coercions.expect(
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/sql/coercions.py", line 388, in expect
+    insp._post_inspect
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/util/langhelpers.py", line 1338, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 2724, in _post_inspect
+    self._check_configure()
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 2401, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 4218, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/sqlalchemy/orm/mapper.py", line 4255, in _do_configure_registries
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'Mapper[Job(jobs)]'. Original exception was: Error creating backref 'job' on relationship 'Job.applications': property of that name exists on mapper 'Mapper[JobApplication(job_applications)]'
+2025-11-20 19:00:38 - qrowiq - ERROR - upload_resume:555 - Error analyzing resume: 500: Error analyzing resume: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-exp
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-exp
+Please retry in 21.06260093s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-exp"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash-exp"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 21
+}
+]
+2025-11-20 19:09:39 - qrowiq - ERROR - upload_resume:555 - Error analyzing resume: 500: Error analyzing resume after 3 attempts: 1 validation error for Content
+parts.1
+  Input should be a valid dictionary or object to extract fields from [type=model_attributes_type, input_value='\n        Analyze this r...rsed directly\n        ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_attributes_type
+2025-11-20 19:10:21 - qrowiq - ERROR - upload_resume:555 - Error analyzing resume: 500: Error analyzing resume after 3 attempts: 1 validation error for Content
+parts.1
+  Input should be a valid dictionary or object to extract fields from [type=model_attributes_type, input_value='\n        Analyze this r...rsed directly\n        ', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_attributes_type
+2025-11-20 21:12:45 - auth_routes - ERROR - login:199 - Login error: module 'hashlib' has no attribute 'scrypt'
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/Grow-IQ-2025-/auth_routes.py", line 94, in login
+    if not check_password_hash(user.password_hash, password):
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/werkzeug/security.py", line 131, in check_password_hash
+    return hmac.compare_digest(_hash_internal(method, salt, password)[0], hashval)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/werkzeug/security.py", line 43, in _hash_internal
+    hashlib.scrypt(
+AttributeError: module 'hashlib' has no attribute 'scrypt'
+2025-11-20 21:12:48 - auth_routes - ERROR - login:199 - Login error: module 'hashlib' has no attribute 'scrypt'
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/Grow-IQ-2025-/auth_routes.py", line 94, in login
+    if not check_password_hash(user.password_hash, password):
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/werkzeug/security.py", line 131, in check_password_hash
+    return hmac.compare_digest(_hash_internal(method, salt, password)[0], hashval)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/werkzeug/security.py", line 43, in _hash_internal
+    hashlib.scrypt(
+AttributeError: module 'hashlib' has no attribute 'scrypt'
+2025-11-20 21:12:49 - auth_routes - ERROR - login:199 - Login error: module 'hashlib' has no attribute 'scrypt'
+Traceback (most recent call last):
+  File "/Users/asmohamedarfeen/Desktop/project/Glow-IQ/Glow-IQ/Grow-IQ-2025-/auth_routes.py", line 94, in login
+    if not check_password_hash(user.password_hash, password):
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/werkzeug/security.py", line 131, in check_password_hash
+    return hmac.compare_digest(_hash_internal(method, salt, password)[0], hashval)
+  File "/Users/asmohamedarfeen/Library/Python/3.9/lib/python/site-packages/werkzeug/security.py", line 43, in _hash_internal
+    hashlib.scrypt(
+AttributeError: module 'hashlib' has no attribute 'scrypt'

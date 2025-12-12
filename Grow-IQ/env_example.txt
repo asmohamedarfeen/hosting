@@ -1,0 +1,34 @@
+# CareerConnect Environment Configuration
+# Copy this file to .env and modify the values as needed
+
+# Application Settings
+DEBUG=true
+ENVIRONMENT=development
+SECRET_KEY=your-secret-key-here
+
+# Server Settings
+HOST=0.0.0.0
+PORT=8000
+
+# Database Settings
+DATABASE_URL=sqlite:///./dashboard.db
+
+# Security Settings
+ALLOWED_HOSTS=localhost,127.0.0.1
+CORS_ORIGINS=http://localhost:3000,http://localhost:8000
+
+# API Rate Limiting
+# Increase this value if you're getting rate limit errors during development
+API_RATE_LIMIT=2000
+
+# File Upload Settings
+MAX_FILE_SIZE=16777216
+UPLOAD_FOLDER=./static/uploads
+
+# OAuth Settings (Google)
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_REDIRECT_URI=http://localhost:8000/auth/google/callback
+
+# Logging
+LOG_LEVEL=INFO

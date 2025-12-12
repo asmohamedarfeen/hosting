@@ -1,0 +1,1162 @@
+================================================================================
+                    GROW-IQ 2025 - COMPLETE PRICING GUIDE
+================================================================================
+
+Last Updated: November 2024
+Version: 2025.1.0
+
+================================================================================
+                            TABLE OF CONTENTS
+================================================================================
+
+1. Subscription Plans (User-Based Pricing)
+2. AI-Powered Features Pricing
+3. Job Management Pricing
+4. HR Dashboard & Hiring Tools Pricing
+5. Communication Features Pricing
+6. Professional Networking Features Pricing
+7. Activity Tracking & Analytics Pricing
+8. Storage & Data Pricing
+9. API Usage & Integration Pricing
+10. Enterprise & Custom Solutions Pricing
+11. Add-On Services Pricing
+12. Payment Terms & Billing Information
+
+================================================================================
+                    1. SUBSCRIPTION PLANS (USER-BASED PRICING)
+================================================================================
+
+FREE PLAN
+---------
+Monthly Cost: $0.00
+Annual Cost: $0.00
+Cost Per User: $0.00
+
+Features Included:
+- Basic profile creation
+- Limited connections (up to 50)
+- Basic job browsing (view only)
+- Limited messaging (50 messages/month)
+- Basic activity tracking
+- Community support
+
+Limitations:
+- No job applications
+- No AI features
+- No advanced analytics
+- Limited storage (100 MB)
+- Basic profile features only
+
+-------------------------------------------------------------------------------
+
+NORMAL USER PLAN
+----------------
+Monthly Cost: $9.99
+Annual Cost: $99.99 (Save $19.89 - 16% discount)
+Cost Per User: $9.99/month or $8.33/month (annual)
+
+Features Included:
+- Unlimited connections
+- Unlimited job applications
+- Basic resume testing (5 tests/month)
+- Basic mock interviews (2 sessions/month)
+- Unlimited messaging
+- Full activity tracking
+- Profile customization
+- Job alerts and recommendations
+- Standard storage (1 GB)
+- Email support
+
+Additional Costs:
+- Extra resume tests: $2.99 per test
+- Extra mock interviews: $4.99 per session
+- Additional storage: $0.50 per GB/month
+
+-------------------------------------------------------------------------------
+
+DOMAIN/HR USER PLAN
+-------------------
+Monthly Cost: $29.99
+Annual Cost: $299.99 (Save $59.89 - 16% discount)
+Cost Per User: $29.99/month or $24.99/month (annual)
+
+Features Included:
+- All Normal User features
+- HR Dashboard access
+- Unlimited job postings
+- Application management tools
+- Candidate search and filtering
+- Advanced analytics dashboard
+- Bulk application processing
+- Interview scheduling tools
+- Company profile management
+- Priority support
+- Extended storage (10 GB)
+- API access (limited)
+
+Additional Costs:
+- Premium resume tests: $1.99 per test
+- Premium mock interviews: $3.99 per session
+- Additional job postings (beyond 50/month): $5.99 per posting
+- Additional storage: $0.40 per GB/month
+- API usage beyond limit: $0.10 per 1000 API calls
+
+-------------------------------------------------------------------------------
+
+PREMIUM USER PLAN
+-----------------
+Monthly Cost: $49.99
+Annual Cost: $499.99 (Save $99.89 - 16% discount)
+Cost Per User: $49.99/month or $41.66/month (annual)
+
+Features Included:
+- All Domain/HR User features
+- Unlimited AI features
+- Advanced analytics and insights
+- Network growth analytics
+- Career path recommendations
+- Priority job applications
+- Featured profile placement
+- Advanced search filters
+- Unlimited storage (50 GB)
+- Full API access
+- White-glove support
+- Custom integrations
+
+Additional Costs:
+- Enterprise features: Custom pricing
+- Dedicated support: $99/month
+- Custom branding: $199/month
+
+================================================================================
+                    2. AI-POWERED FEATURES PRICING
+================================================================================
+
+RESUME/ATS TESTING
+-------------------
+Basic Test (Normal Users):
+- Cost Per Test: $2.99
+- Includes: Basic ATS scoring, 5-category analysis, performance grade
+- Processing Time: 2-5 minutes
+- Report Validity: 30 days
+
+Premium Test (HR/Domain Users):
+- Cost Per Test: $1.99
+- Includes: Advanced ATS scoring, detailed recommendations, improvement suggestions
+- Processing Time: 1-3 minutes
+- Report Validity: 60 days
+
+Enterprise Test (Premium Users):
+- Cost Per Test: $0.99
+- Includes: Comprehensive analysis, AI-powered suggestions, comparison reports
+- Processing Time: <1 minute
+- Report Validity: 90 days
+- Bulk Testing: $0.50 per test (minimum 100 tests)
+
+Monthly Packages:
+- 10 Tests: $24.99 (Save $4.91)
+- 25 Tests: $54.99 (Save $19.76)
+- 50 Tests: $99.99 (Save $49.51)
+- 100 Tests: $179.99 (Save $119.01)
+
+-------------------------------------------------------------------------------
+
+MOCK INTERVIEW SESSIONS
+-----------------------
+Basic Session (Normal Users):
+- Cost Per Session: $4.99
+- Duration: Up to 30 minutes
+- Includes: AI interviewer, basic feedback, session recording
+- Question Types: Standard technical and behavioral
+
+Premium Session (HR/Domain Users):
+- Cost Per Session: $3.99
+- Duration: Up to 45 minutes
+- Includes: Advanced AI interviewer, detailed feedback, performance analysis
+- Question Types: Customizable by role and industry
+
+Enterprise Session (Premium Users):
+- Cost Per Session: $2.99
+- Duration: Up to 60 minutes
+- Includes: Expert-level AI interviewer, comprehensive feedback, improvement roadmap
+- Question Types: Fully customizable, role-specific, difficulty levels
+
+Monthly Packages:
+- 5 Sessions: $19.99 (Save $4.96)
+- 10 Sessions: $34.99 (Save $14.91)
+- 20 Sessions: $59.99 (Save $39.81)
+- 50 Sessions: $129.99 (Save $119.51)
+
+Additional Features:
+- Extended Session (extra 15 min): $1.99
+- Session Recording Download: $0.99
+- Detailed Performance Report: $2.99
+- Follow-up Session: $1.99
+
+-------------------------------------------------------------------------------
+
+AI-POWERED JOB RECOMMENDATIONS
+------------------------------
+Basic Recommendations (Normal Users):
+- Cost: Included in subscription
+- Updates: Weekly
+- Accuracy: Standard matching algorithm
+
+Premium Recommendations (HR/Domain Users):
+- Cost: Included in subscription
+- Updates: Daily
+- Accuracy: Advanced ML matching with 85%+ accuracy
+
+Enterprise Recommendations (Premium Users):
+- Cost: Included in subscription
+- Updates: Real-time
+- Accuracy: AI-powered matching with 95%+ accuracy
+- Custom Matching Criteria: Available
+
+Standalone Service:
+- Monthly Cost: $9.99
+- Includes: Unlimited recommendations, priority matching, custom criteria
+
+-------------------------------------------------------------------------------
+
+AI-POWERED CONNECTION SUGGESTIONS
+----------------------------------
+Basic Suggestions (Normal Users):
+- Cost: Included in subscription
+- Suggestions: Up to 10 per day
+- Criteria: Basic matching (location, company, skills)
+
+Premium Suggestions (HR/Domain Users):
+- Cost: Included in subscription
+- Suggestions: Up to 25 per day
+- Criteria: Advanced matching (mutual connections, industry, experience level)
+
+Enterprise Suggestions (Premium Users):
+- Cost: Included in subscription
+- Suggestions: Unlimited
+- Criteria: AI-powered matching with predictive analytics
+
+Standalone Service:
+- Monthly Cost: $4.99
+- Includes: Unlimited suggestions, advanced filtering, priority matching
+
+================================================================================
+                    3. JOB MANAGEMENT PRICING
+================================================================================
+
+JOB POSTINGS (HR/DOMAIN USERS)
+------------------------------
+Standard Posting:
+- Cost Per Posting: $5.99
+- Duration: 30 days
+- Features: Basic listing, application tracking, candidate management
+- Visibility: Standard placement
+
+Featured Posting:
+- Cost Per Posting: $14.99
+- Duration: 30 days
+- Features: Premium placement, highlighted in search, email alerts to candidates
+- Visibility: Top placement in search results
+
+Premium Posting:
+- Cost Per Posting: $24.99
+- Duration: 60 days
+- Features: Maximum visibility, social media promotion, AI-powered candidate matching
+- Visibility: Featured placement + promoted across platform
+
+Monthly Packages:
+- 5 Standard Postings: $24.99 (Save $5.00)
+- 10 Standard Postings: $44.99 (Save $14.99)
+- 20 Standard Postings: $79.99 (Save $39.99)
+- 50 Standard Postings: $179.99 (Save $119.51)
+
+Additional Features:
+- Extended Duration (extra 30 days): $2.99
+- Priority Placement: $9.99
+- Social Media Promotion: $4.99
+- Email Campaign to Candidates: $19.99
+
+-------------------------------------------------------------------------------
+
+JOB APPLICATIONS (NORMAL USERS)
+--------------------------------
+Standard Application:
+- Cost Per Application: $0.00 (Included in subscription)
+- Features: Basic application form, resume upload, cover letter
+
+Premium Application:
+- Cost Per Application: $1.99
+- Features: Priority review, highlighted application, guaranteed HR view
+- Benefits: 3x higher visibility, faster response time
+
+Bulk Applications:
+- 10 Applications: $14.99 (Save $4.91)
+- 25 Applications: $34.99 (Save $14.76)
+- 50 Applications: $64.99 (Save $34.51)
+
+-------------------------------------------------------------------------------
+
+JOB ALERTS & NOTIFICATIONS
+---------------------------
+Basic Alerts (Normal Users):
+- Cost: Included in subscription
+- Frequency: Weekly digest
+- Criteria: Basic matching
+
+Premium Alerts (HR/Domain Users):
+- Cost: Included in subscription
+- Frequency: Daily updates
+- Criteria: Advanced matching with custom filters
+
+Enterprise Alerts (Premium Users):
+- Cost: Included in subscription
+- Frequency: Real-time notifications
+- Criteria: AI-powered matching with predictive analytics
+
+Standalone Service:
+- Monthly Cost: $2.99
+- Includes: Real-time alerts, custom criteria, unlimited alerts
+
+================================================================================
+                4. HR DASHBOARD & HIRING TOOLS PRICING
+================================================================================
+
+HR DASHBOARD ACCESS
+--------------------
+Standard Access (Domain/HR Users):
+- Cost: Included in subscription ($29.99/month)
+- Features: Basic dashboard, application management, candidate search
+
+Premium Access (Premium Users):
+- Cost: Included in subscription ($49.99/month)
+- Features: Advanced dashboard, analytics, bulk operations, API access
+
+Enterprise Access:
+- Cost: $99.99/month per HR user
+- Features: Full dashboard, custom integrations, dedicated support, white-label options
+
+-------------------------------------------------------------------------------
+
+APPLICATION MANAGEMENT
+----------------------
+Standard Processing:
+- Cost: Included in HR subscription
+- Features: View applications, basic filtering, status updates
+
+Advanced Processing:
+- Cost: $19.99/month
+- Features: Bulk operations, advanced filtering, automated workflows, custom statuses
+
+Enterprise Processing:
+- Cost: $49.99/month
+- Features: AI-powered candidate ranking, automated screening, integration with ATS systems
+
+-------------------------------------------------------------------------------
+
+CANDIDATE SEARCH & FILTERING
+-----------------------------
+Basic Search:
+- Cost: Included in HR subscription
+- Features: Name, skills, location search
+
+Advanced Search:
+- Cost: $9.99/month
+- Features: Multi-criteria search, saved searches, candidate comparison
+
+Enterprise Search:
+- Cost: $29.99/month
+- Features: AI-powered candidate matching, predictive analytics, candidate scoring
+
+-------------------------------------------------------------------------------
+
+INTERVIEW SCHEDULING
+--------------------
+Basic Scheduling:
+- Cost: Included in HR subscription
+- Features: Manual scheduling, calendar integration
+
+Advanced Scheduling:
+- Cost: $14.99/month
+- Features: Automated scheduling, candidate self-scheduling, reminders, calendar sync
+
+Enterprise Scheduling:
+- Cost: $39.99/month
+- Features: AI-powered scheduling optimization, multi-timezone support, video integration
+
+-------------------------------------------------------------------------------
+
+ANALYTICS & REPORTING
+---------------------
+Basic Analytics:
+- Cost: Included in HR subscription
+- Features: Basic metrics, application counts, status breakdown
+
+Advanced Analytics:
+- Cost: $24.99/month
+- Features: Detailed reports, hiring funnel analysis, time-to-hire metrics, custom reports
+
+Enterprise Analytics:
+- Cost: $79.99/month
+- Features: Predictive analytics, AI insights, custom dashboards, data export, API access
+
+================================================================================
+                5. COMMUNICATION FEATURES PRICING
+================================================================================
+
+MESSAGING
+---------
+Basic Messaging (Normal Users):
+- Cost: Included in subscription
+- Limits: Unlimited messages to connections
+- Features: Text messaging, file sharing (up to 10 MB), read receipts
+
+Premium Messaging (HR/Domain Users):
+- Cost: Included in subscription
+- Limits: Unlimited messages
+- Features: Text messaging, file sharing (up to 50 MB), read receipts, typing indicators
+
+Enterprise Messaging (Premium Users):
+- Cost: Included in subscription
+- Limits: Unlimited messages
+- Features: Text messaging, file sharing (up to 100 MB), read receipts, typing indicators, voice messages
+
+Additional Features:
+- Voice Messages: $0.99 per 10 messages
+- Video Messages: $1.99 per 5 messages
+- File Sharing (extra storage): $0.10 per GB/month
+
+-------------------------------------------------------------------------------
+
+CONNECTION REQUESTS
+--------------------
+Standard Requests:
+- Cost: Included in subscription
+- Limits: Unlimited requests
+- Features: Basic request, optional message
+
+Premium Requests:
+- Cost: Included in subscription
+- Limits: Unlimited requests
+- Features: Custom message templates, bulk requests, tracking
+
+Additional Features:
+- Bulk Connection Requests (100+): $9.99
+- Custom Message Templates: $4.99/month
+- Request Tracking & Analytics: $2.99/month
+
+-------------------------------------------------------------------------------
+
+NOTIFICATIONS
+-------------
+Basic Notifications:
+- Cost: Included in subscription
+- Channels: Email, in-app
+- Frequency: Real-time
+
+Premium Notifications:
+- Cost: Included in subscription
+- Channels: Email, in-app, SMS, push notifications
+- Frequency: Real-time, customizable
+
+Enterprise Notifications:
+- Cost: Included in subscription
+- Channels: All channels + webhooks, API
+- Frequency: Real-time, customizable, priority levels
+
+Additional Features:
+- SMS Notifications: $0.05 per SMS
+- Push Notifications: Included
+- Webhook Integration: $9.99/month
+
+================================================================================
+            6. PROFESSIONAL NETWORKING FEATURES PRICING
+================================================================================
+
+PROFILE FEATURES
+----------------
+Basic Profile (Normal Users):
+- Cost: Included in subscription
+- Features: Standard profile, basic customization, profile picture
+
+Premium Profile (HR/Domain Users):
+- Cost: Included in subscription
+- Features: Enhanced profile, advanced customization, portfolio links, skills verification
+
+Enterprise Profile (Premium Users):
+- Cost: Included in subscription
+- Features: Full profile, custom branding, featured placement, analytics
+
+Additional Features:
+- Profile Verification Badge: $4.99/month
+- Featured Profile Placement: $9.99/month
+- Custom Profile URL: $2.99/month
+- Profile Analytics: $7.99/month
+
+-------------------------------------------------------------------------------
+
+CONNECTIONS
+-----------
+Basic Connections (Normal Users):
+- Cost: Included in subscription
+- Limits: Unlimited connections
+- Features: Standard connection management
+
+Premium Connections (HR/Domain Users):
+- Cost: Included in subscription
+- Limits: Unlimited connections
+- Features: Advanced connection management, connection notes, tags
+
+Enterprise Connections (Premium Users):
+- Cost: Included in subscription
+- Limits: Unlimited connections
+- Features: Full connection management, CRM integration, connection analytics
+
+Additional Features:
+- Connection Export: $2.99 per export
+- Connection Analytics: $4.99/month
+- CRM Integration: $19.99/month
+
+-------------------------------------------------------------------------------
+
+POSTS & CONTENT SHARING
+-----------------------
+Basic Posts (Normal Users):
+- Cost: Included in subscription
+- Limits: 10 posts per day
+- Features: Text posts, image uploads (up to 5 MB)
+
+Premium Posts (HR/Domain Users):
+- Cost: Included in subscription
+- Limits: Unlimited posts
+- Features: Text posts, image uploads (up to 20 MB), video posts, analytics
+
+Enterprise Posts (Premium Users):
+- Cost: Included in subscription
+- Limits: Unlimited posts
+- Features: All post types, unlimited file sizes, advanced analytics, scheduling
+
+Additional Features:
+- Post Promotion: $4.99 per post
+- Post Analytics: $2.99/month
+- Scheduled Posts: $9.99/month
+- Video Posts: $1.99 per video
+
+-------------------------------------------------------------------------------
+
+NETWORK ANALYTICS
+-----------------
+Basic Analytics (Normal Users):
+- Cost: Included in subscription
+- Features: Basic connection stats, profile views
+
+Premium Analytics (HR/Domain Users):
+- Cost: Included in subscription
+- Features: Advanced stats, network growth, engagement metrics
+
+Enterprise Analytics (Premium Users):
+- Cost: Included in subscription
+- Features: Comprehensive analytics, predictive insights, custom reports
+
+Standalone Service:
+- Monthly Cost: $14.99
+- Includes: Full analytics suite, custom reports, data export
+
+================================================================================
+            7. ACTIVITY TRACKING & ANALYTICS PRICING
+================================================================================
+
+STREAKS CALENDAR
+----------------
+Basic Tracking (Normal Users):
+- Cost: Included in subscription
+- Features: Basic calendar, activity logging, streak tracking
+
+Premium Tracking (HR/Domain Users):
+- Cost: Included in subscription
+- Features: Advanced calendar, multiple activity types, detailed statistics
+
+Enterprise Tracking (Premium Users):
+- Cost: Included in subscription
+- Features: Full calendar, unlimited activities, analytics, goal setting
+
+Additional Features:
+- Goal Setting: $2.99/month
+- Advanced Analytics: $4.99/month
+- Activity Reminders: $1.99/month
+- Data Export: $0.99 per export
+
+-------------------------------------------------------------------------------
+
+ACTIVITY LOGGING
+----------------
+Basic Logging:
+- Cost: Included in subscription
+- Features: Daily activity logging, basic streak tracking
+
+Premium Logging:
+- Cost: Included in subscription
+- Features: Multiple activities per day, detailed descriptions, categories
+
+Enterprise Logging:
+- Cost: Included in subscription
+- Features: Unlimited activities, custom categories, tags, analytics
+
+Additional Features:
+- Activity Categories: $1.99/month
+- Activity Tags: $0.99/month
+- Activity Analytics: $3.99/month
+
+-------------------------------------------------------------------------------
+
+PERFORMANCE ANALYTICS
+---------------------
+Basic Analytics:
+- Cost: Included in subscription
+- Features: Basic performance metrics, streak statistics
+
+Premium Analytics:
+- Cost: $9.99/month
+- Features: Advanced metrics, trend analysis, performance insights
+
+Enterprise Analytics:
+- Cost: $29.99/month
+- Features: Comprehensive analytics, predictive insights, custom reports, API access
+
+================================================================================
+                    8. STORAGE & DATA PRICING
+================================================================================
+
+STORAGE PLANS
+-------------
+Free Plan:
+- Storage: 100 MB
+- Cost: $0.00
+- File Types: Images, documents
+
+Normal User Plan:
+- Storage: 1 GB (included)
+- Additional Storage: $0.50 per GB/month
+- File Types: All file types
+- Max File Size: 10 MB
+
+HR/Domain User Plan:
+- Storage: 10 GB (included)
+- Additional Storage: $0.40 per GB/month
+- File Types: All file types
+- Max File Size: 50 MB
+
+Premium User Plan:
+- Storage: 50 GB (included)
+- Additional Storage: $0.30 per GB/month
+- File Types: All file types
+- Max File Size: 100 MB
+
+Enterprise Storage:
+- Storage: Custom (starting at 100 GB)
+- Cost: $0.25 per GB/month
+- File Types: All file types
+- Max File Size: Custom
+
+-------------------------------------------------------------------------------
+
+DATA BACKUP & RECOVERY
+----------------------
+Basic Backup:
+- Cost: Included in subscription
+- Frequency: Daily automatic backup
+- Retention: 30 days
+
+Premium Backup:
+- Cost: $4.99/month
+- Frequency: Real-time backup
+- Retention: 90 days
+
+Enterprise Backup:
+- Cost: $19.99/month
+- Frequency: Real-time backup with versioning
+- Retention: 1 year
+- Features: Point-in-time recovery, data export
+
+-------------------------------------------------------------------------------
+
+DATA EXPORT
+-----------
+Basic Export:
+- Cost: $2.99 per export
+- Format: CSV, JSON
+- Includes: Profile data, connections, posts
+
+Premium Export:
+- Cost: $9.99 per export
+- Format: CSV, JSON, Excel, PDF
+- Includes: All data, analytics, reports
+
+Enterprise Export:
+- Cost: $29.99 per export
+- Format: All formats
+- Includes: Complete data archive, custom format, API access
+
+================================================================================
+                9. API USAGE & INTEGRATION PRICING
+================================================================================
+
+API ACCESS
+----------
+Basic API (HR/Domain Users):
+- Cost: Included in subscription
+- Limits: 1,000 API calls/month
+- Features: Read-only access, basic endpoints
+
+Premium API (Premium Users):
+- Cost: Included in subscription
+- Limits: 10,000 API calls/month
+- Features: Read/write access, all endpoints
+
+Enterprise API:
+- Cost: $49.99/month
+- Limits: 100,000 API calls/month
+- Features: Full access, webhooks, custom endpoints, priority support
+
+Additional API Calls:
+- Cost: $0.10 per 1,000 calls (beyond included limit)
+- Overage Protection: Available at $99/month (unlimited calls)
+
+-------------------------------------------------------------------------------
+
+WEBHOOK INTEGRATIONS
+--------------------
+Basic Webhooks:
+- Cost: $9.99/month
+- Limits: 1,000 webhook calls/month
+- Features: Standard events, basic retry logic
+
+Premium Webhooks:
+- Cost: $29.99/month
+- Limits: 10,000 webhook calls/month
+- Features: All events, advanced retry logic, custom payloads
+
+Enterprise Webhooks:
+- Cost: $79.99/month
+- Limits: Unlimited
+- Features: Custom events, real-time delivery, guaranteed delivery
+
+-------------------------------------------------------------------------------
+
+THIRD-PARTY INTEGRATIONS
+-------------------------
+ATS Integration:
+- Cost: $99.99/month
+- Features: Two-way sync, candidate import/export, application tracking
+
+CRM Integration:
+- Cost: $79.99/month
+- Features: Contact sync, activity tracking, lead management
+
+Email Integration:
+- Cost: $19.99/month
+- Features: Email sync, calendar integration, notification management
+
+Social Media Integration:
+- Cost: $29.99/month
+- Features: Post scheduling, cross-platform sharing, analytics
+
+Custom Integration:
+- Cost: Custom pricing (starting at $199/month)
+- Features: Custom API endpoints, dedicated support, SLA guarantee
+
+================================================================================
+            10. ENTERPRISE & CUSTOM SOLUTIONS PRICING
+================================================================================
+
+ENTERPRISE PLANS
+----------------
+Starter Enterprise:
+- Cost: $299.99/month (up to 10 users)
+- Cost Per User: $29.99/month
+- Features: All Premium features, dedicated support, custom branding
+
+Professional Enterprise:
+- Cost: $999.99/month (up to 50 users)
+- Cost Per User: $19.99/month
+- Features: All Enterprise features, priority support, custom integrations
+
+Enterprise Plus:
+- Cost: $2,999.99/month (up to 200 users)
+- Cost Per User: $14.99/month
+- Features: Full enterprise suite, white-label options, dedicated account manager
+
+Custom Enterprise:
+- Cost: Custom pricing
+- Users: Unlimited
+- Features: Fully customized solution, on-premise deployment, dedicated infrastructure
+
+-------------------------------------------------------------------------------
+
+WHITE-LABEL SOLUTIONS
+---------------------
+Basic White-Label:
+- Cost: $199.99/month
+- Features: Custom branding, logo, colors, domain
+
+Premium White-Label:
+- Cost: $499.99/month
+- Features: Full customization, custom domain, SSL, email branding
+
+Enterprise White-Label:
+- Cost: $999.99/month
+- Features: Complete white-label, custom infrastructure, dedicated support
+
+-------------------------------------------------------------------------------
+
+ON-PREMISE DEPLOYMENT
+---------------------
+Standard On-Premise:
+- Cost: $4,999.99 one-time + $999.99/month
+- Features: Self-hosted deployment, full control, custom infrastructure
+
+Premium On-Premise:
+- Cost: $9,999.99 one-time + $1,999.99/month
+- Features: Full on-premise solution, dedicated support, custom development
+
+Enterprise On-Premise:
+- Cost: Custom pricing
+- Features: Complete solution, source code access, unlimited customization
+
+-------------------------------------------------------------------------------
+
+DEDICATED SUPPORT
+-----------------
+Standard Support:
+- Cost: Included in Enterprise plans
+- Response Time: 24 hours
+- Channels: Email, ticket system
+
+Premium Support:
+- Cost: $99.99/month
+- Response Time: 4 hours
+- Channels: Email, ticket system, phone
+
+Enterprise Support:
+- Cost: $299.99/month
+- Response Time: 1 hour
+- Channels: All channels, dedicated account manager, 24/7 support
+
+================================================================================
+                11. ADD-ON SERVICES PRICING
+================================================================================
+
+CAREER COACHING
+---------------
+Basic Coaching:
+- Cost: $49.99 per session
+- Duration: 30 minutes
+- Features: Career guidance, resume review, interview prep
+
+Premium Coaching:
+- Cost: $99.99 per session
+- Duration: 60 minutes
+- Features: Comprehensive coaching, career planning, skill development
+
+Enterprise Coaching:
+- Cost: $199.99 per session
+- Duration: 90 minutes
+- Features: Executive coaching, leadership development, career transition
+
+Monthly Packages:
+- 4 Sessions: $179.99 (Save $19.97)
+- 8 Sessions: $339.99 (Save $59.93)
+- 12 Sessions: $479.99 (Save $119.89)
+
+-------------------------------------------------------------------------------
+
+RESUME WRITING SERVICES
+-----------------------
+Basic Resume:
+- Cost: $79.99
+- Features: Professional resume writing, ATS optimization, 2 revisions
+
+Premium Resume:
+- Cost: $149.99
+- Features: Executive resume writing, LinkedIn optimization, cover letter, 3 revisions
+
+Enterprise Resume:
+- Cost: $299.99
+- Features: Complete career package, multiple versions, portfolio, unlimited revisions
+
+-------------------------------------------------------------------------------
+
+LINKEDIN OPTIMIZATION
+---------------------
+Basic Optimization:
+- Cost: $49.99
+- Features: Profile optimization, keyword research, basic recommendations
+
+Premium Optimization:
+- Cost: $99.99
+- Features: Complete optimization, content strategy, engagement tips
+
+Enterprise Optimization:
+- Cost: $199.99
+- Features: Full optimization, content creation, growth strategy, analytics
+
+-------------------------------------------------------------------------------
+
+INTERVIEW PREPARATION
+---------------------
+Basic Prep:
+- Cost: $29.99
+- Features: Common questions, basic tips, practice scenarios
+
+Premium Prep:
+- Cost: $79.99
+- Features: Role-specific prep, mock interview, detailed feedback
+
+Enterprise Prep:
+- Cost: $149.99
+- Features: Comprehensive prep, multiple mock interviews, personalized coaching
+
+-------------------------------------------------------------------------------
+
+SKILL ASSESSMENTS
+-----------------
+Basic Assessment:
+- Cost: $9.99 per assessment
+- Features: Standard skill test, basic report
+
+Premium Assessment:
+- Cost: $19.99 per assessment
+- Features: Comprehensive test, detailed report, improvement plan
+
+Enterprise Assessment:
+- Cost: $39.99 per assessment
+- Features: Full assessment suite, certification, detailed analytics
+
+Monthly Packages:
+- 10 Assessments: $79.99 (Save $19.91)
+- 25 Assessments: $179.99 (Save $49.76)
+- 50 Assessments: $329.99 (Save $99.51)
+
+-------------------------------------------------------------------------------
+
+CERTIFICATION PROGRAMS
+----------------------
+Basic Certification:
+- Cost: $99.99
+- Features: Online course, basic certification, digital badge
+
+Premium Certification:
+- Cost: $199.99
+- Features: Comprehensive course, premium certification, portfolio project
+
+Enterprise Certification:
+- Cost: $399.99
+- Features: Full program, industry-recognized certification, mentorship
+
+================================================================================
+            12. PAYMENT TERMS & BILLING INFORMATION
+================================================================================
+
+PAYMENT METHODS
+--------------
+Accepted Methods:
+- Credit Cards (Visa, MasterCard, American Express)
+- Debit Cards
+- PayPal
+- Bank Transfer (Enterprise only)
+- Wire Transfer (Enterprise only)
+
+Billing Cycles:
+- Monthly: Charged on the same day each month
+- Annual: Charged once per year (16% discount)
+- Enterprise: Custom billing cycles available
+
+-------------------------------------------------------------------------------
+
+DISCOUNTS & PROMOTIONS
+----------------------
+Annual Subscription Discount:
+- Save 16% on annual subscriptions
+- Example: $9.99/month = $99.99/year (Save $19.89)
+
+Student Discount:
+- 50% off all plans with valid student ID
+- Available for: Normal User, Domain/HR User plans
+
+Non-Profit Discount:
+- 30% off all plans for registered non-profits
+- Available for: All plans
+
+Bulk User Discounts:
+- 10-50 users: 10% discount
+- 51-100 users: 15% discount
+- 101+ users: 20% discount
+
+Referral Program:
+- Refer a friend: Both get 1 month free
+- Refer 5 friends: Get 3 months free
+- Refer 10 friends: Get 6 months free
+
+-------------------------------------------------------------------------------
+
+REFUND POLICY
+-------------
+Free Trial:
+- 14-day free trial for all paid plans
+- No credit card required for trial
+- Full refund if cancelled within 14 days
+
+Monthly Subscriptions:
+- Full refund within 7 days of purchase
+- Prorated refund after 7 days (unused portion)
+
+Annual Subscriptions:
+- Full refund within 30 days of purchase
+- Prorated refund after 30 days (unused portion)
+
+Enterprise Subscriptions:
+- Custom refund policy based on contract
+- Minimum commitment period applies
+
+Add-On Services:
+- No refunds for completed services (coaching, resume writing, etc.)
+- Partial refunds for incomplete services (case-by-case basis)
+
+-------------------------------------------------------------------------------
+
+CANCELLATION POLICY
+-------------------
+Cancellation:
+- Cancel anytime from account settings
+- No cancellation fees
+- Access continues until end of billing period
+
+Downgrade:
+- Downgrade to lower plan anytime
+- Prorated credit applied to account
+- Access adjusted immediately
+
+Upgrade:
+- Upgrade to higher plan anytime
+- Prorated charge applied
+- Access upgraded immediately
+
+-------------------------------------------------------------------------------
+
+TAXES & FEES
+------------
+Sales Tax:
+- Applicable sales tax added based on location
+- Tax-exempt organizations: Provide tax ID for exemption
+
+Transaction Fees:
+- No additional transaction fees
+- All fees included in listed prices
+
+Currency:
+- Prices listed in USD
+- Local currency conversion available
+- Exchange rates updated daily
+
+-------------------------------------------------------------------------------
+
+INVOICING
+---------
+Automatic Invoicing:
+- Invoices sent via email monthly/annually
+- Available in account dashboard
+- Downloadable PDF format
+
+Enterprise Invoicing:
+- Custom invoicing available
+- PO number support
+- Net 30 payment terms available
+
+-------------------------------------------------------------------------------
+
+SUPPORT & BILLING QUESTIONS
+---------------------------
+Billing Support:
+- Email: billing@growiq.com
+- Phone: 1-800-GROW-IQ (1-800-476-9477)
+- Hours: Monday-Friday, 9 AM - 6 PM EST
+
+Payment Issues:
+- Contact billing support immediately
+- Payment plan options available
+- Hardship assistance available
+
+================================================================================
+                            SUMMARY OF PRICING
+================================================================================
+
+QUICK REFERENCE - MONTHLY COSTS
+--------------------------------
+Free Plan:                    $0.00/month
+Normal User Plan:              $9.99/month
+HR/Domain User Plan:          $29.99/month
+Premium User Plan:            $49.99/month
+Enterprise Starter:           $299.99/month (10 users)
+Enterprise Professional:       $999.99/month (50 users)
+Enterprise Plus:              $2,999.99/month (200 users)
+
+QUICK REFERENCE - FEATURE COSTS
+--------------------------------
+Resume/ATS Test (Basic):       $2.99 per test
+Resume/ATS Test (Premium):    $1.99 per test
+Resume/ATS Test (Enterprise): $0.99 per test
+
+Mock Interview (Basic):       $4.99 per session
+Mock Interview (Premium):      $3.99 per session
+Mock Interview (Enterprise):  $2.99 per session
+
+Job Posting (Standard):       $5.99 per posting
+Job Posting (Featured):        $14.99 per posting
+Job Posting (Premium):        $24.99 per posting
+
+Additional Storage:            $0.30-$0.50 per GB/month
+API Calls (Overage):          $0.10 per 1,000 calls
+SMS Notifications:            $0.05 per SMS
+
+================================================================================
+                            CONTACT INFORMATION
+================================================================================
+
+Sales Inquiries:
+Email: sales@growiq.com
+Phone: 1-800-GROW-IQ (1-800-476-9477)
+Hours: Monday-Friday, 9 AM - 6 PM EST
+
+Billing Support:
+Email: billing@growiq.com
+Phone: 1-800-GROW-IQ (1-800-476-9477)
+Hours: Monday-Friday, 9 AM - 6 PM EST
+
+Enterprise Sales:
+Email: enterprise@growiq.com
+Phone: 1-800-GROW-IQ ext. 2
+Hours: Monday-Friday, 9 AM - 6 PM EST
+
+Technical Support:
+Email: support@growiq.com
+Phone: 1-800-GROW-IQ ext. 3
+Hours: 24/7 for Premium and Enterprise users
+
+================================================================================
+                            DISCLAIMER
+================================================================================
+
+All prices are subject to change without notice. Prices listed are in USD.
+Discounts and promotions may apply. Enterprise pricing is custom and may vary
+based on specific requirements. Contact sales for accurate enterprise pricing.
+
+This pricing guide is for informational purposes only. Actual pricing may vary
+based on location, currency, and specific requirements. Please contact our
+sales team for the most up-to-date pricing information.
+
+Last Updated: November 2024
+Version: 2025.1.0
+
+================================================================================
+                            END OF PRICING GUIDE
+================================================================================
+

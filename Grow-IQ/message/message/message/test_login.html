@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Test - LinkedIn-like App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px 5px;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #5a67d8;
+        }
+        .btn-success {
+            background: #28a745;
+        }
+        .btn-danger {
+            background: #dc3545;
+        }
+        .result {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .success {
+            background: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🔐 Login System Test</h1>
+        <p>This page tests the login functionality with your FastAPI backend.</p>
+
+        <div class="test-section">
+            <h3>🧪 Test User Registration</h3>
+            <p>Test creating a new user account:</p>
+            <button class="btn" onclick="testRegistration()">Test Registration</button>
+            <div id="registrationResult" class="result" style="display: none;"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>🔑 Test User Login</h3>
+            <p>Test logging in with the created user:</p>
+            <button class="btn" onclick="testLogin()">Test Login</button>
+            <div id="loginResult" class="result" style="display: none;"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>👤 Test Profile Access</h3>
+            <p>Test accessing user profile with JWT token:</p>
+            <button class="btn" onclick="testProfile()">Test Profile Access</button>
+            <div id="profileResult" class="result" style="display: none;"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>🚪 Test Logout</h3>
+            <p>Test clearing authentication data:</p>
+            <button class="btn btn-danger" onclick="testLogout()">Test Logout</button>
+            <div id="logoutResult" class="result" style="display: none;"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>🌐 Quick Navigation</h3>
+            <p>Navigate to the main application:</p>
+            <a href="/login" class="btn">Go to Login Page</a>
+            <a href="/dashboard" class="btn">Go to Dashboard</a>
+            <a href="/demo" class="btn">Go to Demo Page</a>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:9000/api/v1';
+        let currentToken = null;
+        let currentUser = null;
+
+        function showResult(elementId, message, isSuccess = true) {
+            const element = document.getElementById(elementId);
+            element.textContent = message;
+            element.style.display = 'block';
+            element.className = `result ${isSuccess ? 'success' : 'error'}`;
+        }
+
+        async function testRegistration() {
+            try {
+                const testData = {
+                    name: `TestUser_${Date.now()}`,
+                    email: `test_${Date.now()}@example.com`,
+                    password: 'testpassword123',
+                    bio: 'Test user created for testing'
+                };
+
+                const response = await fetch(`${API_BASE_URL}/users/register`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    currentToken = data.access_token;
+                    currentUser = testData.email;
+                    showResult('registrationResult', 
+                        `✅ Registration Successful!\n\nUser: ${testData.name}\nEmail: ${testData.email}\nToken: ${data.access_token.substring(0, 50)}...`, 
+                        true
+                    );
+                } else {
+                    showResult('registrationResult', 
+                        `❌ Registration Failed!\n\nStatus: ${response.status}\nError: ${data.error || 'Unknown error'}`, 
+                        false
+                    );
+                }
+            } catch (error) {
+                showResult('registrationResult', 
+                    `❌ Network Error!\n\n${error.message}`, 
+                    false
+                );
+            }
+        }
+
+        async function testLogin() {
+            if (!currentUser) {
+                showResult('loginResult', '❌ Please register a user first!', false);
+                return;
+            }
+
+            try {
+                const loginData = {
+                    email: currentUser,
+                    password: 'testpassword123'
+                };
+
+                const response = await fetch(`${API_BASE_URL}/users/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(loginData)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    currentToken = data.access_token;
+                    showResult('loginResult', 
+                        `✅ Login Successful!\n\nEmail: ${currentUser}\nToken: ${data.access_token.substring(0, 50)}...`, 
+                        true
+                    );
+                } else {
+                    showResult('loginResult', 
+                        `❌ Login Failed!\n\nStatus: ${response.status}\nError: ${data.error || 'Unknown error'}`, 
+                        false
+                    );
+                }
+            } catch (error) {
+                showResult('loginResult', 
+                    `❌ Network Error!\n\n${error.message}`, 
+                    false
+                );
+            }
+        }
+
+        async function testProfile() {
+            if (!currentToken) {
+                showResult('profileResult', '❌ Please login first!', false);
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/users/me`, {
+                    headers: {
+                        'Authorization': `Bearer ${currentToken}`
+                    }
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    showResult('profileResult', 
+                        `✅ Profile Access Successful!\n\nName: ${data.name}\nEmail: ${data.email}\nBio: ${data.bio || 'No bio'}\nID: ${data.id}`, 
+                        true
+                    );
+                } else {
+                    showResult('profileResult', 
+                        `❌ Profile Access Failed!\n\nStatus: ${response.status}\nError: ${data.error || 'Unknown error'}`, 
+                        false
+                    );
+                }
+            } catch (error) {
+                showResult('profileResult', 
+                    `❌ Network Error!\n\n${error.message}`, 
+                    false
+                );
+            }
+        }
+
+        function testLogout() {
+            currentToken = null;
+            currentUser = null;
+            showResult('logoutResult', 
+                `✅ Logout Successful!\n\nAuthentication data cleared.\nToken: null\nUser: null`, 
+                true
+            );
+        }
+
+        // Check if backend is accessible
+        window.addEventListener('load', async () => {
+            try {
+                const response = await fetch('http://localhost:9000/health');
+                if (response.ok) {
+                    console.log('✅ Backend is accessible');
+                } else {
+                    console.log('❌ Backend health check failed');
+                }
+            } catch (error) {
+                console.log('❌ Backend is not accessible:', error.message);
+            }
+        });
+    </script>
+</body>
+</html>

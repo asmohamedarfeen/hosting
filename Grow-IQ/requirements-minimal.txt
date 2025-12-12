@@ -1,0 +1,57 @@
+# Minimal Requirements for Glow-IQ
+# =================================
+# Use this for basic deployment or when you want to minimize dependencies
+
+# Core FastAPI
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+
+# Database
+sqlalchemy>=2.0.42
+psycopg2-binary>=2.9.0  # PostgreSQL
+# sqlite3  # Built-in with Python
+
+# Authentication
+python-multipart>=0.0.6
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# Template engine
+jinja2>=3.1.2
+
+# File handling
+aiofiles>=23.2.1
+pillow>=10.0.0
+
+# Data validation
+pydantic>=2.0.0
+email-validator>=2.2.0
+
+# HTTP client
+requests>=2.31.0
+
+# Environment
+python-dotenv>=1.0.0
+
+# Security
+cryptography>=41.0.0
+
+# Production server
+gunicorn>=21.2.0
+
+# Basic monitoring
+psutil>=5.9.0
+
+# Speech recognition (if needed)
+speechrecognition>=3.10.0
+pyaudio>=0.2.11
+pydub>=0.25.1
+
+# AI/ML (if needed)
+google-generativeai>=0.3.0
+scikit-learn>=1.3.0
+numpy>=1.24.0
+
+# Azure (for deployment)
+azure-identity>=1.15.0
+azure-keyvault-secrets>=4.7.0

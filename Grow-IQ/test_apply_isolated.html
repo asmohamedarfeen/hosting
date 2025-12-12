@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isolated Apply Button Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .job-card { border: 2px solid #e0e0e0; padding: 20px; margin: 20px 0; border-radius: 8px; background: white; }
+        .apply-job-btn { 
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 12px 24px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 16px;
+            margin: 10px;
+        }
+        .applied-job-btn { 
+            background: #28a745 !important; 
+            color: white !important; 
+            cursor: not-allowed !important; 
+        }
+        .test-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+        .notification-success { background: #28a745; }
+        .notification-error { background: #dc3545; }
+        .notification-info { background: #17a2b8; }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .debug-panel {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+        }
+        .console-output {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 14px;
+            max-height: 200px;
+            overflow-y: auto;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Apply Button Isolated Test</h1>
+        
+        <div class="debug-panel">
+            <h3>📋 Test Instructions</h3>
+            <ol>
+                <li><strong>Open Console:</strong> Press F12 → Console tab</li>
+                <li><strong>Test Basic JS:</strong> Click "Test JavaScript" button</li>
+                <li><strong>Test Function:</strong> Click "Test Function" button</li>
+                <li><strong>Test Apply:</strong> Click "Apply Now" button</li>
+                <li><strong>Check Console:</strong> Look for logs and errors</li>
+            </ol>
+        </div>
+
+        <div class="job-card">
+            <h3>🚀 Sample Job Position</h3>
+            <p><strong>Company:</strong> TechCorp Solutions</p>
+            <p><strong>Position:</strong> Senior Software Engineer</p>
+            <p><strong>Location:</strong> San Francisco, CA</p>
+            <p><strong>Salary:</strong> $120,000 - $150,000</p>
+            
+            <div style="margin: 20px 0;">
+                <button class="test-btn" onclick="testJavaScript()">
+                    🧪 Test JavaScript
+                </button>
+                
+                <button class="test-btn" onclick="testFunction()">
+                    🔧 Test Function
+                </button>
+                
+                <button class="apply-job-btn" onclick="applyForJob('TechCorp Solutions', 'Senior Software Engineer', 123, event)">
+                    📝 Apply Now
+                </button>
+            </div>
+        </div>
+
+        <div class="debug-panel">
+            <h3>📊 Console Output</h3>
+            <div id="consoleOutput" class="console-output">
+                Console output will appear here...
+            </div>
+            <button onclick="clearConsole()" class="test-btn">Clear Console</button>
+        </div>
+
+        <div class="debug-panel">
+            <h3>🔍 Manual Console Tests</h3>
+            <p>Type these commands in the browser console (F12 → Console):</p>
+            <code style="background: #f1f3f4; padding: 5px; border-radius: 3px; display: block; margin: 10px 0;">
+                testApplyButton()<br>
+                applyForJob('Manual Test', 'Test Job', 999, null)<br>
+                typeof applyForJob
+            </code>
+        </div>
+    </div>
+
+    <div id="notificationContainer"></div>
+
+    <script>
+        // Console logging function
+        function logToConsole(message, type = 'info') {
+            const consoleOutput = document.getElementById('consoleOutput');
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.style.color = type === 'error' ? '#ff6b6b' : type === 'success' ? '#51cf66' : '#74c0fc';
+            logEntry.textContent = `[${timestamp}] ${message}`;
+            consoleOutput.appendChild(logEntry);
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            
+            // Also log to browser console
+            console.log(`[${timestamp}] ${message}`);
+        }
+
+        // Clear console function
+        function clearConsole() {
+            document.getElementById('consoleOutput').innerHTML = 'Console cleared...';
+        }
+
+        // Test JavaScript function
+        function testJavaScript() {
+            logToConsole('🧪 JavaScript test function called successfully!', 'success');
+            alert('✅ JavaScript is working! Function called successfully.');
+        }
+
+        // Test applyForJob function
+        function testFunction() {
+            logToConsole('🔧 Testing applyForJob function...', 'info');
+            try {
+                applyForJob('Test Company', 'Test Position', 456, null);
+                logToConsole('✅ Function test completed successfully!', 'success');
+            } catch (error) {
+                logToConsole(`❌ Function test failed: ${error.message}`, 'error');
+            }
+        }
+
+        // Show notification function
+        function showNotification(message, type = 'info') {
+            const container = document.getElementById('notificationContainer');
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+            
+            container.appendChild(notification);
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 5000);
+        }
+
+        // Main applyForJob function
+        function applyForJob(company, title, jobId = null, event = null) {
+            logToConsole('=== APPLY FOR JOB FUNCTION CALLED ===', 'success');
+            logToConsole(`Company: ${company}, Title: ${title}, JobID: ${jobId || 'None'}`, 'info');
+            logToConsole(`Event: ${event ? 'Present' : 'None'}`, 'info');
+            
+            // Get the button that was clicked
+            let button = event ? event.target : null;
+            
+            // If event.target is not the button, find the closest button
+            if (button && !button.classList.contains('apply-job-btn')) {
+                button = button.closest('.apply-job-btn');
+            }
+            
+            // If still no button, try to find it by company and title
+            if (!button) {
+                const buttons = document.querySelectorAll('.apply-job-btn');
+                for (let btn of buttons) {
+                    const onclick = btn.getAttribute('onclick');
+                    if (onclick && onclick.includes(company) && onclick.includes(title)) {
+                        button = btn;
+                        break;
+                    }
+                }
+            }
+            
+            logToConsole(`Button found: ${button ? 'Yes' : 'No'}`, button ? 'success' : 'error');
+            
+            if (button) {
+                // Update button to show "Applied" state immediately
+                button.innerHTML = '✅ Applied';
+                button.className = 'applied-job-btn';
+                button.disabled = true;
+                button.onclick = null; // Remove onclick to prevent further clicks
+                
+                logToConsole('Button updated to "Applied" state', 'success');
+                
+                // Show success message
+                showNotification(`Successfully applied for ${title} at ${company}!`, 'success');
+                
+                // Store application in localStorage to persist the state
+                const appliedJobs = JSON.parse(localStorage.getItem('appliedJobs') || '[]');
+                const jobKey = jobId || `${company}-${title}`;
+                if (!appliedJobs.includes(jobKey)) {
+                    appliedJobs.push(jobKey);
+                    localStorage.setItem('appliedJobs', JSON.stringify(appliedJobs));
+                    logToConsole('Application saved to localStorage', 'success');
+                }
+                
+                // Submit to backend
+                const formData = new FormData();
+                formData.append('job_id', jobId || '');
+                formData.append('cover_letter', `Applied for ${title} at ${company}`);
+                formData.append('resume_path', '');
+                
+                logToConsole('Submitting to backend...', 'info');
+                
+                fetch('/jobs/apply', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    logToConsole(`Backend response status: ${response.status}`, 'success');
+                    if (response.ok) {
+                        logToConsole('Job application submitted to backend successfully', 'success');
+                    } else {
+                        logToConsole('Backend submission failed, but user sees applied state', 'error');
+                    }
+                })
+                .catch(error => {
+                    logToConsole(`Backend submission failed: ${error.message}`, 'error');
+                });
+            } else {
+                logToConsole('Button not found!', 'error');
+                showNotification('Error: Could not find the apply button', 'error');
+            }
+        }
+
+        // Global test function
+        window.testApplyButton = function() {
+            logToConsole('Global test function called', 'info');
+            applyForJob('Global Test', 'Global Position', 888, null);
+        };
+
+        // Page load logging
+        document.addEventListener('DOMContentLoaded', function() {
+            logToConsole('🚀 Page loaded successfully', 'success');
+            logToConsole(`applyForJob function defined: ${typeof applyForJob}`, typeof applyForJob === 'function' ? 'success' : 'error');
+            
+            if (typeof applyForJob === 'function') {
+                logToConsole('✅ applyForJob function is ready to use!', 'success');
+                logToConsole('You can test with: testApplyButton() or applyForJob()', 'info');
+            } else {
+                logToConsole('❌ applyForJob function is NOT defined!', 'error');
+            }
+        });
+
+        // Log any JavaScript errors
+        window.addEventListener('error', function(e) {
+            logToConsole(`❌ JavaScript Error: ${e.message}`, 'error');
+        });
+    </script>
+</body>
+</html>

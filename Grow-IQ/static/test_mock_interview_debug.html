@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Interview Debug Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+        pre { background-color: #f8f9fa; padding: 10px; border-radius: 3px; overflow-x: auto; }
+        .log { background-color: #f8f9fa; padding: 10px; border-radius: 3px; margin: 10px 0; max-height: 300px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+    <h1>Mock Interview Debug Test</h1>
+    
+    <div class="test-section">
+        <h3>Authentication Test</h3>
+        <button onclick="testAuth()">Test Auth Status</button>
+        <button onclick="login()">Login</button>
+        <div id="authResult"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>Interview Session Test</h3>
+        <button onclick="startInterview()">Start Interview</button>
+        <div id="startResult"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>Message Test</h3>
+        <input type="text" id="messageInput" placeholder="Enter test message" value="Hello, this is a test message" style="width: 300px; padding: 5px;">
+        <button onclick="sendMessage()">Send Message</button>
+        <button onclick="sendMultipleMessages()">Send Multiple Messages</button>
+        <div id="messageResult"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>Speech Recognition Test</h3>
+        <button onclick="testSpeechRecognition()">Test Speech Recognition</button>
+        <div id="speechResult"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>Console Log</h3>
+        <div id="consoleLog" class="log"></div>
+        <button onclick="clearLog()">Clear Log</button>
+    </div>
+
+    <script>
+        let sessionId = null;
+        let isAuthenticated = false;
+        
+        // Override console.log to capture logs
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            const logDiv = document.getElementById('consoleLog');
+            const logEntry = document.createElement('div');
+            logEntry.textContent = args.join(' ');
+            logEntry.style.marginBottom = '5px';
+            logDiv.appendChild(logEntry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        };
+        
+        function clearLog() {
+            document.getElementById('consoleLog').innerHTML = '';
+        }
+        
+        async function testAuth() {
+            const resultDiv = document.getElementById('authResult');
+            try {
+                console.log('Testing authentication...');
+                const response = await fetch('/auth/status', {
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                console.log('Auth response:', data);
+                resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                resultDiv.className = response.ok ? 'success' : 'error';
+                isAuthenticated = data.authenticated;
+            } catch (error) {
+                console.log('Auth error:', error);
+                resultDiv.innerHTML = `<pre>Error: ${error.message}</pre>`;
+                resultDiv.className = 'error';
+            }
+        }
+        
+        async function login() {
+            const resultDiv = document.getElementById('authResult');
+            try {
+                console.log('Attempting login...');
+                const response = await fetch('/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    credentials: 'include',
+                    body: 'identifier=testuser_api&password=password123'
+                });
+                const data = await response.json();
+                console.log('Login response:', data);
+                resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                resultDiv.className = response.ok ? 'success' : 'error';
+                isAuthenticated = data.message === 'Login successful';
+            } catch (error) {
+                console.log('Login error:', error);
+                resultDiv.innerHTML = `<pre>Error: ${error.message}</pre>`;
+                resultDiv.className = 'error';
+            }
+        }
+        
+        async function startInterview() {
+            const resultDiv = document.getElementById('startResult');
+            try {
+                console.log('Starting interview session...');
+                const response = await fetch('/mock-interview/video/start', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    credentials: 'include',
+                    body: JSON.stringify({
+                        job_role: 'Software Engineer',
+                        job_desc: 'Test interview for software engineering position'
+                    })
+                });
+                const data = await response.json();
+                console.log('Start interview response:', data);
+                sessionId = data.session_id;
+                resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                resultDiv.className = response.ok ? 'success' : 'error';
+            } catch (error) {
+                console.log('Start interview error:', error);
+                resultDiv.innerHTML = `<pre>Error: ${error.message}</pre>`;
+                resultDiv.className = 'error';
+            }
+        }
+        
+        async function sendMessage() {
+            const resultDiv = document.getElementById('messageResult');
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value;
+            
+            if (!sessionId) {
+                resultDiv.innerHTML = '<pre>Please start an interview session first</pre>';
+                resultDiv.className = 'error';
+                return;
+            }
+            
+            try {
+                console.log('Sending message:', message);
+                console.log('Session ID:', sessionId);
+                const response = await fetch('/mock-interview/video/message', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    credentials: 'include',
+                    body: JSON.stringify({
+                        message: message,
+                        session_id: sessionId
+                    })
+                });
+                const data = await response.json();
+                console.log('Message response:', data);
+                resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                resultDiv.className = response.ok ? 'success' : 'error';
+            } catch (error) {
+                console.log('Message error:', error);
+                resultDiv.innerHTML = `<pre>Error: ${error.message}</pre>`;
+                resultDiv.className = 'error';
+            }
+        }
+        
+        async function sendMultipleMessages() {
+            const messages = [
+                "Hello, I am a software engineer with 5 years of experience",
+                "I have experience with Python, JavaScript, and React",
+                "I enjoy solving complex problems and working in teams",
+                "I have worked on both frontend and backend development"
+            ];
+            
+            for (let i = 0; i < messages.length; i++) {
+                console.log(`Sending message ${i + 1}/${messages.length}`);
+                document.getElementById('messageInput').value = messages[i];
+                await sendMessage();
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second between messages
+            }
+        }
+        
+        function testSpeechRecognition() {
+            const resultDiv = document.getElementById('speechResult');
+            
+            if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+                resultDiv.innerHTML = '<pre>Speech recognition not supported in this browser</pre>';
+                resultDiv.className = 'error';
+                return;
+            }
+            
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+            
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+            
+            recognition.onstart = () => {
+                console.log('Speech recognition started');
+                resultDiv.innerHTML = '<pre>🎤 Listening... Speak now!</pre>';
+                resultDiv.className = 'success';
+            };
+            
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                console.log('Speech recognition result:', transcript);
+                resultDiv.innerHTML = `<pre>🎤 Heard: "${transcript}"</pre>`;
+                resultDiv.className = 'success';
+                
+                // Auto-send the message if we have a session
+                if (sessionId) {
+                    document.getElementById('messageInput').value = transcript;
+                    sendMessage();
+                }
+            };
+            
+            recognition.onerror = (event) => {
+                console.log('Speech recognition error:', event.error);
+                resultDiv.innerHTML = `<pre>❌ Speech recognition error: ${event.error}</pre>`;
+                resultDiv.className = 'error';
+            };
+            
+            recognition.start();
+        }
+        
+        // Auto-test on page load
+        window.onload = function() {
+            console.log('Page loaded, starting auto-test...');
+            testAuth();
+        };
+    </script>
+</body>
+</html>

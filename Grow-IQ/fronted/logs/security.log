@@ -1,0 +1,9 @@
+2025-09-12 18:30:29 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-12 18:30:42 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-12 18:30:43 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
