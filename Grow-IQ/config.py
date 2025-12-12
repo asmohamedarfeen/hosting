@@ -1,17 +1,7 @@
 import os
 from pydantic_settings import BaseSettings
+from pydantic import field_validator
 from typing import List, Optional
-
-def _get_port() -> int:
-    """Safely get PORT from environment, handling $PORT literal string"""
-    port_str = os.getenv("PORT", "8000")
-    # Handle case where PORT might be set to literal '$PORT' string
-    if port_str == "$PORT" or not port_str:
-        return 8000
-    try:
-        return int(port_str)
-    except (ValueError, TypeError):
-        return 8000
 
 class Settings(BaseSettings):
     # =================================================================
@@ -26,9 +16,33 @@ class Settings(BaseSettings):
     # =================================================================
     # Server Settings
     # =================================================================
-    HOST: str = os.getenv("HOST", "0.0.0.0")
-    PORT: int = _get_port()
-    WORKERS: int = int(os.getenv("WORKERS", "4"))
+    HOST: str = "0.0.0.0"
+    PORT: int = 8000  # Default, will be overridden by env var or validator
+    WORKERS: int = 4
+    
+    @field_validator('PORT', mode='before')
+    @classmethod
+    def validate_port(cls, v):
+        """Safely parse PORT from environment, handling $PORT literal string"""
+        # If already an integer, return as-is
+        if isinstance(v, int):
+            return v
+        # If None or not provided, use default
+        if v is None:
+            return 8000
+        # If string, handle various cases
+        if isinstance(v, str):
+            # Strip whitespace
+            v = v.strip()
+            # Handle case where PORT might be set to literal '$PORT' string
+            if v == "$PORT" or not v or v == "":
+                return 8000
+            try:
+                return int(v)
+            except (ValueError, TypeError):
+                return 8000
+        # If not string or int, default to 8000
+        return 8000
     
     # =================================================================
     # Database Settings
