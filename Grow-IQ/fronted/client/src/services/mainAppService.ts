@@ -3,8 +3,21 @@
  * Bypasses messaging system and uses main app directly
  */
 
-// Use environment variable or default to relative URL (works for both dev and production)
-const MAIN_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+// Get API base URL from environment variable or use current origin
+const getApiBaseUrl = (): string => {
+  // Check for Vite environment variable
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+  // Auto-detect from current location (works in production)
+  if (typeof window !== 'undefined') {
+    return window.location.origin;
+  }
+  // Fallback for development
+  return 'http://localhost:8000';
+};
+
+const MAIN_API_BASE = getApiBaseUrl();
 
 export interface MainUser {
   id: number;

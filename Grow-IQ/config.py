@@ -19,6 +19,9 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000  # Default, will be overridden by env var or validator
     WORKERS: int = 4
+    # Base URL for the application (used for redirects, OAuth, etc.)
+    # Automatically detected from request in production, or use env var
+    BASE_URL: str = os.getenv("BASE_URL", "")
     
     @field_validator('PORT', mode='before')
     @classmethod
@@ -70,16 +73,11 @@ class Settings(BaseSettings):
     UPLOAD_FOLDER: str = os.getenv("UPLOAD_FOLDER", "./static/uploads")
     
     # =================================================================
-    # Base URL Settings
-    # =================================================================
-    BASE_URL: Optional[str] = os.getenv("BASE_URL")  # Explicit base URL (e.g., https://hosting-ujm7.onrender.com)
-    
-    # =================================================================
     # OAuth Settings (Google)
     # =================================================================
     GOOGLE_CLIENT_ID: Optional[str] = os.getenv("GOOGLE_CLIENT_ID")
     GOOGLE_CLIENT_SECRET: Optional[str] = os.getenv("GOOGLE_CLIENT_SECRET")
-    GOOGLE_REDIRECT_URI: Optional[str] = os.getenv("GOOGLE_REDIRECT_URI")  # Can be auto-generated if not set
+    GOOGLE_REDIRECT_URI: Optional[str] = os.getenv("GOOGLE_REDIRECT_URI")
     
     # =================================================================
     # AI & External API Settings
@@ -105,6 +103,25 @@ class Settings(BaseSettings):
 
 # Create global settings instance
 settings = Settings()
+
+# Helper function to get base URL dynamically
+def get_base_url(request=None):
+    """Get the base URL for the application, auto-detecting from request if available"""
+    if settings.BASE_URL:
+        return settings.BASE_URL.rstrip('/')
+    if request:
+        # Auto-detect from request
+        scheme = request.url.scheme
+        host = request.headers.get("host", f"{settings.HOST}:{settings.PORT}")
+        return f"{scheme}://{host}"
+    # Fallback for development
+    if settings.ENVIRONMENT == "development":
+        return f"http://localhost:{settings.PORT}"
+    # Production fallback - use environment variable or default
+    render_url = os.getenv("RENDER_EXTERNAL_URL", "")
+    if render_url:
+        return render_url.rstrip('/')
+    return f"http://{settings.HOST}:{settings.PORT}"
 
 # Ensure critical directories exist
 try:

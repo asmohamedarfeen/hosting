@@ -6,6 +6,17 @@ import { HeroSection } from "./sections/HeroSection";
 import { OpportunitiesSection } from "./sections/OpportunitiesSection";
 import { StatsSection } from "./sections/StatsSection";
 
+// Helper function to get API base URL dynamically
+const getApiBaseUrl = (): string => {
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+  if (typeof window !== 'undefined') {
+    return window.location.origin;
+  }
+  return 'http://localhost:8000';
+};
+
 const companyNames = [
   "Wipro",
   "Zoho",
@@ -67,8 +78,7 @@ export const LandingPage = (): JSX.Element => {
                 data-testid="button-explore-companies"
                 onClick={() => {
                   console.log('Explore Companies button clicked');
-                  // Use relative URL - works for both localhost and production
-                  window.location.href = '/login';
+                  window.location.replace(`${getApiBaseUrl()}/login`);
                 }}
               >
                 Explore Companies
@@ -260,7 +270,7 @@ export const LandingPage = (): JSX.Element => {
               <Button 
                 className="px-8 py-4 bg-white text-purple-600 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors" 
                 data-testid="button-create-profile-final"
-                onClick={() => window.location.href = '/login'}
+                onClick={() => window.location.replace(`${getApiBaseUrl()}/login`)}
               >
                 Create Your Profile Now
               </Button>
@@ -268,7 +278,7 @@ export const LandingPage = (): JSX.Element => {
                 variant="outline" 
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full text-lg font-bold hover:bg-white/10 transition-colors" 
                 data-testid="button-learn-more"
-                onClick={() => window.location.href = '/login'}
+                onClick={() => window.location.replace(`${getApiBaseUrl()}/login`)}
               >
                 Learn More
               </Button>
@@ -311,11 +321,11 @@ export const LandingPage = (): JSX.Element => {
               <div>
                 <h4 className="font-bold text-lg mb-4">Quick Links</h4>
                 <ul className="space-y-3">
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-about">About Us</a></li>
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-how-it-works">How It Works</a></li>
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-pricing">Pricing</a></li>
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-success-stories">Success Stories</a></li>
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-blog">Blog</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-about">About Us</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-how-it-works">How It Works</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-pricing">Pricing</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-success-stories">Success Stories</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-blog">Blog</a></li>
                 </ul>
               </div>
 
@@ -323,11 +333,11 @@ export const LandingPage = (): JSX.Element => {
               <div>
                 <h4 className="font-bold text-lg mb-4">Support</h4>
                 <ul className="space-y-3">
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-help-center">Help Center</a></li>
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-contact">Contact Us</a></li>
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-privacy">Privacy Policy</a></li>
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-terms">Terms of Service</a></li>
-                  <li><a href="/login" className="text-gray-300 hover:text-white transition-colors" data-testid="link-careers">Careers</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-help-center">Help Center</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-contact">Contact Us</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-privacy">Privacy Policy</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-terms">Terms of Service</a></li>
+                  <li><a href={`${getApiBaseUrl()}/login`} className="text-gray-300 hover:text-white transition-colors" data-testid="link-careers">Careers</a></li>
                 </ul>
               </div>
             </div>

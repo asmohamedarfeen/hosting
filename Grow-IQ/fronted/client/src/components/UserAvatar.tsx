@@ -35,12 +35,16 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
     if (typeof raw === "string" && (raw.startsWith("http://") || raw.startsWith("https://"))) {
       return raw;
     }
-    // If it starts with /static/, it's already a full path from the main app - use relative URL
+    // If it starts with /static/, it's already a full path from the main app
     if (typeof raw === "string" && raw.startsWith("/static/")) {
-      return raw; // Use relative URL - browser will resolve it correctly
+      // Get base URL dynamically
+      const baseUrl = import.meta.env.VITE_API_BASE_URL || (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:8000');
+      return `${baseUrl}${raw}`;
     }
-    // Otherwise, construct the relative path
-    return `/static/uploads/${raw}`;
+    // Otherwise, construct the full path
+    // Get base URL dynamically
+    const baseUrl = import.meta.env.VITE_API_BASE_URL || (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:8000');
+    return `${baseUrl}/static/uploads/${raw}`;
   };
 
   const getSizeClasses = () => {

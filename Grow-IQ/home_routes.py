@@ -231,14 +231,15 @@ def get_default_growth_data():
     ]
 
 @router.get("/home", response_class=HTMLResponse)
-async def home_page():
+async def home_page(request: Request):
     """Serve SPA for home route"""
     index_path = os.path.join(FRONTEND_DIST_DIR, "index.html")
     if os.path.exists(index_path):
         return FileResponse(index_path, media_type="text/html")
     from fastapi.responses import RedirectResponse
-    # Use relative URL - works for both localhost and production
-    return RedirectResponse(url="/", status_code=307)
+    from config import get_base_url
+    base_url = get_base_url(request)
+    return RedirectResponse(url=f"{base_url}/home", status_code=307)
 
 @router.post("/update-profile")
 async def update_profile(

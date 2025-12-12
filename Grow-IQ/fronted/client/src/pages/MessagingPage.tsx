@@ -10,8 +10,18 @@ import { UserAvatar } from "@/components/UserAvatar";
 import { usePageTransition } from "@/contexts/TransitionContext";
 import { mainAppService, MainUser, Connection } from "@/services/mainAppService";
 
-// Use environment variable or empty string for relative URLs
-const MAIN_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+// Get API base URL dynamically
+const getApiBaseUrl = (): string => {
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+  if (typeof window !== 'undefined') {
+    return window.location.origin;
+  }
+  return 'http://localhost:8000';
+};
+
+const MAIN_API_BASE = getApiBaseUrl();
 import { 
   ArrowLeft, 
   Send, 

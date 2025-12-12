@@ -41,8 +41,9 @@ export const StatsSection = (): JSX.Element => {
           data-testid="button-login"
           onClick={() => {
             console.log('Log Me In button clicked');
-            // Use relative URL - works for both localhost and production
-            window.location.href = '/login';
+            // Get API base URL dynamically
+            const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:8000');
+            window.location.replace(`${apiBaseUrl}/login`);
           }}
         >
           <span className="relative w-fit mt-[-1.00px] [font-family:'Sora',Helvetica] font-bold text-black/75 text-sm tracking-[0] leading-[normal]">

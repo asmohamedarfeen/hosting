@@ -1,12 +1,23 @@
 /**
  * Message Service - Handles all messaging API calls
- * Connects to the message system backend
+ * Connects to the message system backend at localhost:9000
  * Integrated with main database authentication
  */
 
-// Use environment variables or relative URLs
-const MESSAGE_API_BASE = import.meta.env.VITE_MESSAGE_API_BASE_URL || '/api/v1';
-const MAIN_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+// Get API base URL from environment variable or use current origin
+const getApiBaseUrl = (): string => {
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+  if (typeof window !== 'undefined') {
+    return window.location.origin;
+  }
+  return 'http://localhost:8000';
+};
+
+const MAIN_API_BASE = getApiBaseUrl();
+// Message API uses a different port in some setups, but default to main API
+const MESSAGE_API_BASE = import.meta.env.VITE_MESSAGE_API_BASE_URL || `${MAIN_API_BASE}/api/v1`;
 
 export interface User {
   id: number;
@@ -274,10 +285,7 @@ class MessageService {
 
   // WebSocket connection
   createWebSocketConnection(userId: number, onMessage: (message: any) => void) {
-    // Use wss:// for production (HTTPS), ws:// for development
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const wsUrl = import.meta.env.VITE_WS_URL || `${protocol}//${window.location.host}/api/v1/messages/ws/${userId}`;
-    const ws = new WebSocket(wsUrl);
+    const ws = new WebSocket(`ws://localhost:9000/api/v1/messages/ws/${userId}`);
     
     ws.onopen = () => {
       console.log('WebSocket connected');

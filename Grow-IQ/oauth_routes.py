@@ -11,7 +11,6 @@ from auth_utils import get_user_from_session, create_session_token, delete_sessi
 from datetime import datetime, timedelta
 import secrets
 import hashlib
-from url_utils import get_base_url, get_redirect_uri, build_url
 
 # Initialize router
 router = APIRouter(prefix="/auth", tags=["oauth"])
@@ -21,6 +20,17 @@ from config import settings
 # OAuth Configuration
 GOOGLE_CLIENT_ID = settings.GOOGLE_CLIENT_ID
 GOOGLE_CLIENT_SECRET = settings.GOOGLE_CLIENT_SECRET
+# Use environment variable if set, otherwise auto-generate from request
+GOOGLE_REDIRECT_URI = settings.GOOGLE_REDIRECT_URI
+
+def get_oauth_redirect_uri(request: Request) -> str:
+    """Get OAuth redirect URI, using env var or auto-detecting from request"""
+    if GOOGLE_REDIRECT_URI:
+        return GOOGLE_REDIRECT_URI
+    # Auto-generate from request
+    from config import get_base_url
+    base_url = get_base_url(request)
+    return f"{base_url}/auth/google/callback"
 
 # OAuth endpoints
 GOOGLE_AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth"
@@ -36,15 +46,15 @@ oauth_states = {}
 async def google_oauth_login(request: Request):
     """Initiate Google OAuth login"""
     try:
-        # Get dynamic redirect URI from request
-        redirect_uri = settings.GOOGLE_REDIRECT_URI or get_redirect_uri(request)
-        
         # Generate state parameter for security
         state = secrets.token_urlsafe(32)
         oauth_states[state] = {
             "created_at": datetime.utcnow(),
             "redirect_after": request.query_params.get("redirect", "/dashboard")
         }
+        
+        # Get redirect URI (use env var or auto-detect)
+        redirect_uri = get_oauth_redirect_uri(request)
         
         # Build OAuth URL
         oauth_params = {
@@ -77,28 +87,25 @@ async def google_oauth_callback(
 ):
     """Handle Google OAuth callback"""
     try:
-        # Get base URL for redirects
-        base_url = get_base_url(request)
-        
         # Check for OAuth errors
         if error:
             logging.error(f"Google OAuth error: {error}")
-            return RedirectResponse(url=f"{base_url}/login?error=oauth_failed", status_code=302)
+            return RedirectResponse(url="/login?error=oauth_failed", status_code=302)
         
         # Validate state parameter
         if state not in oauth_states:
             logging.error("Invalid OAuth state parameter")
-            return RedirectResponse(url=f"{base_url}/login?error=invalid_state", status_code=302)
+            return RedirectResponse(url="/login?error=invalid_state", status_code=302)
         
         state_data = oauth_states.pop(state)
         
         # Check if state is expired (5 minutes)
         if datetime.utcnow() - state_data["created_at"] > timedelta(minutes=5):
             logging.error("OAuth state expired")
-            return RedirectResponse(url=f"{base_url}/login?error=state_expired", status_code=302)
+            return RedirectResponse(url="/login?error=state_expired", status_code=302)
         
-        # Get dynamic redirect URI from request
-        redirect_uri = settings.GOOGLE_REDIRECT_URI or get_redirect_uri(request)
+        # Get redirect URI (use env var or auto-detect)
+        redirect_uri = get_oauth_redirect_uri(request)
         
         # Exchange authorization code for access token
         token_response = requests.post(GOOGLE_TOKEN_URL, data={
@@ -111,14 +118,14 @@ async def google_oauth_callback(
         
         if token_response.status_code != 200:
             logging.error(f"Token exchange failed: {token_response.text}")
-            return RedirectResponse(url=f"{base_url}/login?error=token_exchange_failed", status_code=302)
+            return RedirectResponse(url="/login?error=token_exchange_failed", status_code=302)
         
         token_data = token_response.json()
         access_token = token_data.get("access_token")
         
         if not access_token:
             logging.error("No access token received")
-            return RedirectResponse(url=f"{base_url}/login?error=no_access_token", status_code=302)
+            return RedirectResponse(url="/login?error=no_access_token", status_code=302)
         
         # Get user information from Google
         userinfo_response = requests.get(
@@ -128,7 +135,7 @@ async def google_oauth_callback(
         
         if userinfo_response.status_code != 200:
             logging.error(f"Failed to get user info: {userinfo_response.text}")
-            return RedirectResponse(url=f"{base_url}/login?error=userinfo_failed", status_code=302)
+            return RedirectResponse(url="/login?error=userinfo_failed", status_code=302)
         
         userinfo = userinfo_response.json()
         
@@ -138,13 +145,10 @@ async def google_oauth_callback(
         # Create session
         session_token = create_session_token(user.id)
         
-        # Redirect to dashboard or intended page (use relative URL, browser will handle it)
-        redirect_path = state_data.get("redirect_after", "/dashboard")
-        # Ensure it's a relative path
-        if not redirect_path.startswith('/'):
-            redirect_path = '/' + redirect_path
+        # Redirect to dashboard or intended page
+        redirect_url = state_data.get("redirect_after", "/dashboard")
         
-        response = RedirectResponse(url=redirect_path, status_code=302)
+        response = RedirectResponse(url=redirect_url, status_code=302)
         response.set_cookie(
             key="session_token",
             value=session_token,
@@ -158,8 +162,7 @@ async def google_oauth_callback(
         
     except Exception as e:
         logging.error(f"Error processing Google OAuth callback: {str(e)}")
-        base_url = get_base_url(request)
-        return RedirectResponse(url=f"{base_url}/login?error=callback_failed", status_code=302)
+        return RedirectResponse(url="/login?error=callback_failed", status_code=302)
 
 # ==================== OAUTH USER PROCESSING ====================
 
