@@ -31,7 +31,15 @@ def main():
         raise RuntimeError("Cannot connect to database")
     
     # Get port from environment (Render sets this automatically)
-    port = int(os.getenv("PORT", 8000))
+    # Handle case where PORT might be set to literal '$PORT' string
+    port_str = os.getenv("PORT", "8000")
+    if port_str == "$PORT" or not port_str:
+        port = 8000
+    else:
+        try:
+            port = int(port_str)
+        except (ValueError, TypeError):
+            port = 8000
     host = os.getenv("HOST", "0.0.0.0")
     
     print(f"🌐 Starting server on {host}:{port}")
@@ -41,6 +49,7 @@ def main():
     
     # Start uvicorn server
     # Note: Render expects the app to bind to $PORT
+    # Note: uvicorn doesn't support workers parameter - use gunicorn for multiple workers
     uvicorn.run(
         app,
         host=host,
@@ -48,9 +57,7 @@ def main():
         log_level=settings.LOG_LEVEL.lower(),
         access_log=True,
         # Don't use reload in production
-        reload=False,
-        # Use multiple workers if specified
-        workers=settings.WORKERS if hasattr(settings, 'WORKERS') else 1
+        reload=False
     )
 
 if __name__ == "__main__":

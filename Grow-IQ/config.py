@@ -2,6 +2,17 @@ import os
 from pydantic_settings import BaseSettings
 from typing import List, Optional
 
+def _get_port() -> int:
+    """Safely get PORT from environment, handling $PORT literal string"""
+    port_str = os.getenv("PORT", "8000")
+    # Handle case where PORT might be set to literal '$PORT' string
+    if port_str == "$PORT" or not port_str:
+        return 8000
+    try:
+        return int(port_str)
+    except (ValueError, TypeError):
+        return 8000
+
 class Settings(BaseSettings):
     # =================================================================
     # Application Basic Settings
@@ -16,7 +27,7 @@ class Settings(BaseSettings):
     # Server Settings
     # =================================================================
     HOST: str = os.getenv("HOST", "0.0.0.0")
-    PORT: int = int(os.getenv("PORT", "8000"))
+    PORT: int = _get_port()
     WORKERS: int = int(os.getenv("WORKERS", "4"))
     
     # =================================================================
