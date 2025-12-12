@@ -5,8 +5,25 @@ import { createProxyMiddleware } from "http-proxy-middleware";
 import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Backend target (FastAPI). Configure via env BACKEND_URL or defaults to localhost:8000
-  const backendUrl = process.env.BACKEND_URL || "http://localhost:8000";
+  // Backend target (FastAPI). Configure via env BACKEND_URL or auto-detect
+  // In production (Render), use RENDER_EXTERNAL_URL or current origin
+  const getBackendUrl = (): string => {
+    if (process.env.BACKEND_URL) {
+      return process.env.BACKEND_URL;
+    }
+    // Render automatically sets RENDER_EXTERNAL_URL
+    if (process.env.RENDER_EXTERNAL_URL) {
+      return process.env.RENDER_EXTERNAL_URL;
+    }
+    // Auto-detect from request in production, fallback to localhost for dev
+    if (process.env.NODE_ENV === 'production') {
+      // In production, backend should be on same origin or use BASE_URL
+      return process.env.BASE_URL || '';
+    }
+    return "http://localhost:8000";
+  };
+  
+  const backendUrl = getBackendUrl();
 
   // Reverse proxy API and auth to backend
   // Ensure these are registered BEFORE the Vite middleware catch-all
