@@ -37,10 +37,10 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
     }
     // If it starts with /static/, it's already a full path from the main app
     if (typeof raw === "string" && raw.startsWith("/static/")) {
-      return `http://localhost:8000${raw}`;
+      return raw; // Use relative URL
     }
     // Otherwise, construct the full path
-    return `http://localhost:8000/static/uploads/${raw}`;
+    return `/static/uploads/${raw}`;
   };
 
   const getSizeClasses = () => {

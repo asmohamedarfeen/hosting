@@ -10,7 +10,8 @@ import { UserAvatar } from "@/components/UserAvatar";
 import { usePageTransition } from "@/contexts/TransitionContext";
 import { mainAppService, MainUser, Connection } from "@/services/mainAppService";
 
-const MAIN_API_BASE = 'http://localhost:8000';
+// Use relative URL for same-domain requests, or environment variable for different domains
+const MAIN_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 import { 
   ArrowLeft, 
   Send, 

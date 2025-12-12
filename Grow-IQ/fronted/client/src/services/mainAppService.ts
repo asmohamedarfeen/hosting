@@ -3,7 +3,8 @@
  * Bypasses messaging system and uses main app directly
  */
 
-const MAIN_API_BASE = 'http://localhost:8000';
+// Use relative URL for same-domain requests, or environment variable for different domains
+const MAIN_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 
 export interface MainUser {
   id: number;

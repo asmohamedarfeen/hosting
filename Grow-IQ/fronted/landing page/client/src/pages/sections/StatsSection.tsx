@@ -41,7 +41,7 @@ export const StatsSection = (): JSX.Element => {
           data-testid="button-login"
           onClick={() => {
             console.log('Log Me In button clicked');
-            window.location.replace('http://localhost:8000/login');
+            window.location.replace('/login');
           }}
         >
           <span className="relative w-fit mt-[-1.00px] [font-family:'Sora',Helvetica] font-bold text-black/75 text-sm tracking-[0] leading-[normal]">

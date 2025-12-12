@@ -4,8 +4,9 @@
  * Integrated with main database authentication
  */
 
-const MESSAGE_API_BASE = 'http://localhost:9000/api/v1';
-const MAIN_API_BASE = 'http://localhost:8000';
+// Use relative URLs for same-domain requests, or environment variables for different domains
+const MESSAGE_API_BASE = import.meta.env.VITE_MESSAGE_API_BASE_URL || '/api/v1';
+const MAIN_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 
 export interface User {
   id: number;
@@ -273,7 +274,10 @@ class MessageService {
 
   // WebSocket connection
   createWebSocketConnection(userId: number, onMessage: (message: any) => void) {
-    const ws = new WebSocket(`ws://localhost:9000/api/v1/messages/ws/${userId}`);
+    // Use wss:// for HTTPS, ws:// for HTTP, or environment variable
+    const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsHost = import.meta.env.VITE_WS_BASE_URL || `${wsProtocol}//${window.location.host}`;
+    const ws = new WebSocket(`${wsHost}/api/v1/messages/ws/${userId}`);
     
     ws.onopen = () => {
       console.log('WebSocket connected');
