@@ -237,7 +237,8 @@ async def home_page():
     if os.path.exists(index_path):
         return FileResponse(index_path, media_type="text/html")
     from fastapi.responses import RedirectResponse
-    return RedirectResponse(url="http://localhost:5000/home", status_code=307)
+    # Use relative URL - works for both localhost and production
+    return RedirectResponse(url="/", status_code=307)
 
 @router.post("/update-profile")
 async def update_profile(

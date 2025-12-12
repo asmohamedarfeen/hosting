@@ -70,11 +70,16 @@ class Settings(BaseSettings):
     UPLOAD_FOLDER: str = os.getenv("UPLOAD_FOLDER", "./static/uploads")
     
     # =================================================================
+    # Base URL Settings
+    # =================================================================
+    BASE_URL: Optional[str] = os.getenv("BASE_URL")  # Explicit base URL (e.g., https://hosting-ujm7.onrender.com)
+    
+    # =================================================================
     # OAuth Settings (Google)
     # =================================================================
     GOOGLE_CLIENT_ID: Optional[str] = os.getenv("GOOGLE_CLIENT_ID")
     GOOGLE_CLIENT_SECRET: Optional[str] = os.getenv("GOOGLE_CLIENT_SECRET")
-    GOOGLE_REDIRECT_URI: Optional[str] = os.getenv("GOOGLE_REDIRECT_URI")
+    GOOGLE_REDIRECT_URI: Optional[str] = os.getenv("GOOGLE_REDIRECT_URI")  # Can be auto-generated if not set
     
     # =================================================================
     # AI & External API Settings

@@ -1873,4 +1873,5 @@ async def spa_fallback(full_path: str, request: Request):
     index_path = os.path.join(FRONTEND_DIST_DIR, "index.html")
     if os.path.exists(index_path):
         return FileResponse(index_path, media_type="text/html")
-    return RedirectResponse(url="http://localhost:5000/", status_code=307)
+    # Fallback to root - use relative URL
+    return RedirectResponse(url="/", status_code=307)

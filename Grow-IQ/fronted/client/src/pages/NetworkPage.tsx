@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { usePageTransition } from "@/contexts/TransitionContext";
 import { mainAppService, MainUser, Connection, ConnectionRequest } from "@/services/mainAppService";
 
-// Use relative URL for same-domain requests, or environment variable for different domains
+// Use environment variable or empty string for relative URLs
 const MAIN_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 import { 
   ArrowLeft, 

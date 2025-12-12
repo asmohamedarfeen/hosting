@@ -1,10 +1,10 @@
 /**
  * Message Service - Handles all messaging API calls
- * Connects to the message system backend at localhost:9000
+ * Connects to the message system backend
  * Integrated with main database authentication
  */
 
-// Use relative URLs for same-domain requests, or environment variables for different domains
+// Use environment variables or relative URLs
 const MESSAGE_API_BASE = import.meta.env.VITE_MESSAGE_API_BASE_URL || '/api/v1';
 const MAIN_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 
@@ -274,10 +274,10 @@ class MessageService {
 
   // WebSocket connection
   createWebSocketConnection(userId: number, onMessage: (message: any) => void) {
-    // Use wss:// for HTTPS, ws:// for HTTP, or environment variable
-    const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const wsHost = import.meta.env.VITE_WS_BASE_URL || `${wsProtocol}//${window.location.host}`;
-    const ws = new WebSocket(`${wsHost}/api/v1/messages/ws/${userId}`);
+    // Use wss:// for production (HTTPS), ws:// for development
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsUrl = import.meta.env.VITE_WS_URL || `${protocol}//${window.location.host}/api/v1/messages/ws/${userId}`;
+    const ws = new WebSocket(wsUrl);
     
     ws.onopen = () => {
       console.log('WebSocket connected');

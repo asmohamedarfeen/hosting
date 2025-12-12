@@ -3,7 +3,7 @@
  * Bypasses messaging system and uses main app directly
  */
 
-// Use relative URL for same-domain requests, or environment variable for different domains
+// Use environment variable or default to relative URL (works for both dev and production)
 const MAIN_API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 
 export interface MainUser {

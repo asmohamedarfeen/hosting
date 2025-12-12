@@ -67,7 +67,8 @@ export const LandingPage = (): JSX.Element => {
                 data-testid="button-explore-companies"
                 onClick={() => {
                   console.log('Explore Companies button clicked');
-                  window.location.replace('/login');
+                  // Use relative URL - works for both localhost and production
+                  window.location.href = '/login';
                 }}
               >
                 Explore Companies
@@ -259,7 +260,7 @@ export const LandingPage = (): JSX.Element => {
               <Button 
                 className="px-8 py-4 bg-white text-purple-600 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors" 
                 data-testid="button-create-profile-final"
-                onClick={() => window.location.replace('/login')}
+                onClick={() => window.location.href = '/login'}
               >
                 Create Your Profile Now
               </Button>
@@ -267,7 +268,7 @@ export const LandingPage = (): JSX.Element => {
                 variant="outline" 
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full text-lg font-bold hover:bg-white/10 transition-colors" 
                 data-testid="button-learn-more"
-                onClick={() => window.location.replace('/login')}
+                onClick={() => window.location.href = '/login'}
               >
                 Learn More
               </Button>

@@ -35,11 +35,11 @@ export const UserAvatar: React.FC<UserAvatarProps> = ({
     if (typeof raw === "string" && (raw.startsWith("http://") || raw.startsWith("https://"))) {
       return raw;
     }
-    // If it starts with /static/, it's already a full path from the main app
+    // If it starts with /static/, it's already a full path from the main app - use relative URL
     if (typeof raw === "string" && raw.startsWith("/static/")) {
-      return raw; // Use relative URL
+      return raw; // Use relative URL - browser will resolve it correctly
     }
-    // Otherwise, construct the full path
+    // Otherwise, construct the relative path
     return `/static/uploads/${raw}`;
   };
 
