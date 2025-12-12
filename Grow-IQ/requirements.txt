@@ -105,7 +105,7 @@ fastapi-mail>=1.4.0
 fastapi-limiter>=0.1.0
 fastapi-users>=12.0.0
 fastapi-versioning>=0.10.0
-fastapi-swagger-ui>=0.1.0
+# Note: fastapi-swagger-ui is not needed - FastAPI includes Swagger UI by default at /docs
 
 # WebSocket
 websockets>=11.0.0
