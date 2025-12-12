@@ -1,0 +1,133 @@
+2025-12-12 19:23:55 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:23:57 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:57 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:57 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:57 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:23:57 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:11 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:11 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:11 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:12 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:12 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:12 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:12 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:12 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:12 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:12 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:12 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:12 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:12 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:12 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:12 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:12 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:12 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:12 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:12 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:12 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:12 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:12 - SECURITY - WARNING - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:13 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - SECURITY - WARNING - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:13 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:13 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:13 - SECURITY - WARNING - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:13 - SECURITY - ERROR - Failed to initialize database tables: (sqlite3.OperationalError) table users already exists
+[SQL: 
+CREATE TABLE users (
+	id INTEGER NOT NULL, 
+	username VARCHAR(64) NOT NULL, 
+	email VARCHAR(120) NOT NULL, 
+	full_name VARCHAR(100) NOT NULL, 
+	title VARCHAR(100), 
+	company VARCHAR(100), 
+	location VARCHAR(100), 
+	bio TEXT, 
+	profile_image VARCHAR(200), 
+	profile_pic VARCHAR(500), 
+	password_hash VARCHAR(256), 
+	user_type VARCHAR(20) NOT NULL, 
+	domain VARCHAR(100), 
+	is_verified BOOLEAN NOT NULL, 
+	is_active BOOLEAN NOT NULL, 
+	last_login DATETIME, 
+	created_at DATETIME NOT NULL, 
+	updated_at DATETIME NOT NULL, 
+	phone VARCHAR(20), 
+	website VARCHAR(200), 
+	linkedin_url VARCHAR(200), 
+	twitter_url VARCHAR(200), 
+	github_url VARCHAR(200), 
+	google_id VARCHAR(100), 
+	domain_id VARCHAR(100), 
+	hr_id VARCHAR(100), 
+	industry VARCHAR(100), 
+	skills TEXT, 
+	experience_years INTEGER, 
+	experience VARCHAR(20), 
+	education TEXT, 
+	certifications TEXT, 
+	interests TEXT, 
+	portfolio_url VARCHAR(200), 
+	profile_visibility VARCHAR(20) NOT NULL, 
+	show_email BOOLEAN NOT NULL, 
+	show_phone BOOLEAN NOT NULL, 
+	PRIMARY KEY (id), 
+	CONSTRAINT valid_user_type CHECK (user_type IN ('normal', 'domain', 'premium')), 
+	CONSTRAINT valid_profile_visibility CHECK (profile_visibility IN ('public', 'connections', 'private')), 
+	CONSTRAINT valid_experience_years CHECK (experience_years >= 0), 
+	UNIQUE (google_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - SECURITY - WARNING - Database tables may not be properly initialized
+2025-12-12 19:31:31 - SECURITY - WARNING - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:31:40 - SECURITY - WARNING - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:31:42 - SECURITY - WARNING - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:33:09 - SECURITY - WARNING - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:34:44 - SECURITY - WARNING - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:34:45 - SECURITY - WARNING - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:35:18 - SECURITY - WARNING - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:35:19 - SECURITY - WARNING - Login failed: User not found for identifier: testuser@example.com

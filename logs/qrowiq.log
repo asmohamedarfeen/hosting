@@ -1,0 +1,261 @@
+2025-12-12 19:23:55 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:55 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:23:57 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:23:57 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:23:57 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:23:57 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:23:57 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:57 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:23:57 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:23:57 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:23:57 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:23:57 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:23:57 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:23:57 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:29:11 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:29:11 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:11 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:29:11 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:11 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:29:11 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:11 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:29:11 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:29:12 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:29:12 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:29:12 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:29:12 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:29:12 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:12 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:12 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:12 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:29:12 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:29:12 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:29:12 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:29:12 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:29:12 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:30:12 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:30:12 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:30:12 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:30:12 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:30:12 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:30:12 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:126 - Mounted frontend assets from /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/fronted/dist/public/assets at /assets
+2025-12-12 19:30:12 - qrowiq - WARNING - <module>:140 - Resume tester static directory not found: /Users/asmohamedarfeen/Desktop/project/hostapp/Grow-IQ/resume_tester/static
+2025-12-12 19:30:12 - qrowiq - INFO - <module>:156 - Message UI static directory mounted at /message/static
+2025-12-12 19:30:13 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - message_api_routes - WARNING - _ensure_messages_table_schema:55 - Could not verify/patch messages table schema: (sqlite3.OperationalError) no such table: messages
+[SQL: ALTER TABLE messages ADD COLUMN timestamp DATETIME DEFAULT (CURRENT_TIMESTAMP)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:30:13 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:30:13 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:30:13 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1261 - Streak routes included successfully
+2025-12-12 19:30:13 - qrowiq - WARNING - <module>:1271 - Could not include job recommendation routes: No module named 'job_recommendation_routes'
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1277 - Test auth routes included successfully
+2025-12-12 19:30:13 - qrowiq - INFO - <module>:1281 - Qrow IQ FastAPI application configured successfully
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:52 - Starting Qrow IQ application...
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:56 - Database connection successful
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:58 - Database: {'type': 'SQLite', 'path': './dashboard.db', 'status': 'healthy'}
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:52 - Starting Qrow IQ application...
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:62 - Database health: {'overall': 'healthy', 'database': {'type': 'SQLite', 'status': 'connected'}, 'pool': {'pool_size': 'N/A (SQLite)', 'checked_in': 'N/A (SQLite)', 'checked_out': 'N/A (SQLite)', 'overflow': 'N/A (SQLite)'}, 'last_check': 1765548013.32515}
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:56 - Database connection successful
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:58 - Database: {'type': 'SQLite', 'path': './dashboard.db', 'status': 'healthy'}
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:62 - Database health: {'overall': 'healthy', 'database': {'type': 'SQLite', 'status': 'connected'}, 'pool': {'pool_size': 'N/A (SQLite)', 'checked_in': 'N/A (SQLite)', 'checked_out': 'N/A (SQLite)', 'overflow': 'N/A (SQLite)'}, 'last_check': 1765548013.32543}
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:52 - Starting Qrow IQ application...
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:56 - Database connection successful
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:58 - Database: {'type': 'SQLite', 'path': './dashboard.db', 'status': 'healthy'}
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:62 - Database health: {'overall': 'healthy', 'database': {'type': 'SQLite', 'status': 'connected'}, 'pool': {'pool_size': 'N/A (SQLite)', 'checked_in': 'N/A (SQLite)', 'checked_out': 'N/A (SQLite)', 'overflow': 'N/A (SQLite)'}, 'last_check': 1765548013.3297422}
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:52 - Starting Qrow IQ application...
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:56 - Database connection successful
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:58 - Database: {'type': 'SQLite', 'path': './dashboard.db', 'status': 'healthy'}
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:62 - Database health: {'overall': 'healthy', 'database': {'type': 'SQLite', 'status': 'connected'}, 'pool': {'pool_size': 'N/A (SQLite)', 'checked_in': 'N/A (SQLite)', 'checked_out': 'N/A (SQLite)', 'overflow': 'N/A (SQLite)'}, 'last_check': 1765548013.3317068}
+2025-12-12 19:30:13 - database_enhanced - ERROR - init_database:268 - Failed to initialize database tables: (sqlite3.OperationalError) table users already exists
+[SQL: 
+CREATE TABLE users (
+	id INTEGER NOT NULL, 
+	username VARCHAR(64) NOT NULL, 
+	email VARCHAR(120) NOT NULL, 
+	full_name VARCHAR(100) NOT NULL, 
+	title VARCHAR(100), 
+	company VARCHAR(100), 
+	location VARCHAR(100), 
+	bio TEXT, 
+	profile_image VARCHAR(200), 
+	profile_pic VARCHAR(500), 
+	password_hash VARCHAR(256), 
+	user_type VARCHAR(20) NOT NULL, 
+	domain VARCHAR(100), 
+	is_verified BOOLEAN NOT NULL, 
+	is_active BOOLEAN NOT NULL, 
+	last_login DATETIME, 
+	created_at DATETIME NOT NULL, 
+	updated_at DATETIME NOT NULL, 
+	phone VARCHAR(20), 
+	website VARCHAR(200), 
+	linkedin_url VARCHAR(200), 
+	twitter_url VARCHAR(200), 
+	github_url VARCHAR(200), 
+	google_id VARCHAR(100), 
+	domain_id VARCHAR(100), 
+	hr_id VARCHAR(100), 
+	industry VARCHAR(100), 
+	skills TEXT, 
+	experience_years INTEGER, 
+	experience VARCHAR(20), 
+	education TEXT, 
+	certifications TEXT, 
+	interests TEXT, 
+	portfolio_url VARCHAR(200), 
+	profile_visibility VARCHAR(20) NOT NULL, 
+	show_email BOOLEAN NOT NULL, 
+	show_phone BOOLEAN NOT NULL, 
+	PRIMARY KEY (id), 
+	CONSTRAINT valid_user_type CHECK (user_type IN ('normal', 'domain', 'premium')), 
+	CONSTRAINT valid_profile_visibility CHECK (profile_visibility IN ('public', 'connections', 'private')), 
+	CONSTRAINT valid_experience_years CHECK (experience_years >= 0), 
+	UNIQUE (google_id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:30:13 - qrowiq - WARNING - lifespan:76 - Database tables may not be properly initialized
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:83 - Qrow IQ application started successfully
+2025-12-12 19:30:13 - database_enhanced - INFO - init_database:265 - Database tables initialized successfully
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:78 - Database tables created/verified successfully
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:83 - Qrow IQ application started successfully
+2025-12-12 19:30:13 - database_enhanced - INFO - init_database:265 - Database tables initialized successfully
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:78 - Database tables created/verified successfully
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:83 - Qrow IQ application started successfully
+2025-12-12 19:30:13 - database_enhanced - INFO - init_database:265 - Database tables initialized successfully
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:78 - Database tables created/verified successfully
+2025-12-12 19:30:13 - qrowiq - INFO - lifespan:83 - Qrow IQ application started successfully
+2025-12-12 19:31:31 - auth_routes - INFO - login:62 - Login attempt started
+2025-12-12 19:31:31 - auth_routes - INFO - login:68 - Login attempt for identifier: testuser@example.com
+2025-12-12 19:31:31 - auth_routes - INFO - login:78 - Searching for user in database
+2025-12-12 19:31:31 - auth_routes - WARNING - login:84 - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:31:40 - auth_routes - INFO - login:62 - Login attempt started
+2025-12-12 19:31:40 - auth_routes - INFO - login:68 - Login attempt for identifier: testuser@example.com
+2025-12-12 19:31:40 - auth_routes - INFO - login:78 - Searching for user in database
+2025-12-12 19:31:40 - auth_routes - WARNING - login:84 - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:31:42 - auth_routes - INFO - login:62 - Login attempt started
+2025-12-12 19:31:42 - auth_routes - INFO - login:68 - Login attempt for identifier: testuser@example.com
+2025-12-12 19:31:42 - auth_routes - INFO - login:78 - Searching for user in database
+2025-12-12 19:31:42 - auth_routes - WARNING - login:84 - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:33:09 - auth_routes - INFO - login:62 - Login attempt started
+2025-12-12 19:33:09 - auth_routes - INFO - login:68 - Login attempt for identifier: testuser@example.com
+2025-12-12 19:33:09 - auth_routes - INFO - login:78 - Searching for user in database
+2025-12-12 19:33:09 - auth_routes - WARNING - login:84 - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:34:44 - auth_routes - INFO - login:62 - Login attempt started
+2025-12-12 19:34:44 - auth_routes - INFO - login:68 - Login attempt for identifier: testuser@example.com
+2025-12-12 19:34:44 - auth_routes - INFO - login:78 - Searching for user in database
+2025-12-12 19:34:44 - auth_routes - WARNING - login:84 - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:34:45 - auth_routes - INFO - login:62 - Login attempt started
+2025-12-12 19:34:45 - auth_routes - INFO - login:68 - Login attempt for identifier: testuser@example.com
+2025-12-12 19:34:45 - auth_routes - INFO - login:78 - Searching for user in database
+2025-12-12 19:34:45 - auth_routes - WARNING - login:84 - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:35:18 - auth_routes - INFO - login:62 - Login attempt started
+2025-12-12 19:35:18 - auth_routes - INFO - login:68 - Login attempt for identifier: testuser@example.com
+2025-12-12 19:35:18 - auth_routes - INFO - login:78 - Searching for user in database
+2025-12-12 19:35:18 - auth_routes - WARNING - login:84 - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:35:19 - auth_routes - INFO - login:62 - Login attempt started
+2025-12-12 19:35:19 - auth_routes - INFO - login:68 - Login attempt for identifier: testuser@example.com
+2025-12-12 19:35:19 - auth_routes - INFO - login:78 - Searching for user in database
+2025-12-12 19:35:19 - auth_routes - WARNING - login:84 - Login failed: User not found for identifier: testuser@example.com
+2025-12-12 19:36:16 - qrowiq - INFO - lifespan:88 - Shutting down Qrow IQ application...
+2025-12-12 19:36:16 - database_enhanced - INFO - cleanup:210 - Database connections cleaned up
+2025-12-12 19:36:16 - qrowiq - INFO - lifespan:88 - Shutting down Qrow IQ application...
+2025-12-12 19:36:16 - database_enhanced - INFO - cleanup:210 - Database connections cleaned up
+2025-12-12 19:36:16 - qrowiq - INFO - lifespan:88 - Shutting down Qrow IQ application...
+2025-12-12 19:36:16 - database_enhanced - INFO - cleanup:210 - Database connections cleaned up
+2025-12-12 19:36:16 - qrowiq - INFO - lifespan:88 - Shutting down Qrow IQ application...
+2025-12-12 19:36:16 - database_enhanced - INFO - cleanup:210 - Database connections cleaned up
